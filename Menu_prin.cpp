@@ -1,11 +1,17 @@
 #include <iostream>
-//#include "import_data1.h"
+
+#include "Leer_archivo.h"
+//#include "Leer_archivo.cpp"
 
 using namespace std;
 
 
 int main()
 {
+	Leer_archivo read_ar;
+	read_ar.prueba();
+	
+	
 	int opcion;
     bool men = true;
     while(men)
@@ -24,8 +30,14 @@ int main()
     	cout <<"opcion: "<<opcion<<endl;
     	if (opcion == 1)
     	{
+    		int a;
     		//aqui importamos la archivo
-    		Leer_archivo read_ar;
+			//Leer_archivo read_ar;
+			//read_ar.prueba();
+
+			
+
+			//read_ar.leer_arhivo_ima("marioverde.csv");
     		
     		
 			
@@ -34,5 +46,5 @@ int main()
 
 
     }
-    //return 0;
+    return 0;
 }

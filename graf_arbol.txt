@@ -1,0 +1,4 @@
+digraph G { 
+graph [ordering="out"] 
+ "Boo" -> "Geoff" -> "Mario1" -> "Mario2" -> "Mushroom" -> "Pickachu"
+}
