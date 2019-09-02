@@ -1,12 +1,20 @@
-#include "Leer_archivo.h"
+#include "Leer_archivo.h" 
+#include "arbol_images.h" //para importar arbol de imagenes
+#include "arbol_layers.h"  /// para guardar las capas en orden, depues leer todo
 
 #include <iostream>
 #include <fstream>
 #include <string> 
-//#include <stdlib.h> 
+#include <string.h> 
+
+#include <stdlib.h> 
+
+#include <sstream>
 
 
 using namespace std;
+arbol_images arbol;
+arbol_layers ar_leyers;
 
 /*
 class Leer_archivo
@@ -47,9 +55,9 @@ void Leer_archivo::leer_arhivo_ima(string archiv){
 		 		getline(data_ar, layer, ';');
 		 		getline(data_ar, file, '\n');
 		 		
-		 		//cout<<linea<<' ';
-		 		cout<<layer<<' ';
-		 		cout<<file<<endl;
+		 		////cout<<linea<<' ';
+		 		//cout<<layer<<' ';
+		 		//cout<<file<<endl;
 		 		
 		 		if (layer == "" || layer == "Layer" )
 		 		{
@@ -58,11 +66,12 @@ void Leer_archivo::leer_arhivo_ima(string archiv){
 		 			
 			 		layar_val = atoi(layer.c_str());
 			 		//cout<<"layar_val: "<<layar_val<<endl;
-			 		//if (layer == "0")
-			 		if (layar_val == 0)
+			 		/*if (layar_val == 0)
 			 		{
 			 			Read_config(file);
-			 		}
+			 		}*/			 		
+			 		//insertando en arbol los arhivos a leer
+			 		ar_leyers.insert(layar_val, file);
 		 		}
 
 	 	}
@@ -75,23 +84,62 @@ void Leer_archivo::leer_arhivo_ima(string archiv){
 void Leer_archivo::read_path()
 {
 	system("cls");
+	getchar();
 	string aceptar;
 	string path_archivo ="";
-	//cin>>aceptar;
+	string nombre_ima = "";
+	
+	int pun;
+	bool yapun = false;
+
+
 	cout <<"Ingrese nombre del arhivo (.CSV)"<<endl;
-	cin>>path_archivo;
-	//getline(cin,path_archivo);
+	//cin>>path_archivo;
+	getline(cin,path_archivo);
 	cout<<"path_archivo: "<<path_archivo<<endl;
+	
 	leer_arhivo_ima(path_archivo);
+	//cout<<"strlen(path_archivo.c_str()): "<<strlen(path_archivo.c_str())<<endl;	
+	pun = path_archivo.find(".csv");
+	//cout<<"pun: "<<pun<<endl;
+	nombre_ima = path_archivo.substr(0, pun);
+	cout<<"nombre_ima: "<<nombre_ima<<endl;
+	
+	//////guardando nombre en arbol
+	arbol.insert(nombre_ima.c_str());
+	//arbol.Graficando_arbol();
+	inorder_layer(ar_leyers.root);
+
 	
 }
 
-void Leer_archivo::prueba()
-{
 
-	cout <<"para ver si entra en guncion"<<endl;	
-	read_path();
+void Leer_archivo :: inorder_layer( NodeLay *root_lay) {
+    if (root_lay != NULL) {  	
+        inorder_layer(root_lay -> n_izq);
+        /*leyenado archivos*/
+        if (root_lay->layer == 0)
+ 		{
+ 			Read_config(root_lay->file);
+ 		}	
+ 		else
+ 		{
+ 			Read_capas(root_lay->file);
+ 		}
+ 		
+        cout<< root_lay->layer <<" - "<<root_lay->file <<endl;
+        inorder_layer(root_lay -> n_der);
+    }
+    
 }
+
+
+
+arbol_images Leer_archivo::Retornando_arbol()
+{
+	return arbol;
+}
+
 
 void Leer_archivo::Read_config(string file)
 {
@@ -160,18 +208,71 @@ void Leer_archivo::Read_config(string file)
 	 }
 }
 
-/*Leer_archivo::Read_capas(string file_cap, int layer)
+void Leer_archivo::Read_capas(string files)
 {
-}*/
+	cout <<"leyendo archivos de capas"<<endl;
+	cout<<endl;
+	
+	string val;
+	
+	ifstream data_capas;
+	data_capas.open(files.c_str() , ios::in);
+	
+	 if(!data_capas.is_open() ) 
+	 {
+	 	cout << "\n No se encuentra el archivo capa: " << files <<'\n';
+	 }
+	 else
+	 
+	 {
+		/*//while(data_capas.good())
+		while(!data_capas.fail())
+	 	{
+	 		//config = "";
+	 		val = "";
+		 		getline(data_capas, val, ';');
+		 		//getline(data_capas, val, '\n');
+		 		
+		 		//cout<<linea<<' ';
+		 		cout<<"*"<<val<<"*";//<<endl;;
+		 		//cout<<value<<endl;	 		
+	 	}
+	 	data_capas.close();*/
+	 	
+	 	int linea_y = 0;
+	 	int colum_x;
+	 	/*para recorrer por linea*/
+	 	for (string linea; getline(data_capas,linea);)
+	 	{
+	 		cout<<"linea_y: "<<linea_y<<endl<<endl;
+	 		stringstream reg_x_linea(linea);
+	 		//cout<<"*"<<linea<<"*"<<endl;
+	 		
+	 		/*para recorer por dato*/
+	 		colum_x = 0;
+	 		for(string dat; getline(reg_x_linea, dat, ';');)
+	 		{
+	 			//cout<<"colum_x: "<<colum_x<<endl;
+	 			
+	 			cout<<"cor(y,x)-: "<<linea_y<<","<<colum_x;
+	 			cout<<"-dato-"<<dat<<'\t';//<<endl<<endl;
+	 			//cout<<"dato-"<<dat<<"-"<<'\t';
+	 			colum_x++;
+			}
+			linea_y++;	 		
+		}
 
-/*	
+	 }
+}
+
+	/*
 int main()
 {
 	Leer_archivo read_ar;
 	read_ar.read_path();
 	//return 0;
-}
-*/
+}*/
+
 
 /*void leer_arhivo_ima(string archiv){
 	string layer;

@@ -12,6 +12,7 @@ public:
     int data;
     int cor_y;
     int cor_x;
+    int cor_z;
     
     node (int data_ , int x, int y) {
         data = data_;
@@ -339,7 +340,8 @@ public:
 				
 				if (temp != NULL)
 		    	{
-		    		cout<<"(x:"<<temp->cor_x<<" y:"<<temp->cor_y<<")";	
+		    		cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";	
+		    		//cout<<"(x:"<<temp->cor_x<<" y:"<<temp->cor_y<<")";
 				}	    	
 		    	temp = temp->right;
 			}
@@ -407,38 +409,38 @@ int main(){
 	//sm->add(12,3,2);
 	//sm->add(99,0,0);
 		
-	/*	
+		
 	sm->add(10,2,1);
 	sm->add(12,5,2);
 	sm->add(25,3,4);
 	sm->add(15,3,6);
 	sm->add(35,5,3);
-	sm->add(20,7,4);*/ 
+	sm->add(20,7,4);
 	
-	//sm->add(10,2,5);
-	//sm->add(12,6,1);
-	//sm->add(25,8,3);
-	//sm->add(15,2,1);
-	//sm->add(35,1,2);
+	/*sm->add(10,2,5);
+	sm->add(12,6,1);
+	sm->add(25,8,3);
+	sm->add(15,2,1);
+	sm->add(35,1,2);*/
 
 	
 	
 	//sm->add(12,6,1);
 	//sm->add(15,2,1);
 	
-	sm->add(56,4,5);
-	sm->add(55,4,2);
+	//sm->add(56,4,5);
+	//sm->add(55,4,2);
 	
 	
 	
 	
 	sm->print_headers();
 	
-	cout <<"va imprimir valores"<<endl;    
-	cout <<"recorre der enlace abajo"<<endl;   
-	sm->print_nodes_x();
-	cout <<"recorre abajo enlace der"<<endl;   
-	sm->print_nodes_y();
+	//cout <<"va imprimir valores"<<endl;    
+	//cout <<"recorre der enlace abajo"<<endl;   
+	//sm->print_nodes_x();
+	//cout <<"recorre abajo enlace der"<<endl;   
+	//sm->print_nodes_y();
 	
 	cout<<endl<<endl<<"-"<<endl;   
 	sm->print_node_cor();

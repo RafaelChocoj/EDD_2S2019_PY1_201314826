@@ -1,4 +1,7 @@
 digraph G { 
-graph [ordering="out"] 
- "Boo" -> "Geoff" -> "Mario1" -> "Mario2" -> "Mushroom" -> "Pickachu"
+rankdir=TB;
+graph [nodesep=0.5 ];
+node [shape = record, fillcolor=seashell2];
+nodomario [ label ="<C0>|mario|<C1>"]; 
+
 }
