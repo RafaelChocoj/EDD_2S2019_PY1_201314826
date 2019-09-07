@@ -22,14 +22,18 @@ class Leer_archivo
 		void read_path();
 		void Read_config(std::string);
 		//Read_config();
-		//Read_capas(string, int);
-		void Read_capas(string files);
+		
+		void solo_ejemplo2();
+		
+		void Read_capas(string files, int layer);
 		
 		//arbol_images arbol;	
 		arbol_images Retornando_arbol();	
 		
 		//void inorder_layer()  { inorder_layer(ar_leyers.root);};
     	void inorder_layer( NodeLay* actual);
+    	
+    	
 
 		
 };

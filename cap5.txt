@@ -1,0 +1,20 @@
+digraph{ 
+rankdir=BT;
+node[shape=record]; 
+graph[pencolor=transparent]; 
+node [style=filled]; 
+p00[label="{<data>0,0|<next>Z5}" pos="0,6!"]; 
+p00->p30[dir=both]; 
+p00->p04[dir=both]; 
+p30[label="{<data>3,0|<next>X3}" pos="3,6!"]; 
+p30->p34[dir=both]; 
+p04[label="{<data>0,4|<next>Y4}" pos="0,2!"]; 
+p04->p34[dir=both]; 
+p04->p06[dir=both]; 
+p34[label="{<data>3,4|<next>}" pos="3,2!"]; 
+p34->p36[dir=both]; 
+p06[label="{<data>0,6|<next>Y6}" pos="0,0!"]; 
+p06->p36[dir=both]; 
+p36[label="{<data>3,6|<next>}" pos="3,0!"]; 
+
+}

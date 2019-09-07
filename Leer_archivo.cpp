@@ -1,4 +1,5 @@
-#include "Leer_archivo.h" 
+#include "Leer_archivo.h"
+
 #include "arbol_images.h" //para importar arbol de imagenes
 #include "arbol_layers.h"  /// para guardar las capas en orden, depues leer todo
 
@@ -6,6 +7,8 @@
 #include <fstream>
 #include <string> 
 #include <string.h> 
+
+#include "Matrix_cub.h"
 
 #include <stdlib.h> 
 
@@ -16,6 +19,12 @@ using namespace std;
 arbol_images arbol;
 arbol_layers ar_leyers;
 
+/*para valores de config de la imagen*/
+int ima_h, ima_w;
+int pix_h, pix_w;
+int pix_ima_h, pix_ima_w;
+
+matrix mt; //para la matrix dispersa cubica
 /*
 class Leer_archivo
 {
@@ -105,12 +114,18 @@ void Leer_archivo::read_path()
 	nombre_ima = path_archivo.substr(0, pun);
 	cout<<"nombre_ima: "<<nombre_ima<<endl;
 	
-	//////guardando nombre en arbol
-	arbol.insert(nombre_ima.c_str());
-	//arbol.Graficando_arbol();
+	
 	inorder_layer(ar_leyers.root);
 
+	mt.print_node_cor_orde_zz();
+	///mt.Tipo_a_Graficar();
 	
+	//////guardando nombre en arbol
+	arbol.insert(nombre_ima.c_str(),mt, pix_w, pix_h,  pix_ima_w, pix_ima_h);
+	//arbol.Graficando_arbol();
+}
+
+void Leer_archivo :: solo_ejemplo2( ) {
 }
 
 
@@ -124,7 +139,7 @@ void Leer_archivo :: inorder_layer( NodeLay *root_lay) {
  		}	
  		else
  		{
- 			Read_capas(root_lay->file);
+ 			Read_capas(root_lay->file, root_lay->layer);
  		}
  		
         cout<< root_lay->layer <<" - "<<root_lay->file <<endl;
@@ -148,9 +163,14 @@ void Leer_archivo::Read_config(string file)
 	
 	string config;
 	string value;
-	int ima_h, ima_w;
-	int pix_h, pix_w;
-	int pix_ima_h, pix_ima_w;
+	
+	//int ima_h, ima_w;
+	//int pix_h, pix_w;
+	//int pix_ima_h, pix_ima_w;
+	
+	ima_h, ima_w = 0;
+	pix_h, pix_w = 0;
+	pix_ima_h, pix_ima_w = 0;
 	
 	//fstream data_ar(archiv );
 	ifstream data_config;
@@ -208,7 +228,7 @@ void Leer_archivo::Read_config(string file)
 	 }
 }
 
-void Leer_archivo::Read_capas(string files)
+void Leer_archivo::Read_capas(string files, int layer)
 {
 	cout <<"leyendo archivos de capas"<<endl;
 	cout<<endl;
@@ -239,26 +259,44 @@ void Leer_archivo::Read_capas(string files)
 	 	}
 	 	data_capas.close();*/
 	 	
-	 	int linea_y = 0;
+	 	//int linea_y = 0;
+	 	int linea_y = 1;  // para que inicie  en 1, porque 0 esta reservado para raices
 	 	int colum_x;
 	 	/*para recorrer por linea*/
 	 	for (string linea; getline(data_capas,linea);)
 	 	{
-	 		cout<<"linea_y: "<<linea_y<<endl<<endl;
+	 		//cout<<"linea_y: "<<linea_y<<endl<<endl;
 	 		stringstream reg_x_linea(linea);
 	 		//cout<<"*"<<linea<<"*"<<endl;
 	 		
 	 		/*para recorer por dato*/
-	 		colum_x = 0;
+	 		//colum_x = 0;
+	 		colum_x = 1; // para que inicie  en 1, porque 0 esta reservado para raices
 	 		for(string dat; getline(reg_x_linea, dat, ';');)
 	 		{
-	 			//cout<<"colum_x: "<<colum_x<<endl;
+	 			//cout<<"cl_x: "<<colum_x<<"  ";
 	 			
-	 			cout<<"cor(y,x)-: "<<linea_y<<","<<colum_x;
-	 			cout<<"-dato-"<<dat<<'\t';//<<endl<<endl;
+	 			//cout<<"cor(y,x)-: "<<linea_y<<","<<colum_x;
+	 			//cout<<"-dato-"<<dat<<'\t';
+				 
+				//cout<<"y,x: "<<linea_y<<","<<colum_x;
+	 			//cout<<"-dat: "<<dat<<'\t'<<"     "; 	
+				
+				/*****inicio bloque agregando a matrix*****/
+				cout<<dat<<'\t'<<"     "; 
+				
+				if (dat == "x" || dat == "X")
+				{}else {
+					mt.add(0, colum_x, linea_y, layer, dat);
+				}
+				
+				/*****fin bloque agregando a matrix*****/
+				
+				 //<<endl<<endl;
 	 			//cout<<"dato-"<<dat<<"-"<<'\t';
 	 			colum_x++;
 			}
+			cout<<endl;
 			linea_y++;	 		
 		}
 

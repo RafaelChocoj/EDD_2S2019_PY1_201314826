@@ -1,0 +1,34 @@
+digraph{ 
+rankdir=BT;
+node[shape=record]; 
+graph[pencolor=transparent]; 
+node [style=filled]; 
+p00[label="{<data>0,0|<next>}" pos="0,6!"]; 
+p00->p20[dir=both]; 
+p00->p01[dir=both]; 
+p20[label="{<data>2,0|<next>}" pos="2,6!"]; 
+p20->p30[dir=both]; 
+p20->p21[dir=both]; 
+p30[label="{<data>3,0|<next>}" pos="3,6!"]; 
+p30->p50[dir=both]; 
+p30->p34[dir=both]; 
+p50[label="{<data>5,0|<next>}" pos="5,6!"]; 
+p50->p52[dir=both]; 
+p01[label="{<data>0,1|<next>}" pos="0,5!"]; 
+p01->p21[dir=both]; 
+p01->p02[dir=both]; 
+p21[label="{<data>2,1|<next>}" pos="2,5!"]; 
+p02[label="{<data>0,2|<next>}" pos="0,4!"]; 
+p02->p52[dir=both]; 
+p02->p03[dir=both]; 
+p52[label="{<data>5,2|<next>}" pos="5,4!"]; 
+p52->p53[dir=both]; 
+p03[label="{<data>0,3|<next>}" pos="0,3!"]; 
+p03->p53[dir=both]; 
+p03->p04[dir=both]; 
+p53[label="{<data>5,3|<next>}" pos="5,3!"]; 
+p04[label="{<data>0,4|<next>}" pos="0,2!"]; 
+p04->p34[dir=both]; 
+p34[label="{<data>3,4|<next>}" pos="3,2!"]; 
+
+}

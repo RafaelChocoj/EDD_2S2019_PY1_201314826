@@ -28,8 +28,8 @@ Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=0000000000000000000000000
-UnitCount=7
+CompilerSettings=0000000000000000001000000
+UnitCount=9
 
 [VersionInfo]
 Major=1
@@ -81,23 +81,14 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit8]
-FileName=Leer_archivo.o
-Folder=
-Compile=0
-Link=0
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit7]
-FileName=Leer_archivo.cpp
-CompileCpp=1
+FileName=Leer_archivo.h
 Folder=
 Compile=1
 Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+CompileCpp=1
 
 [Unit4]
 FileName=arbol_layers.h
@@ -119,8 +110,28 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
+[Unit9]
+FileName=Leer_archivo.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
 [Unit6]
-FileName=Leer_archivo.h
+FileName=Matrix_cub.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit7]
+FileName=Matrix_cub.cpp
 CompileCpp=1
 Folder=
 Compile=1

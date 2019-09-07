@@ -1,0 +1,41 @@
+digraph{ 
+rankdir=BT;
+node[shape=record]; 
+graph[pencolor=transparent]; 
+node [style=filled]; 
+p00[label="{<data>0,0|<next>Z1}" pos="0,2!"]; 
+p00->p10[dir=both]; 
+p00->p01[dir=both]; 
+p10[label="{<data>1,0|<next>X1}" pos="1,2!"]; 
+p10->p20[dir=both]; 
+p10->p11[dir=both]; 
+p20[label="{<data>2,0|<next>X2}" pos="2,2!"]; 
+p20->p30[dir=both]; 
+p20->p21[dir=both]; 
+p30[label="{<data>3,0|<next>X3}" pos="3,2!"]; 
+p30->p31[dir=both]; 
+p01[label="{<data>0,1|<next>Y1}" pos="0,1!"]; 
+p01->p11[dir=both]; 
+p01->p02[dir=both]; 
+p11[label="{<data>1,1|<next>0,0}" pos="1,1!"]; 
+p11->p11[dir=both]; 
+p11->p11[dir=both]; 
+p11[label="{<data>1,1|<next>0,0}" pos="1,1!"]; 
+p11->p21[dir=both]; 
+p11->p12[dir=both]; 
+p21[label="{<data>2,1|<next>0,1}" pos="2,1!"]; 
+p21->p31[dir=both]; 
+p21->p21[dir=both]; 
+p31[label="{<data>3,1|<next>0,2}" pos="3,1!"]; 
+p31->p31[dir=both]; 
+p02[label="{<data>0,2|<next>Y2}" pos="0,0!"]; 
+p02->p12[dir=both]; 
+p12[label="{<data>1,2|<next>0,1}" pos="1,0!"]; 
+p12->p12[dir=both]; 
+p12[label="{<data>1,2|<next>0,1}" pos="1,0!"]; 
+p12->p22[dir=both]; 
+p22[label="{<data>2,2|<next>1,1}" pos="2,0!"]; 
+p22->p32[dir=both]; 
+p32[label="{<data>3,2|<next>1,2}" pos="3,0!"]; 
+
+}

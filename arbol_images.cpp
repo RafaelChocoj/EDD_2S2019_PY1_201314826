@@ -4,6 +4,8 @@
 #include <string.h> 
 #include <fstream>
 
+#include "Matrix_cub.h"
+
 using namespace std;
 
 /*
@@ -59,12 +61,12 @@ public:
 };
 */
 
-bool arbol_images :: insert(string name, Node *raiz_actual) {
+bool arbol_images :: insert(string name, Node *raiz_actual, matrix mat_cub, int pix_w, int pix_h, int pix_ima_w, int pix_ima_h) {
 	int compar_nombre;
 	compar_nombre = 0;
 	
     if (root == NULL) {
-        root = new Node(name);
+        root = new Node(name, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h);
         size++;
         //cout << " \nsize " << size ;
         return true;
@@ -72,23 +74,23 @@ bool arbol_images :: insert(string name, Node *raiz_actual) {
     }
 		else if (compar_nombre = strcmp(name.c_str() ,raiz_actual->data.c_str()) < 0) {
         if (raiz_actual->n_izq == NULL) {
-            raiz_actual->n_izq = new Node(name);
+            raiz_actual->n_izq = new Node(name, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h);
             size++;
             return true;
         }
         else {
-            return insert(name, raiz_actual->n_izq);
+            return insert(name, raiz_actual->n_izq, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h);
         }
     //}else if (nombre > raiz_actual->data) {
     }
 	else if (compar_nombre = strcmp(name.c_str() ,raiz_actual->data.c_str()) > 0) {
         if (raiz_actual->n_der == NULL) {
-            raiz_actual->n_der = new Node(name);
+            raiz_actual->n_der = new Node(name, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h);
             size++;
             return true;
         }
         else {
-            return insert(name, raiz_actual->n_der);
+            return insert(name, raiz_actual->n_der, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h);
         }
     }else {
         return false;

@@ -11,6 +11,8 @@ int main(int argc, char** argv) {
 #include "arbol_images.h" //importar arbol de imagenes
 
 
+#include "Matrix_cub.h"
+
 using namespace std;
 
 Leer_archivo read_ar; //para importacion
@@ -35,6 +37,7 @@ int main(int argc, char** argv)
 		cout <<"5. Export Image"<<endl;
 		cout <<"6. Reports"<<endl;
 		cout <<"7. Exit"<<endl<<endl;
+		cout <<"8. prueba matriz"<<endl<<endl;
 		cout <<"**************************\n\n";
 		
     	cout<<"Selecciona opcion:\n" ; cin>>opcion;
@@ -69,6 +72,52 @@ int main(int argc, char** argv)
     	{
     		MenuReport();
 		} 
+		else if (opcion == 8)
+    	{
+    		matrix mt;
+    		mt.add(10,2,1,2, "");
+			mt.add(12,5,2,2, "");
+			mt.add(25,3,4,2, "");
+			mt.add(15,3,6,5, "");
+			mt.add(35,5,3,2, "");
+			mt.add(20,7,4,4, "");
+
+			mt.add(1212,5,2,4, "");
+			
+			mt.add(22,2,2,4, "");
+			
+			mt.add(34,3,4,5, "");
+			
+			
+		
+			mt.print_headers();
+			
+			//cout <<"va imprimir valores"<<endl;    
+			//cout <<"recorre der enlace abajo"<<endl;   
+			//sm->print_nodes_x();
+			//cout <<"recorre abajo enlace der"<<endl;   
+			//sm->print_nodes_y();
+			
+			cout<<endl<<endl<<"-"<<endl;   
+			cout<<"print_node_cor_z"<<endl; 
+			//sm->print_node_cor();
+			mt.print_node_cor_z();
+			cout<<endl<<endl<<"cordenada abajo, derecha"<<endl; 
+			//sm->print_node_cor_orde();
+			mt.print_node_cor_orde_zz();
+			
+			//cout<<endl<<endl<<"imprimiendo si tiene superior"<<endl; 
+			//sm->print_node_z_cap();
+			
+			//cout<<endl<<endl<<"cordenada derecha, abajo"<<endl; 
+			////sm->print_node_cor_orde_der_abaj();
+			//sm->print_node_cor_orde_der_abaj_z();
+			
+			///////////////////sm->print_mt_ejemplo();
+			//mt.print_Grafica_matrix();
+			mt.Tipo_a_Graficar();
+	
+		}
 		else if (opcion == 7)
     	{
     		men = false;
