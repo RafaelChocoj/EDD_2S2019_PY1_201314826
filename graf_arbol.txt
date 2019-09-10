@@ -2,5 +2,10 @@ digraph G {
 rankdir=TB;
 graph [nodesep=0.5 ];
 node [shape = record, fillcolor=seashell2];
+nodomario:C1 -> nodomarioverde
+nodomario [ label ="<C0>|mario|<C1>"]; 
+nodomariop1 [ label ="<C0>|mariop1|<C1>"]; 
+nodomarioverde:C0 -> nodomariop1
+nodomarioverde [ label ="<C0>|marioverde|<C1>"]; 
 
 }

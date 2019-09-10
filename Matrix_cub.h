@@ -62,7 +62,7 @@ public:
 		head = temp;  
     }
     
-    void add (int value, int x, int y, int z, string valor);
+    void add (int value, int x, int y, int z, string valor, string file_capa);
     /*nodo en z*/
     void add_z(node *new_node, int x, int y, int z);
     
@@ -88,7 +88,7 @@ public:
     //void add_y_header(int y) {
     void add_y_header(int y, int z);
     
-    void add_z_header(int z);
+    void add_z_header(int z, string file_capa);
     
     void print_headers();
     
@@ -166,8 +166,16 @@ public:
     ///para recorer de derecha hacia abajo
     void print_node_cor_orde_der_abaj();
     
+    int no_columnas_mat();
     
+    void Generando_css(int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto);
+    void read_matrix_css_html(node *matrix_capa, int canvas_w, int canvas_h, int pix_w, int pix_, int no_pix_ancho, int no_pix_alto);
     
+    void create_file_images(string nombre, string contenido);
+    
+    string RGBToHex(int r_int, int g_int, int b_int);
+    	
+    void Capas_para_select();
     
     
     

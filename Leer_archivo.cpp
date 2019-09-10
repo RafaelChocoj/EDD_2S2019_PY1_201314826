@@ -24,6 +24,8 @@ int ima_h, ima_w;
 int pix_h, pix_w;
 int pix_ima_h, pix_ima_w;
 
+int no_pixel_w, no_pixel_h;
+
 matrix mt; //para la matrix dispersa cubica
 /*
 class Leer_archivo
@@ -42,6 +44,10 @@ void Leer_archivo::leer_arhivo_ima(string archiv){
 	string file;
 	int layar_val = 0;
 	int linea = 0;
+	
+	//para limpiar layers
+	arbol_layers ar_leyers_limpio;
+	ar_leyers = ar_leyers_limpio;
 	
 	//fstream data_ar(archiv);
 	ifstream data_ar;
@@ -115,14 +121,18 @@ void Leer_archivo::read_path()
 	cout<<"nombre_ima: "<<nombre_ima<<endl;
 	
 	
+	matrix mt_blanco; //limpiando la matrix
+	mt = mt_blanco;
+	
 	inorder_layer(ar_leyers.root);
 
 	mt.print_node_cor_orde_zz();
 	///mt.Tipo_a_Graficar();
 	
 	//////guardando nombre en arbol
-	arbol.insert(nombre_ima.c_str(),mt, pix_w, pix_h,  pix_ima_w, pix_ima_h);
+	arbol.insert(nombre_ima.c_str(),mt, pix_w, pix_h,  pix_ima_w, pix_ima_h, no_pixel_w, no_pixel_h);
 	//arbol.Graficando_arbol();
+	cout <<"Archivo "<<nombre_ima.c_str()<<" Cargado."<<endl;
 }
 
 void Leer_archivo :: solo_ejemplo2( ) {
@@ -223,6 +233,9 @@ void Leer_archivo::Read_config(string file)
 	 	pix_ima_w = pix_w*ima_w;
  		pix_ima_h = pix_h*ima_h;
  		
+ 		no_pixel_w = ima_w;
+		no_pixel_h = ima_h;
+ 		
  		cout <<"pix_ima_w: "<<pix_ima_w<<endl;
  		cout <<"pix_ima_h: "<<pix_ima_h<<endl;
 	 }
@@ -287,7 +300,7 @@ void Leer_archivo::Read_capas(string files, int layer)
 				
 				if (dat == "x" || dat == "X")
 				{}else {
-					mt.add(0, colum_x, linea_y, layer, dat);
+					mt.add(0, colum_x, linea_y, layer, dat, files);
 				}
 				
 				/*****fin bloque agregando a matrix*****/

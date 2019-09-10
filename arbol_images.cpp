@@ -61,12 +61,12 @@ public:
 };
 */
 
-bool arbol_images :: insert(string name, Node *raiz_actual, matrix mat_cub, int pix_w, int pix_h, int pix_ima_w, int pix_ima_h) {
+bool arbol_images :: insert(string name, Node *raiz_actual, matrix mat_cub, int pix_w, int pix_h, int pix_ima_w, int pix_ima_h, int no_pixel_w, int no_pixel_h) {
 	int compar_nombre;
 	compar_nombre = 0;
 	
     if (root == NULL) {
-        root = new Node(name, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h);
+        root = new Node(name, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h, no_pixel_w, no_pixel_h);
         size++;
         //cout << " \nsize " << size ;
         return true;
@@ -74,23 +74,23 @@ bool arbol_images :: insert(string name, Node *raiz_actual, matrix mat_cub, int 
     }
 		else if (compar_nombre = strcmp(name.c_str() ,raiz_actual->data.c_str()) < 0) {
         if (raiz_actual->n_izq == NULL) {
-            raiz_actual->n_izq = new Node(name, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h);
+            raiz_actual->n_izq = new Node(name, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h, no_pixel_w, no_pixel_h);
             size++;
             return true;
         }
         else {
-            return insert(name, raiz_actual->n_izq, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h);
+            return insert(name, raiz_actual->n_izq, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h, no_pixel_w, no_pixel_h);
         }
     //}else if (nombre > raiz_actual->data) {
     }
 	else if (compar_nombre = strcmp(name.c_str() ,raiz_actual->data.c_str()) > 0) {
         if (raiz_actual->n_der == NULL) {
-            raiz_actual->n_der = new Node(name, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h);
+            raiz_actual->n_der = new Node(name, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h, no_pixel_w, no_pixel_h);
             size++;
             return true;
         }
         else {
-            return insert(name, raiz_actual->n_der, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h);
+            return insert(name, raiz_actual->n_der, mat_cub, pix_w, pix_h, pix_ima_w, pix_ima_h, no_pixel_w, no_pixel_h);
         }
     }else {
         return false;
@@ -113,6 +113,35 @@ void arbol_images :: inorder( Node *root) {
     
 }
 
+void arbol_images :: Buscando_x_index( Node *root, int index) {
+//int arbol_images :: Buscando_x_index( Node *root, int index) {
+    if (root != NULL) {
+        Buscando_x_index(root -> n_izq, index);
+        
+        index_root++;
+        
+        //if (index_root != size)
+		//{grafica_orden = grafica_orden + " \"" + root->data + "\" ->"; }
+        //else{grafica_orden = grafica_orden + " \"" + root->data + "\""; }
+        
+		//cout<< index_root<<"- "<<root->data <<endl;
+        
+        if (index_root == index){
+        	//cout << "valor encontrado *** " << root->data<<endl;
+        	/*si encuentro entonces retorno nodo de arbol*/
+        	imagen_actual_nod = root;
+        	//cout << "vimagen_actual_nod *** " << imagen_actual_nod->data<<endl;
+        	
+			//return *root;
+        	return;
+        
+		}
+        
+        //grafica_orden = grafica_orden + " " + root->data;
+        Buscando_x_index(root -> n_der, index);
+    }
+    
+}
 
 
 

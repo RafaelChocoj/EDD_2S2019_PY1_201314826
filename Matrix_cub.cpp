@@ -6,13 +6,20 @@
 #include <string.h>
 #include <fstream>
 
+#include <stdlib.h> 
+
+
 using namespace std;
 
-void matrix :: add (int value, int x, int y, int z, string valor) {
+
+string file_css;
+string file_html;
+    	
+void matrix :: add (int value, int x, int y, int z, string valor, string file_capa) {
     	//1 crear header
     	//1.1 creade x header
     	//cout<<"x: " <<x<<endl; 
-    	add_z_header(z);
+    	add_z_header(z, file_capa);
     	add_x_header(x, z);
     	add_y_header(y, z);  	
     	//1.2 create y header
@@ -551,12 +558,14 @@ void matrix :: add (int value, int x, int y, int z, string valor) {
     	}
     }
     
-       void matrix :: add_z_header(int z) {
+       void matrix :: add_z_header(int z, string file_capa) {
     	  	
     	string nombre_cab = "";
-    	ostringstream num;
-    	num<<z;
-    	nombre_cab = "Z"+num.str();
+    	//ostringstream num;
+    	//num<<z;
+    	//nombre_cab = "Z"+num.str();
+    	
+    	nombre_cab = file_capa;
     	
     	if (head->capa_up == NULL) { 
 	    	//node *temp = new node(x);    	
@@ -1312,3 +1321,245 @@ void matrix :: add (int value, int x, int y, int z, string valor) {
 		cout <<"termina reco der abaj"<<endl;   
     	
     }
+    
+    
+    ////**********************inicio*****para*crear*imagen*****************************************////
+    
+    int matrix :: no_columnas_mat(){
+    	int no_col = 0;
+    	
+    	node *temp = head;
+    	while (temp->right != NULL) { 
+    		temp = temp->right;
+    	}
+    	no_col = temp->cor_x;
+    	return no_col;
+	}
+	
+    void matrix :: Generando_css(int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto) {
+    	
+    	//node *temp = head;
+    	//print_Grafica_matrix(temp);
+    	string name_cap;
+    	
+    	//string file_css;
+    	//string file_html;
+    	
+ 		///***para css*****///
+    	file_css = "";
+    	
+    	file_css = file_css + "body {\n";
+		file_css = file_css + "  background: #333333; \n";    
+		file_css = file_css + "  height: 100vh; \n";        
+		file_css = file_css + "  display: flex; \n";         
+		file_css = file_css + "  justify-content: center; \n";
+		file_css = file_css + "  align-items: center; \n";   
+		file_css = file_css + " }\n";
+		
+		ostringstream can_w, can_h;
+		can_w<<canvas_w;
+		can_h<<canvas_h;
+		
+    	//name_cap = "cap"+cap.str();
+
+		file_css = file_css + ".canvas {\n";  
+		file_css = file_css + "  width: "+ can_w.str() +"px; \n";    
+		file_css = file_css + "  height: "+can_h.str() +"px;\n";    
+		file_css = file_css + " }\n";  
+		
+		ostringstream px_w, px_h;
+		px_w<<pix_w;
+		px_h<<pix_h;
+			
+		file_css = file_css + ".pixel {\n"; 
+		file_css = file_css + "  width: "+ px_w.str() + "px;\n"; 
+		file_css = file_css + "  height:"+ px_h.str() + "px;\n"; 
+		file_css = file_css + "  float: left;  \n"; 
+		file_css = file_css + "  box-shadow: 0px 0px 1px #fff;\n"; 
+		file_css = file_css + "}\n"; 
+
+
+		///***para html*****///
+		file_html = "";
+		
+		file_html = file_html + "<!DOCTYPE html>\n";
+		file_html = file_html + "<html>\n";
+		file_html = file_html + "<head>\n";
+		//file_html = file_html + "  <link rel=\"stylesheet\" href=\"geoff.css\">\n";
+		file_html = file_html + "  <link rel=\"stylesheet\" href=\"ejemplo.css\">\n";
+		file_html = file_html + "</head>\n";
+		file_html = file_html + "<body>\n";
+		file_html = file_html + "<div class=\"canvas\"> \n";
+		
+    	
+    	node *temp = head;
+    	while (temp->capa_up != NULL) { 
+
+    		
+    		if (temp->valor != "RAIZ"){
+    			read_matrix_css_html(temp, canvas_w, canvas_h, pix_w, pix_h, no_pix_ancho, no_pix_alto);
+			}
+	    	
+	    	temp = temp->capa_up;
+		}  	
+		
+		read_matrix_css_html(temp, canvas_w, canvas_h, pix_w, pix_h, no_pix_ancho, no_pix_alto);
+		
+		
+		////creando los divs
+		for(int y = 0; y<no_pix_alto ; y++){
+			for(int x = 0; x<no_pix_ancho ; x++){
+				///para html
+				file_html = file_html + "  <div class=\"pixel\"></div>\n";
+			}
+		}
+		
+		
+		
+		
+		file_html = file_html + "</div>\n";
+		file_html = file_html + "</body>\n";
+		file_html = file_html + "</html> \n";
+		
+		
+		//create_file_images(name_cap, file_css);
+		create_file_images("ejemplo.css", file_css);
+		create_file_images("ejemplo.html", file_html);
+		
+		system("ejemplo.html");
+		
+	}
+	
+	void matrix :: read_matrix_css_html(node *matrix_capa, int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto) {
+		
+		string c_r, c_g, c_b;
+		
+		
+    	////node *temp = head;
+    	node *temp = matrix_capa;
+    	
+    	string color_completo;
+    	string color_hexa;
+    	int no_col;
+    	int k;
+    	//no_col = no_columnas_mat();
+    	no_col = no_pix_ancho;
+
+    	
+    	//node *temp = nodo_x_nivel;
+    	node *temp_inicio;	
+    	node *temp_sup_ini;
+		   	
+
+    	while (temp != NULL) { 
+
+	    	temp_inicio = temp;
+
+	    	while (temp != NULL) { 
+						
+						if (temp->tipo == "N")
+						{
+
+							ostringstream k_str;
+							k = 0;
+							//k = i(y) * Numero Columnas + j(x)
+							//k = temp->cor_y  * no_col + temp->cor_x; 
+							k = ((temp->cor_y - 1 ) * no_col ) + (temp->cor_x - 1); 
+							k = k +1;
+							k_str<<k;
+							
+							//cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
+							color_completo = temp->valor;
+							//cout<<color_completo<<endl;
+							 
+							
+							stringstream col(color_completo);
+							getline(col, c_r, '-');
+							getline(col, c_g, '-');
+							getline(col, c_b, '-');
+							
+							//cout<<"c_r: "<<c_r<<endl;
+							//cout<<"c_g: "<<c_g<<endl;
+							//cout<<"c_b: "<<c_b<<endl;
+							color_hexa = RGBToHex( atoi(c_r.c_str()), atoi(c_g.c_str()), atoi(c_b.c_str()) );
+							//cout<<"color_hexa: "<<color_hexa<<endl;
+							
+							//para css
+							file_css = file_css + ".pixel:nth-child("+ k_str.str() + ") { \n";
+							file_css = file_css + "  background: #"+color_hexa+"; \n";
+							file_css = file_css + "} \n";
+							
+							///para html
+							//file_html = file_html + "  <div class=\"pixel\"></div>\n";
+
+						}
+						
+											    	
+		    	temp = temp->right;
+			}
+			
+		
+			temp = temp_inicio;
+	    	temp = temp->down;
+	    	
+	    	cout<<endl;
+		}  	
+
+
+ 	
+    }
+    
+    void matrix :: create_file_images(string nombre, string contenido) {
+    	
+    	string nom_ar = "";
+		//nom_ar = nombre + ".css";
+		nom_ar = nombre;
+		
+		ofstream file;
+		file.open(nom_ar.c_str());
+		file <<contenido;
+		file.close();
+		
+	    //system(nom_ar.c_str());
+
+	}
+	
+	string matrix :: RGBToHex(int r_int, int g_int, int b_int)
+	{
+		string color_hexa;
+	
+		char r[255];	
+		sprintf(r, "%.2X", r_int);
+		//cout<<"r: "<<r<<endl;
+		color_hexa.append(r );
+	
+		char g[255];	
+		sprintf(g, "%.2X", g_int);
+		//cout<<"g: "<<g<<endl;
+		color_hexa.append(g );
+	
+		char b[255];	
+		sprintf(b, "%.2X", b_int);
+		//cout<<"b: "<<b<<endl;
+		color_hexa.append(b );
+		//color_hexa = r+g+b;
+		
+		return color_hexa;
+	}
+	
+	void matrix :: Capas_para_select() {
+    	
+    	node *temp = head;
+    	while (temp->capa_up != NULL) { 
+    	
+    		if (temp->valor != "RAIZ"){
+	    		cout<<temp->cor_z<<" - "<<temp->valor<<endl;}
+	    	
+	    	temp = temp->capa_up;
+		}  	
+		
+		cout<<temp->cor_z<<" - "<<temp->valor<<endl;
+		
+	}
+	
+	////**********************fin*****para*crear*imagen*****************************************////
