@@ -39,7 +39,9 @@ class Leer_archivo
 };
 */
 
-void Leer_archivo::leer_arhivo_ima(string archiv){
+//void Leer_archivo::leer_arhivo_ima(string archiv){
+bool Leer_archivo::leer_arhivo_ima(string archiv){
+	bool encontrado = false;
 	string layer;
 	string file;
 	int layar_val = 0;
@@ -57,9 +59,9 @@ void Leer_archivo::leer_arhivo_ima(string archiv){
 	 if(!data_ar.is_open() ) 
 	 {
 	 	cout << "\n No se encuentra el archivo" << '\n';
+	 	encontrado = false;
 	 }
 	 else
-	 
 	 {
 		//while(data_ar.good())
 		while(!data_ar.fail())
@@ -88,16 +90,17 @@ void Leer_archivo::leer_arhivo_ima(string archiv){
 			 		//insertando en arbol los arhivos a leer
 			 		ar_leyers.insert(layar_val, file);
 		 		}
-
 	 	}
 	 	data_ar.close();
+	 	encontrado = true;
 	 }
 	
-	
+	return encontrado;
 }
 
 void Leer_archivo::read_path()
 {
+	bool encontrado;
 	system("cls");
 	getchar();
 	string aceptar;
@@ -113,26 +116,29 @@ void Leer_archivo::read_path()
 	getline(cin,path_archivo);
 	cout<<"path_archivo: "<<path_archivo<<endl;
 	
-	leer_arhivo_ima(path_archivo);
-	//cout<<"strlen(path_archivo.c_str()): "<<strlen(path_archivo.c_str())<<endl;	
-	pun = path_archivo.find(".csv");
-	//cout<<"pun: "<<pun<<endl;
-	nombre_ima = path_archivo.substr(0, pun);
-	cout<<"nombre_ima: "<<nombre_ima<<endl;
+	encontrado = leer_arhivo_ima(path_archivo);
+	if (encontrado == true){
+		//cout<<"strlen(path_archivo.c_str()): "<<strlen(path_archivo.c_str())<<endl;	
+		pun = path_archivo.find(".csv");
+		cout<<"encontrado: "<<encontrado<<endl;
+		
+		nombre_ima = path_archivo.substr(0, pun);
+		//cout<<"nombre_ima: "<<nombre_ima<<endl;
+		
+		
+		matrix mt_blanco; //limpiando la matrix
+		mt = mt_blanco;
+		
+		inorder_layer(ar_leyers.root);
 	
-	
-	matrix mt_blanco; //limpiando la matrix
-	mt = mt_blanco;
-	
-	inorder_layer(ar_leyers.root);
-
-	mt.print_node_cor_orde_zz();
-	///mt.Tipo_a_Graficar();
-	
-	//////guardando nombre en arbol
-	arbol.insert(nombre_ima.c_str(),mt, pix_w, pix_h,  pix_ima_w, pix_ima_h, no_pixel_w, no_pixel_h);
-	//arbol.Graficando_arbol();
-	cout <<"Archivo "<<nombre_ima.c_str()<<" Cargado."<<endl;
+		mt.print_node_cor_orde_zz();
+		///mt.Tipo_a_Graficar();
+		
+		//////guardando nombre en arbol
+		arbol.insert(nombre_ima.c_str(),mt, pix_w, pix_h,  pix_ima_w, pix_ima_h, no_pixel_w, no_pixel_h);
+		//arbol.Graficando_arbol();
+		cout <<"Archivo "<<nombre_ima.c_str()<<" Cargado."<<endl;
+	}
 }
 
 void Leer_archivo :: solo_ejemplo2( ) {

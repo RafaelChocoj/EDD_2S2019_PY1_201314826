@@ -30,6 +30,12 @@ matrix mtx_actual;
 void Select_images();
 void menu_filters();
 void Select_capas();
+void menu_mirror();
+
+//para imagen actual
+int a_pix_ima_w, a_pix_ima_h;
+int a_pix_w, a_pix_h;
+int a_no_pixel_x, a_no_pixel_y;
 
 int main(int argc, char** argv)
 {
@@ -57,6 +63,7 @@ int main(int argc, char** argv)
 		cout <<"8. prueba matriz"<<endl<<endl;
 		cout <<"9. graficando matriz"<<endl<<endl;
 		cout <<"10. verificando lista layes"<<endl<<endl;
+		cout <<"11. leyendo lista layes"<<endl<<endl;
 		cout <<"**************************\n\n";
 		
     	cout<<"Selecciona opcion:\n" ; cin>>opcion;
@@ -76,16 +83,18 @@ int main(int argc, char** argv)
 		}
 		else if (opcion == "3")
     	{
-    		menu_filters();
+    		if (arbol_im.imagen_actual_nod != NULL){
+    			menu_filters();
+			} else {
+				cout <<"No tiene una imagen seleccioanda. "<<endl;
+				system("pause");
+			}
+    		
 		}
 		/*para exportar el cubo*/
 		else if (opcion == "5")
     	{
 			mtx_actual.Generando_css(arbol_im.imagen_actual_nod->pix_ima_w,arbol_im.imagen_actual_nod->pix_ima_h, arbol_im.imagen_actual_nod->pix_w, arbol_im.imagen_actual_nod->pix_h, arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
-			//cout <<"pix_ima_w: "<<arbol_im.imagen_actual_nod->pix_ima_w<<endl;
-			//cout <<"pix_ima_h: "<<arbol_im.imagen_actual_nod->pix_ima_h<<endl;
-			//cout <<"pix_w: "<<arbol_im.imagen_actual_nod->pix_w<<endl;
-			//cout <<"pix_h: "<<arbol_im.imagen_actual_nod->pix_h<<endl;
 			system("pause");
 		
 		} 
@@ -146,13 +155,13 @@ int main(int argc, char** argv)
     	}
     	else if (opcion == "10")
     	{
-    		/*Filtros_lista_cir lis_c;
+    		Filtros_lista_cir lis_c;
 	
-			lis_c.Insert_nod(1, NULL);
-			lis_c.Insert_nod(2);
-			lis_c.Insert_nod(3);
-			lis_c.Insert_nod(4);
-			lis_c.Insert_nod(55);
+			lis_c.Insert_nod(1, mtx_actual,"");
+			lis_c.Insert_nod(2, mtx_actual,"");
+			lis_c.Insert_nod(3, mtx_actual,"");
+			lis_c.Insert_nod(4, mtx_actual,"");
+			lis_c.Insert_nod(55, mtx_actual,"");
 			
 			lis_c.Lista_imprimir_ade();
 			
@@ -160,7 +169,12 @@ int main(int argc, char** argv)
 			
 			cout<<"--imprime atras-----"<<endl;
 			lis_c.Lista_imprimir_atra();
-			lis_c.Graf_filters();*/
+			lis_c.Graf_filters();
+
+    	}
+    	else if (opcion == "11")
+    	{
+			list_filtros.Lista_print_filters();
 
     	}
 		else if (opcion == "7")
@@ -179,7 +193,57 @@ int main(int argc, char** argv)
     return 0;
 }
 
-void tipo_filtro()
+void aplicando_filter_mat(int all_capa, string name_filtro)
+{
+	if(all_capa == 0){
+		
+
+		if(name_filtro == "NEGATIVE"){
+			
+			matrix mtx_negativo;
+			mtx_negativo = mtx_actual.imagen_original("N", a_no_pixel_x, a_no_pixel_y);
+			list_filtros.Insert_nod(0, mtx_negativo, "NEGATIVE");
+			
+			mtx_negativo.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
+			
+		}
+		
+		else if(name_filtro == "X-MIRROR"){
+			
+    		matrix mtx_espejo_x;
+    		mtx_espejo_x = mtx_actual.imagen_original("EX", arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
+    		
+    		mtx_espejo_x.Generando_css(arbol_im.imagen_actual_nod->pix_ima_w,arbol_im.imagen_actual_nod->pix_ima_h, arbol_im.imagen_actual_nod->pix_w, arbol_im.imagen_actual_nod->pix_h, arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
+    		
+    		list_filtros.Insert_nod(0, mtx_espejo_x, "X-MIRROR");
+		}
+		else if(name_filtro == "Y-MIRROR"){
+			
+    		matrix mtx_espejo_y;
+    		mtx_espejo_y = mtx_actual.imagen_original("EY", arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
+    		
+    		mtx_espejo_y.Generando_css(arbol_im.imagen_actual_nod->pix_ima_w,arbol_im.imagen_actual_nod->pix_ima_h, arbol_im.imagen_actual_nod->pix_w, arbol_im.imagen_actual_nod->pix_h, arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
+			list_filtros.Insert_nod(0, mtx_espejo_y, "Y-MIRROR");
+		}
+		else if(name_filtro == "XY-DOUBLE MIRROR"){
+
+    		matrix mtx_espejo_xy;
+    		mtx_espejo_xy = mtx_actual.imagen_original("EXY", arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
+    		
+    		mtx_espejo_xy.Generando_css(arbol_im.imagen_actual_nod->pix_ima_w,arbol_im.imagen_actual_nod->pix_ima_h, arbol_im.imagen_actual_nod->pix_w, arbol_im.imagen_actual_nod->pix_h, arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
+			list_filtros.Insert_nod(0, mtx_espejo_xy, "XY-DOUBLE MIRROR");
+		}
+		
+		cout <<"Filtro: "<<name_filtro<<" Aplicado."<<endl;
+		system("pause");
+		
+	}
+	else if(all_capa != 0){
+		
+	}
+}
+
+void tipo_filtro(string name_filtro)
 {
 	string opcion;
 	bool men = true;
@@ -199,9 +263,7 @@ void tipo_filtro()
     	
     	if (opcion == "1")
     	{
-    		//convirtiendo toda la matriz
-    		matrix mtx_invertido;
-    		//mtx_actual
+    		aplicando_filter_mat(0, name_filtro);		
 		}
 		else if (opcion == "2")
     	{Select_capas();
@@ -244,11 +306,16 @@ void menu_filters()
     	
     	if (opcion == "a" || opcion == "A")
     	{
-    		tipo_filtro();
+    		tipo_filtro("NEGATIVE");
 		}
 		else if (opcion == "b" || opcion == "B")
     	{
-    		tipo_filtro();
+    		tipo_filtro("GRAYSCALE");
+		}
+		else if (opcion == "c" || opcion == "C")
+    	{
+    		menu_mirror();
+			
 		}
     	else if (opcion == "0")
     	{
@@ -266,6 +333,52 @@ void menu_filters()
 	}
 }
 
+void menu_mirror()
+{
+	string opcion;
+	bool men = true;
+    while(men)
+    {
+    	
+		system("cls");
+	    cout <<"***********MIRROR***********\n\n";
+		cout <<"x. X-MIRROR (ESPEJO EN EJE X)"<<endl;
+		cout <<"y. Y-MIRROR (ESPEJO EN EJE Y)"<<endl;
+		cout <<"xy. DOUBLE MIRROR (ESPEJO EN AMBOS EJES)"<<endl;
+		cout <<endl<<endl;
+		cout <<"0. Regresar"<<endl<<endl;
+		cout <<"**************************\n\n";
+		
+		cout<<"Selecciona un Filtro:\n" ; cin>>opcion;
+    	cout <<"Reporte: "<<opcion<<endl;
+    	
+    	if (opcion == "x" || opcion == "X")
+    	{
+    		tipo_filtro("X-MIRROR");
+		}
+		else if (opcion == "y" || opcion == "Y")
+    	{
+    		tipo_filtro("Y-MIRROR");
+		}
+		else if (opcion == "xy" || opcion == "XY")
+    	{
+    		tipo_filtro("XY-DOUBLE MIRROR");
+		}
+    	else if (opcion == "0")
+    	{
+    		men = false;
+		}
+		else
+    	{
+    		system("cls");
+    		cout <<"(MIRROR) Tecla invalida, seleccione opcion valida "<<endl;
+    		system("pause");
+					
+    
+		} 
+    	
+	}
+}
 void MenuReport()
 {
 	arbol_im = read_ar.Retornando_arbol();
@@ -337,17 +450,17 @@ void Select_capas()
 		}
 		else if (opcion != "0" )
     	{
-			arbol_im.index_root = 0;
+			bool encontrado;
+			encontrado = false;
+			
 	    	index = atoi(opcion.c_str());
 	    	
-			arbol_im.Buscando_x_index(index);
+			encontrado = mtx_actual.Buscando_capa(index);
 			
-			if (arbol_im.imagen_actual_nod != NULL)
+			if (encontrado == true)
 	    	{
-	    		//cout <<"arbol_im.imagen_actual_nod->data: "<<arbol_im.imagen_actual_nod->data<<endl;
-	    		
-	    		cout <<"Imagen Seleccionada: "<<arbol_im.imagen_actual_nod->data<<endl;
-	    		mtx_actual = arbol_im.imagen_actual_nod->mat;
+
+	    		cout <<"Capa Seleccionada: "<<index<<endl;
 				system("pause");
 				men = false;
 			}
@@ -409,6 +522,16 @@ void Select_images()
 	    		
 	    		cout <<"Imagen Seleccionada: "<<arbol_im.imagen_actual_nod->data<<endl;
 	    		mtx_actual = arbol_im.imagen_actual_nod->mat;
+	    		
+	    		a_pix_ima_w = arbol_im.imagen_actual_nod->pix_ima_w;
+	    		a_pix_ima_h = arbol_im.imagen_actual_nod->pix_ima_h;
+	    		
+	    		a_pix_w = arbol_im.imagen_actual_nod->pix_w;
+	    		a_pix_h = arbol_im.imagen_actual_nod->pix_h;
+	    		
+	    		a_no_pixel_x = arbol_im.imagen_actual_nod->no_pixel_w;
+	    		a_no_pixel_y = arbol_im.imagen_actual_nod->no_pixel_h;
+	    		
 				system("pause");
 				men = false;
 			}

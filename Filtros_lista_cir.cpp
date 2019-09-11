@@ -12,8 +12,8 @@ bool Filtros_lista_cir :: esVacio() {
 	return (primero_head ==NULL);
 }	
 
-void Filtros_lista_cir :: Insert_nod(int val, matrix mat_cub) {
-	NodeCir *new_nod = new NodeCir(val, mat_cub);
+void Filtros_lista_cir :: Insert_nod(int tipo, matrix mat_cub,  string filtro) {
+	NodeCir *new_nod = new NodeCir(tipo, mat_cub, filtro);
  
 	if (esVacio() == true)
 	{
@@ -55,6 +55,31 @@ void Filtros_lista_cir :: Lista_imprimir_ade() {
             temp_prin = temp_prin->siguiente;
         }
         cout<<"emp_prin->val: "<< temp_prin->val <<endl;  
+        
+	} 
+
+}
+
+//Imprimir lista de filtros
+void Filtros_lista_cir :: Lista_print_filters() {
+	
+	if (esVacio() == true)
+	{
+		cout<< "La  lista esta vacia \n";
+	} 
+	else
+	{
+		int index = 0;
+		NodeCir *temp_prin = primero_head;
+        while (temp_prin != ultimo)
+		{   index++;
+			//cout<<"emp_prin->val: "<< temp_prin->val <<endl;   
+			cout<<index<<" - "<< temp_prin->filtro <<endl;     
+            temp_prin = temp_prin->siguiente;
+        }
+        index++;
+        cout<<index<<" - "<< temp_prin->filtro <<endl;
+        //cout<<"emp_prin->val: "<< temp_prin->val <<endl;  
         
 	} 
 

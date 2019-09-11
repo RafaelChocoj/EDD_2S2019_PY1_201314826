@@ -177,6 +177,20 @@ public:
     	
     void Capas_para_select();
     
+    //para negativo
+    //void imagen_negativo(matrix mat_neg);
+    matrix imagen_original(string tipo, int no_col, int no_lin );
+    void read_matrix_original(node *matrix_capa, matrix mat_negl);
+    
+    void read_matrix_espejo_x(node *matrix_capa, matrix mat_neg, int no_col);
+    void read_matrix_espejo_y(node *matrix_capa, matrix mat_neg, int no_lin);
+    
+    void read_matrix_espejo_xy(node *matrix_capa, matrix mat_neg, int no_col, int no_lin);
+    
+    bool Buscando_capa(int z);
+    
+    
+    
     
     
     

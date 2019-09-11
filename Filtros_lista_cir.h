@@ -15,13 +15,19 @@ public:
     int val;
     
     matrix mat;
+    string filtro;//nombre del fitltro
+    int tipo; //0 todo, diferente de 0, el numero de capa
     
-    NodeCir (int val, matrix mat_cub) {
-        this->val = val;
+    //NodeCir (int val, matrix mat_cub) {
+    NodeCir (int tip, matrix mat_cub, string fil) {
+        this->val = tip;
+        //tipo = tip;
+        
         siguiente = NULL;
         anterior = NULL;
         
         mat = mat_cub;
+        filtro = fil;
     }
 };
 
@@ -38,10 +44,12 @@ public:
 	size=0;
 	}
 	bool esVacio();
-	void Insert_nod(int val, matrix mat_cub);
+	void Insert_nod(int tipo, matrix mat_cub, string filtro);
 	void Lista_imprimir_ade();
 	void Lista_imprimir_atra();
 	void Graf_filters();
+	
+	void Lista_print_filters();
 };
 
 #endif

@@ -17,7 +17,7 @@ class Leer_archivo
 	public:
 		//NodeLay* root;
 		
-		void leer_arhivo_ima(std::string);
+		bool leer_arhivo_ima(std::string);
 		//void leer_arhivo_ima();
 		void read_path();
 		void Read_config(std::string);
