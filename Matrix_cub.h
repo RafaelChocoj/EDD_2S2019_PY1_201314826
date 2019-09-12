@@ -179,15 +179,20 @@ public:
     
     //para negativo
     //void imagen_negativo(matrix mat_neg);
-    matrix imagen_original(string tipo, int no_col, int no_lin );
-    void read_matrix_original(node *matrix_capa, matrix mat_negl);
+    matrix imagen_original(string tipo, int no_col, int no_lin, int all_capa );
     
-    void read_matrix_espejo_x(node *matrix_capa, matrix mat_neg, int no_col);
-    void read_matrix_espejo_y(node *matrix_capa, matrix mat_neg, int no_lin);
+    void read_matrix_negativ(node *matrix_capa, matrix mat_negl, int all_capa);
     
-    void read_matrix_espejo_xy(node *matrix_capa, matrix mat_neg, int no_col, int no_lin);
+    void read_matrix_espejo_x(node *matrix_capa, matrix mat_neg, int no_col, int all_capa);
+    void read_matrix_espejo_y(node *matrix_capa, matrix mat_neg, int no_lin, int all_capa);
+    
+    void read_matrix_espejo_xy(node *matrix_capa, matrix mat_neg, int no_col, int no_lin, int all_capa);
     
     bool Buscando_capa(int z);
+    
+    void read_matrix_gris(node *matrix_capa, matrix mat_mod, int all_capa);
+    
+    void read_matrix_collage(node *matrix_capa, matrix mat_mod, int no_col,int all_capa);
     
     
     

@@ -29,7 +29,7 @@ matrix mtx_actual;
 
 void Select_images();
 void menu_filters();
-void Select_capas();
+void Select_capas(string name_filtro);
 void menu_mirror();
 
 //para imagen actual
@@ -195,52 +195,90 @@ int main(int argc, char** argv)
 
 void aplicando_filter_mat(int all_capa, string name_filtro)
 {
-	if(all_capa == 0){
+	/*if(all_capa == 0){*/
 		
 
 		if(name_filtro == "NEGATIVE"){
 			
 			matrix mtx_negativo;
-			mtx_negativo = mtx_actual.imagen_original("N", a_no_pixel_x, a_no_pixel_y);
-			list_filtros.Insert_nod(0, mtx_negativo, "NEGATIVE");
+			mtx_negativo = mtx_actual.imagen_original("N", a_no_pixel_x, a_no_pixel_y, all_capa);
+			
+			list_filtros.Insert_nod(all_capa, mtx_negativo, "NEGATIVE");
 			
 			mtx_negativo.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
 			
 		}
-		
+		else if(name_filtro == "GRAYSCALE"){
+			
+			matrix mtx_gray;
+			mtx_gray = mtx_actual.imagen_original("G", a_no_pixel_x, a_no_pixel_y, all_capa);
+			
+			mtx_gray.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
+			
+			list_filtros.Insert_nod(all_capa, mtx_gray, "GRAYSCALE");
+			
+		}
+		else if(name_filtro == "COLLAGE"){
+			
+    		matrix mtx_collage;
+    		mtx_collage = mtx_actual.imagen_original("C", a_no_pixel_x*2, a_no_pixel_y*2, all_capa);
+    		
+    		//mtx_collage.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
+    		mtx_collage.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x*2, a_no_pixel_y*2);
+    		
+    		list_filtros.Insert_nod(all_capa, mtx_collage, "COLLAGE");
+    		//mtx_collage.Tipo_a_Graficar();
+		}
 		else if(name_filtro == "X-MIRROR"){
 			
     		matrix mtx_espejo_x;
-    		mtx_espejo_x = mtx_actual.imagen_original("EX", arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
+    		mtx_espejo_x = mtx_actual.imagen_original("EX", a_no_pixel_x, a_no_pixel_y, all_capa);
     		
-    		mtx_espejo_x.Generando_css(arbol_im.imagen_actual_nod->pix_ima_w,arbol_im.imagen_actual_nod->pix_ima_h, arbol_im.imagen_actual_nod->pix_w, arbol_im.imagen_actual_nod->pix_h, arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
+    		mtx_espejo_x.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
     		
-    		list_filtros.Insert_nod(0, mtx_espejo_x, "X-MIRROR");
+    		list_filtros.Insert_nod(all_capa, mtx_espejo_x, "X-MIRROR");
 		}
 		else if(name_filtro == "Y-MIRROR"){
 			
     		matrix mtx_espejo_y;
-    		mtx_espejo_y = mtx_actual.imagen_original("EY", arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
+    		mtx_espejo_y = mtx_actual.imagen_original("EY", a_no_pixel_x, a_no_pixel_y, all_capa);
     		
-    		mtx_espejo_y.Generando_css(arbol_im.imagen_actual_nod->pix_ima_w,arbol_im.imagen_actual_nod->pix_ima_h, arbol_im.imagen_actual_nod->pix_w, arbol_im.imagen_actual_nod->pix_h, arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
-			list_filtros.Insert_nod(0, mtx_espejo_y, "Y-MIRROR");
+    		mtx_espejo_y.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
+			list_filtros.Insert_nod(all_capa, mtx_espejo_y, "Y-MIRROR");
 		}
 		else if(name_filtro == "XY-DOUBLE MIRROR"){
 
     		matrix mtx_espejo_xy;
-    		mtx_espejo_xy = mtx_actual.imagen_original("EXY", arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
+    		mtx_espejo_xy = mtx_actual.imagen_original("EXY", a_no_pixel_x, a_no_pixel_y, all_capa);
     		
-    		mtx_espejo_xy.Generando_css(arbol_im.imagen_actual_nod->pix_ima_w,arbol_im.imagen_actual_nod->pix_ima_h, arbol_im.imagen_actual_nod->pix_w, arbol_im.imagen_actual_nod->pix_h, arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
-			list_filtros.Insert_nod(0, mtx_espejo_xy, "XY-DOUBLE MIRROR");
+    		mtx_espejo_xy.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
+			list_filtros.Insert_nod(all_capa, mtx_espejo_xy, "XY-DOUBLE MIRROR");
 		}
 		
-		cout <<"Filtro: "<<name_filtro<<" Aplicado."<<endl;
+		if(all_capa == 0){
+			cout <<"Filtro: "<<name_filtro<<" Aplicado."<<endl;
+		} else{
+			cout <<"Filtro: "<<name_filtro<<" Aplicado, Capa "<<all_capa<<endl;
+		}
 		system("pause");
 		
-	}
-	else if(all_capa != 0){
+	/*}*/
+	/*else if(all_capa != 0){
 		
-	}
+		if(name_filtro == "X-MIRROR"){
+			
+    		matrix mtx_espejo_x_cap;
+    		mtx_espejo_x_cap = mtx_actual.imagen_original("EX", a_no_pixel_x, a_no_pixel_y, all_capa);
+    		
+    		mtx_espejo_x_cap.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
+    		
+    		list_filtros.Insert_nod(all_capa, mtx_espejo_x_cap, "X-MIRROR capa ");
+		}
+		
+		cout <<"Filtro: "<<name_filtro<<" Aplicado, Capa "<<all_capa<<endl;
+		system("pause");
+		
+	}*/
 }
 
 void tipo_filtro(string name_filtro)
@@ -266,7 +304,7 @@ void tipo_filtro(string name_filtro)
     		aplicando_filter_mat(0, name_filtro);		
 		}
 		else if (opcion == "2")
-    	{Select_capas();
+    	{Select_capas(name_filtro);
 		}
     	else if (opcion == "0")
     	{
@@ -314,8 +352,17 @@ void menu_filters()
 		}
 		else if (opcion == "c" || opcion == "C")
     	{
-    		menu_mirror();
-			
+    		menu_mirror();	
+		}
+		else if (opcion == "d" || opcion == "D")
+    	{
+    		int rep_x, rep_y;
+    		//system("cls");
+    		//cout<<"Cantidad de repeticiones en X:\n" ; cin>>rep_x;
+    		//cout<<"Cantidad de repeticiones en Y:\n" ; cin>>rep_y;
+    		
+    		aplicando_filter_mat(0,"COLLAGE");
+    		//tipo_filtro("GRAYSCALE");
 		}
     	else if (opcion == "0")
     	{
@@ -424,7 +471,7 @@ void MenuReport()
 	}
 }
 
-void Select_capas()
+void Select_capas(string name_filtro)
 {
 	string opcion;
 	int index;
@@ -459,14 +506,14 @@ void Select_capas()
 			
 			if (encontrado == true)
 	    	{
-
 	    		cout <<"Capa Seleccionada: "<<index<<endl;
-				system("pause");
+	    		aplicando_filter_mat(index, name_filtro);
+				//system("pause");
 				men = false;
 			}
 			else
 			{
-				cout <<"Imagen no encontrada, selecciona una imagen valida"<<endl;
+				cout <<"Capa no encontrada, selecciona una capa valida"<<endl;
 				system("pause");
 			}
     	

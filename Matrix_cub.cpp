@@ -849,7 +849,11 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 		    			co_x<<temp->cor_x;
 		    			co_y<<temp->cor_y;
 		    			
-		    			y_gr<<alto - temp->cor_y;
+		    			////para normales
+		    			//y_gr<<alto - temp->cor_y;
+		    			
+		    			//para collage
+		    			y_gr<<alto - temp->cor_y*2;
 		    			
 		    			//xx =""; yy ="";
     					xx = co_x.str(); 
@@ -1363,8 +1367,12 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
     	//name_cap = "cap"+cap.str();
 
 		file_css = file_css + ".canvas {\n";  
-		file_css = file_css + "  width: "+ can_w.str() +"px; \n";    
-		file_css = file_css + "  height: "+can_h.str() +"px;\n";    
+		//file_css = file_css + "  width: "+ can_w.str() +"px; \n";    
+		//file_css = file_css + "  height: "+can_h.str() +"px;\n";  
+		
+		file_css = file_css + "  width: "+  "360" +"px; \n";    
+		file_css = file_css + "  height: "+  "360" +"px;\n";   
+		  
 		file_css = file_css + " }\n";  
 		
 		ostringstream px_w, px_h;
@@ -1570,9 +1578,9 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
     	while (temp != NULL) {
     	
     		if (temp->valor != "RAIZ"){
-    			cout<<temp->cor_z<<"--"<<endl;
+    			//cout<<temp->cor_z<<"--"<<endl;
     			if (z ==temp->cor_z){
-    				cout<<temp->cor_z<<" encontrado "<<endl;
+    				//cout<<temp->cor_z<<" encontrado "<<endl;
     				return true;
 					}
 				}
@@ -1586,57 +1594,49 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 ///**********************inicio*****para*crear*negativo imagen***********************////
 
 //void matrix :: imagen_negativo(matrix *mat_neg) {
-matrix matrix :: imagen_original(string tipo, int no_col, int no_lin) {
+matrix matrix :: imagen_original(string tipo, int no_col, int no_lin, int all_capa) {
     	
-    	matrix mat_neg;
-		//ostringstream can_w, can_h;
-		//can_w<<canvas_w;
-		//can_h<<canvas_h;
-		 
-		
-		//ostringstream px_w, px_h;
-		//px_w<<pix_w;
-		//px_h<<pix_h;
-			
+    	matrix mat_mod;
 
     	node *temp = head;
     	//while (temp->capa_up != NULL) { 
     	while (temp != NULL) { 
     	
-			cout<<temp->cor_z<<endl;
-    		
+			//cout<<temp->cor_z<<endl;
     		if (temp->valor != "RAIZ"){
     			
     			if (tipo == "N"){
-    				read_matrix_original(temp, mat_neg);
+    				read_matrix_negativ(temp, mat_mod, all_capa);
+    			}
+    			else if (tipo == "G"){
+    				read_matrix_gris(temp, mat_mod, all_capa);
+    			}
+    			else if (tipo == "C"){
+    				read_matrix_collage(temp, mat_mod, no_col, all_capa );
     			}
     			else if (tipo == "EX"){
-    				read_matrix_espejo_x(temp, mat_neg, no_col);
+    				read_matrix_espejo_x(temp, mat_mod, no_col, all_capa );
     			}
     			else if (tipo == "EY"){
-    				read_matrix_espejo_y(temp, mat_neg, no_col);
+    				read_matrix_espejo_y(temp, mat_mod, no_lin, all_capa);
     			}
     			else if (tipo == "EXY"){
-    				read_matrix_espejo_xy(temp, mat_neg, no_col, no_lin);
+    				read_matrix_espejo_xy(temp, mat_mod, no_col, no_lin, all_capa);
     			}
-    			
 			}
-			
-	    	
 	    	temp = temp->capa_up;
 		}  	
 		//cout<<temp->cor_z<<endl;
 		//read_matrix_original(temp, mat_neg);
 		
-		return mat_neg;
+		return mat_mod;
 	}
 	
-	void matrix :: read_matrix_original(node *matrix_capa, matrix mat_neg) {
+	void matrix :: read_matrix_negativ(node *matrix_capa, matrix mat_mod, int all_capa) {
 		
 		string c_r, c_g, c_b;
 		string rgb_negative = "";
 		int r_neg, g_neg, b_neg;
-		
 		
     	////node *temp = head;
     	node *temp = matrix_capa;
@@ -1650,76 +1650,185 @@ matrix matrix :: imagen_original(string tipo, int no_col, int no_lin) {
     	node *temp_inicio;	
     	node *temp_sup_ini;
 		   	
-
     	while (temp != NULL) { 
-
 	    	temp_inicio = temp;
-
 	    	while (temp != NULL) { 
 						
 						if (temp->tipo == "N")
 						{
-
-							//ostringstream k_str;
-							//k = 0;
-							////k = i(y) * Numero Columnas + j(x)
-							////k = temp->cor_y  * no_col + temp->cor_x; 
-							//k = ((temp->cor_y - 1 ) * no_col ) + (temp->cor_x - 1); 
-							//k = k +1;
-							//k_str<<k;
-							
-							cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
+							//cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
 							color_completo = temp->valor;
 							//cout<<"color_completo"<<color_completo<<endl;
 							 
+							if (all_capa == 0 || temp->cor_z == all_capa){
+								stringstream col(color_completo);
+								getline(col, c_r, '-');
+								getline(col, c_g, '-');
+								getline(col, c_b, '-');
+								
+								r_neg = 255 -  atoi(c_r.c_str());
+								g_neg = 255 -  atoi(c_g.c_str());
+								b_neg = 255 -  atoi(c_b.c_str());
+								
+						    	ostringstream neg_r, neg_g, neg_b;
+						    	neg_r<<r_neg;
+						    	neg_g<<g_neg;
+						    	neg_b<<b_neg;
+						    	rgb_negative = neg_r.str() + "-" + neg_g.str() + "-" +neg_b.str();
+								//cout<<"rgb_negative"<<rgb_negative<<endl; 
+							}
+							//mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_negative , "tempo");
 							
-							stringstream col(color_completo);
-							getline(col, c_r, '-');
-							getline(col, c_g, '-');
-							getline(col, c_b, '-');
-							
-							r_neg = 255 -  atoi(c_r.c_str());
-							g_neg = 255 -  atoi(c_g.c_str());
-							b_neg = 255 -  atoi(c_b.c_str());
-							
-					    	ostringstream neg_r, neg_g, neg_b;
-					    	neg_r<<r_neg;
-					    	neg_g<<g_neg;
-					    	neg_b<<b_neg;
-					    	rgb_negative = neg_r.str() + "-" + neg_g.str() + "-" +neg_b.str();
-							//cout<<"rgb_negative"<<rgb_negative<<endl; 
-							
-							//color_hexa = RGBToHex( atoi(c_r.c_str()), atoi(c_g.c_str()), atoi(c_b.c_str()) );
-							
-							//mt.add(0, colum_x, linea_y, layer, dat, files);
-							//mat_neg.add(0, temp->cor_x, temp->cor_y, temp->cor_z, temp->data, "tempo");
-							mat_neg.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_negative , "tempo");
-
-							//color_hexa = RGBToHex( atoi(c_r.c_str()), atoi(c_g.c_str()), atoi(c_b.c_str()) );
-
-						}
-						
-											    	
+							//all_capa == 0 , entonces es para toda la capa
+							if (all_capa == 0)
+							{mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_negative , "tempo");	}
+							else /// entonces es solo una capa
+							{
+								if (temp->cor_z == all_capa){
+									mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_negative , "tempo");
+								} else {
+									mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+								}
+								
+							}
+						}					    	
 		    	temp = temp->right;
 			}
-			
-		
 			temp = temp_inicio;
 	    	temp = temp->down;
 	    	
 	    	cout<<endl;
 		}  	
-
     }
     
-    void matrix :: read_matrix_espejo_x(node *matrix_capa, matrix mat_neg, int no_col) {
+    void matrix :: read_matrix_gris(node *matrix_capa, matrix mat_mod, int all_capa) {
+		
+		string c_r, c_g, c_b;
+		string rgb_gris = "";
+		int r_neg, g_neg, b_neg;
 		
     	////node *temp = head;
     	node *temp = matrix_capa;
     	
-    	no_col = no_col + 1;
+    	string color_completo;
+    	string color_hexa;
+    	int no_col;
+    	int es_gris;
     	
     	//node *temp = nodo_x_nivel;
+    	node *temp_inicio;	
+    	node *temp_sup_ini;
+		   	
+    	while (temp != NULL) { 
+	    	temp_inicio = temp;
+	    	while (temp != NULL) { 
+						
+						if (temp->tipo == "N")
+						{
+							//cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
+							color_completo = temp->valor;
+							//cout<<"color_completo"<<color_completo<<endl;
+							 
+							if (all_capa == 0 || temp->cor_z == all_capa){
+								stringstream col(color_completo);
+								getline(col, c_r, '-');
+								getline(col, c_g, '-');
+								getline(col, c_b, '-');
+								
+								/*r_neg = 255 -  atoi(c_r.c_str());
+								g_neg = 255 -  atoi(c_g.c_str());
+								b_neg = 255 -  atoi(c_b.c_str());*/
+								
+								es_gris = (atoi(c_r.c_str()) + atoi(c_g.c_str()) +atoi(c_b.c_str()) )/3;
+								
+						    	ostringstream gris_color;
+						    	gris_color<<es_gris;
+						    	
+						    	rgb_gris = gris_color.str() + "-" + gris_color.str() + "-" +gris_color.str();
+								//cout<<"rgb_negative"<<rgb_negative<<endl; 
+							}
+							//mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_negative , "tempo");
+							
+							//all_capa == 0 , entonces es para toda la capa
+							if (all_capa == 0)
+							{mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_gris , "tempo");	}
+							else /// entonces es solo una capa
+							{
+								if (temp->cor_z == all_capa){
+									mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_gris , "tempo");
+								} else {
+									mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+								}
+								
+							}
+						}					    	
+		    	temp = temp->right;
+			}
+			temp = temp_inicio;
+	    	temp = temp->down;
+	    	
+	    	cout<<endl;
+		}  	
+    }
+    
+	void matrix :: read_matrix_collage(node *matrix_capa, matrix mat_mod, int no_col,int all_capa) {
+		
+		int no_x, no_y;
+		no_x = 2;
+		no_y = 2;
+		
+		for(int y = 1; y<=no_y ; y++){
+			for(int x = 1; x<=no_x ; x++){
+
+		
+    	///node *temp = head;
+    	node *temp = matrix_capa;
+    	no_col = no_col + 1;
+    	
+    	node *temp_inicio;	
+    	node *temp_sup_ini;
+		   	
+
+    	while (temp != NULL) { 
+	    	temp_inicio = temp;
+	    	while (temp != NULL) { 
+						
+					if (temp->tipo == "N")
+					{
+						cout<<"("<<x<<","<<y<<") ";
+						mat_mod.add(temp->data, x*temp->cor_x, y*temp->cor_y, temp->cor_z, temp->valor , "tempo");
+						////all_capa == 0 , entonces es para toda la capa
+						//if (all_capa == 0)
+						//{mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");	}
+						//else /// entonces es solo una capa
+						//{
+						//	if (temp->cor_z == all_capa){
+						//		mat_mod.add(temp->data, no_col - temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+						//	} else {
+						//		mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+						//	}	
+						//}
+					}					    	
+		    	temp = temp->right;
+			}
+			
+			temp = temp_inicio;
+	    	temp = temp->down;
+	    	//cout<<endl;
+		}  	
+		
+		
+			}
+			cout<<endl;
+		}
+    }
+    
+    void matrix :: read_matrix_espejo_x(node *matrix_capa, matrix mat_mod, int no_col,int all_capa) {
+		
+    	///node *temp = head;
+    	node *temp = matrix_capa;
+    	no_col = no_col + 1;
+    	
     	node *temp_inicio;	
     	node *temp_sup_ini;
 		   	
@@ -1727,33 +1836,85 @@ matrix matrix :: imagen_original(string tipo, int no_col, int no_lin) {
     	while (temp != NULL) { 
 
 	    	temp_inicio = temp;
-
 	    	while (temp != NULL) { 
 						
-						if (temp->tipo == "N")
+					if (temp->tipo == "N")
+					{
+						//cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
+						//all_capa == 0 , entonces es para toda la capa
+						if (all_capa == 0)
+						{mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");	}
+						else /// entonces es solo una capa
 						{
-							cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
-							mat_neg.add(temp->data, no_col - temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+							if (temp->cor_z == all_capa){
+								mat_mod.add(temp->data, no_col - temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+							} else {
+								mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+							}
 							
 						}
-						
-											    	
+					}					    	
 		    	temp = temp->right;
 			}
 			
-		
 			temp = temp_inicio;
 	    	temp = temp->down;
 	    	
-	    	cout<<endl;
+	    	//cout<<endl;
 		}  	
     }
     
-     void matrix :: read_matrix_espejo_y(node *matrix_capa, matrix mat_neg, int no_lin) {
+     void matrix :: read_matrix_espejo_y(node *matrix_capa, matrix mat_neg, int no_lin, int all_capa) {
 		
     	////node *temp = head;
     	node *temp = matrix_capa;
     	
+    	no_lin = no_lin + 1;
+    	
+    	//node *temp = nodo_x_nivel;
+    	node *temp_inicio;	
+    	node *temp_sup_ini;
+		   	
+
+    	while (temp != NULL) { 
+	    	temp_inicio = temp;
+	    	while (temp != NULL) { 
+						
+						if (temp->tipo == "N")
+						{
+							//cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
+							//mat_neg.add(temp->data, temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , "tempo");
+							
+							//all_capa == 0 , entonces es para toda la capa
+							if (all_capa == 0)
+							{mat_neg.add(temp->data, temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , "tempo");	}
+							else /// entonces es solo una capa
+							{
+								if (temp->cor_z == all_capa){
+									mat_neg.add(temp->data, temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , "tempo");
+								} else {
+									mat_neg.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+								}
+								
+							}
+							
+						}
+					    	
+		    	temp = temp->right;
+			}
+			temp = temp_inicio;
+	    	temp = temp->down;
+	    	
+	    	//cout<<endl;
+		}  	
+    }
+    
+    void matrix :: read_matrix_espejo_xy(node *matrix_capa, matrix mat_neg, int no_col, int no_lin, int all_capa) {
+		
+    	////node *temp = head;
+    	node *temp = matrix_capa;
+    	
+    	no_col = no_col + 1;
     	no_lin = no_lin + 1;
     	
     	//node *temp = nodo_x_nivel;
@@ -1769,58 +1930,29 @@ matrix matrix :: imagen_original(string tipo, int no_col, int no_lin) {
 						
 						if (temp->tipo == "N")
 						{
-							cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
-							mat_neg.add(temp->data, temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , "tempo");
+							//cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
+							//mat_neg.add(temp->data, no_col - temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , "tempo");
 							
-						}
+							//all_capa == 0 , entonces es para toda la capa	
+							if (all_capa == 0)
+							{mat_neg.add(temp->data, no_col - temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , "tempo");	}
+							else /// entonces es solo una capa
+							{
+								if (temp->cor_z == all_capa){
+									mat_neg.add(temp->data, no_col - temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , "tempo");
+								} else {
+									mat_neg.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+								}
+								
+							}	
 						
-											    	
+						}				    	
 		    	temp = temp->right;
 			}
-			
-		
+
 			temp = temp_inicio;
 	    	temp = temp->down;
-	    	
-	    	cout<<endl;
-		}  	
-    }
-    
-    void matrix :: read_matrix_espejo_xy(node *matrix_capa, matrix mat_neg, int no_col, int no_lin) {
-		
-    	////node *temp = head;
-    	node *temp = matrix_capa;
-    	
-    	no_col = no_col + 1;
-    	no_lin = no_lin + 1;
-    	
-    	//node *temp = nodo_x_nivel;
-    	node *temp_inicio;	
-    	node *temp_sup_ini;
-		   	
-
-    	while (temp != NULL) { 
-
-	    	temp_inicio = temp;
-
-	    	while (temp != NULL) { 
-						
-						if (temp->tipo == "N")
-						{
-							cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
-							mat_neg.add(temp->data, no_col - temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , "tempo");
-							
-						}
-						
-											    	
-		    	temp = temp->right;
-			}
-			
-		
-			temp = temp_inicio;
-	    	temp = temp->down;
-	    	
-	    	cout<<endl;
+	    	//cout<<endl;
 		}  	
     }
 
