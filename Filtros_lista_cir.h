@@ -38,6 +38,8 @@ public:
 	NodeCir *primero_head;
 	NodeCir *ultimo;
 	
+	string name_actual;
+	
 	Filtros_lista_cir () {
 	primero_head = NULL;
 	ultimo = NULL;
@@ -50,6 +52,9 @@ public:
 	void Graf_filters();
 	
 	void Lista_print_filters();
+	
+	bool Buscando_ima(int i);
+	matrix return_mat_ima(int in);
 };
 
 #endif

@@ -115,14 +115,20 @@ public:
     
     /////****inicio******para*imprimir*matriz*en*grapiz******************//
     void create_archivo(string nombre, string contenido);
+    void create_archivo_linear(string nombre, string contenido);
     
     int alto_mat();
     
     int alto_mat_x_cap(node *matrix_head);
+    int ancho_mat_x_cap(node *matrix_head);
     
-    void Tipo_a_Graficar();
+    //void Tipo_a_Graficar();
+    void Tipo_a_Graficar_back();
+    void Tipo_a_Graficar(int capa);
+    void Tipo_a_Graficar_linear(int capa, string name_cap);
     
     void print_Grafica_matrix(node *matrix_capa, string name_cap);
+    void print_Grafica_matrix_linear(node *matrix_capa, string name_cap, string tipo_lin);
 
     /////****fin******para*imprimir*matriz*en*grapiz******************//
     
@@ -168,7 +174,7 @@ public:
     
     int no_columnas_mat();
     
-    void Generando_css(int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto);
+    void Generando_css(int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto, string nam_completo, string nombre);
     void read_matrix_css_html(node *matrix_capa, int canvas_w, int canvas_h, int pix_w, int pix_, int no_pix_ancho, int no_pix_alto);
     
     void create_file_images(string nombre, string contenido);
@@ -180,6 +186,7 @@ public:
     //para negativo
     //void imagen_negativo(matrix mat_neg);
     matrix imagen_original(string tipo, int no_col, int no_lin, int all_capa );
+    matrix imagen_original_col_mos(string tipo, int no_col, int no_lin, int all_capa, int rep_x, int rep_y);
     
     void read_matrix_negativ(node *matrix_capa, matrix mat_negl, int all_capa);
     
@@ -192,7 +199,9 @@ public:
     
     void read_matrix_gris(node *matrix_capa, matrix mat_mod, int all_capa);
     
-    void read_matrix_collage(node *matrix_capa, matrix mat_mod, int no_col,int all_capa);
+    void read_matrix_collage(node *matrix_capa, matrix mat_mod, int no_col, int no_lin, int all_capa, int rep_x, int rep_y);
+    
+    
     
     
     

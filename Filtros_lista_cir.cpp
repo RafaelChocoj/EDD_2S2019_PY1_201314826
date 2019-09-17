@@ -73,16 +73,77 @@ void Filtros_lista_cir :: Lista_print_filters() {
 		NodeCir *temp_prin = primero_head;
         while (temp_prin != ultimo)
 		{   index++;
-			//cout<<"emp_prin->val: "<< temp_prin->val <<endl;   
-			cout<<index<<" - "<< temp_prin->filtro <<endl;     
+			////cout<<"emp_prin->val: "<< temp_prin->val <<endl;   
+			//cout<<index<<" - "<< temp_prin->filtro <<endl;     
+			
+			cout<<index<<" - "<< temp_prin->filtro; 
+			if (temp_prin->val != 0){
+				cout<<" Capa "<< temp_prin->val; 
+			}
+			
+			cout<<endl; 
             temp_prin = temp_prin->siguiente;
         }
         index++;
-        cout<<index<<" - "<< temp_prin->filtro <<endl;
-        //cout<<"emp_prin->val: "<< temp_prin->val <<endl;  
+        cout<<index<<" - "<< temp_prin->filtro; 
+        if (temp_prin->val != 0){
+				cout<<" Capa "<< temp_prin->val <<endl; 
+			}
         
 	} 
 
+}
+
+
+bool Filtros_lista_cir :: Buscando_ima(int in) {
+    	int index = 0;
+		NodeCir *temp_prin = primero_head;
+    	while (temp_prin != ultimo){
+		index++;	
+		//cout<<"index : "<< index<<"*"<< temp_prin->filtro <<endl; 
+			if (in == index){
+				//cout<<"ee : "<< temp_prin->filtro <<endl; 
+				return true;
+			}
+	    	temp_prin = temp_prin->siguiente;
+		}
+		index++;	
+		if (in == index){
+			//cout<<"22 encontrado: "<< temp_prin->filtro <<endl; 
+			return true;
+		}
+		return false;
+}
+
+matrix Filtros_lista_cir :: return_mat_ima(int in) {
+
+    	int index = 0;
+		NodeCir *temp_prin = primero_head;
+    	while (temp_prin != ultimo){
+		index++;	
+			if (in == index){
+				
+				name_actual = temp_prin->filtro; 
+				if (temp_prin->val != 0){
+					ostringstream cap;
+			    	cap<<temp_prin->val;
+					name_actual = name_actual +" Capa "+cap.str();
+				}
+				return temp_prin->mat;
+			}
+	    	temp_prin = temp_prin->siguiente;
+		}
+		index++;	
+		if (in == index){
+			
+			name_actual = temp_prin->filtro; 
+			if (temp_prin->val != 0){
+				ostringstream cap;
+		    	cap<<temp_prin->val;
+				name_actual = name_actual +" Capa "+cap.str();
+			}
+			return temp_prin->mat;
+		}
 }
 
 //Imprimir lista atras

@@ -131,18 +131,25 @@ void arbol_images :: Buscando_x_index( Node *root, int index) {
         	/*si encuentro entonces retorno nodo de arbol*/
         	imagen_actual_nod = root;
         	//cout << "vimagen_actual_nod *** " << imagen_actual_nod->data<<endl;
-        	
-			//return *root;
         	return;
-        
 		}
-        
         //grafica_orden = grafica_orden + " " + root->data;
         Buscando_x_index(root -> n_der, index);
     }
-    
 }
 
+
+void arbol_images :: Buscando_x_index_report( Node *root, int index) {
+    if (root != NULL) {
+        Buscando_x_index_report(root -> n_izq, index);
+        index_root++;
+        if (index_root == index){
+        	imagen_a_reportar = root;
+        	return;
+		}
+        Buscando_x_index_report(root -> n_der, index);
+    }
+}
 
 
 
@@ -184,12 +191,24 @@ void arbol_images :: VerArbol( Node *root) {
        		
        	}
        	
-       	
-       	
        	grafica_orden = grafica_orden + tem_nod;
        	
-       	grafica_orden = grafica_orden +"nodo"+ root->data  +" [ label =\"<C0>|"+ root->data + "|<C1>\"]; \n";
-        cout  << root->data <<endl;
+       	//grafica_orden = grafica_orden +"nodo"+ root->data  +" [ label =\"<C0>|"+ root->data + "|<C1>\"]; \n";
+       	
+       	ostringstream pi_h, pi_w;
+    	pi_h<<root->pix_h;
+    	pi_w<<root->pix_w;
+    	string pix_dim = "pixel: "+ pi_w.str() + "h, "+ pi_h.str()+"w";
+    	
+    	ostringstream ima_h, ima_w;
+    	ima_h<<root->pix_ima_h;
+    	ima_w<<root->pix_ima_w;
+    	string ima_dim = "ima: "+ ima_w.str() + "h, "+ ima_h.str()+"w";
+       	
+		grafica_orden = grafica_orden +"nodo"+ root->data  +" [ label =\"<C0>|"+ root->data +" - "+ pix_dim +" - "+ ima_dim +"|<C1>\"]; \n";
+       	
+       	
+        //cout  << root->data <<endl;
         VerArbol(root -> n_der /*, cont+1, "D"*/ );
         //VerArbol(root -> n_izq, cont+1, "I");
     }
@@ -209,8 +228,9 @@ void arbol_images::Graficando_arbol() {
 	grafica_orden = grafica_orden + "node [shape = record, fillcolor=seashell2];\n";
 	VerArbol();
     grafica_orden = grafica_orden + "\n}\n";
-    cout << "arbol bonario: \n";
-    //cout << "grafica_orden: "<<grafica_orden <<endl;
+    
+    //cout << "arbol bonario: \n";
+    ////cout << "grafica_orden: "<<grafica_orden <<endl;
 	create_archivo("graf_arbol",grafica_orden);
 	
 }

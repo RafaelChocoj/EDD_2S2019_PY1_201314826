@@ -1,0 +1,9 @@
+digraph G { rankdir=LR
+node [shape=record dir=both];
+p0[label = "{<f0>|<f1> Inicio|<f2> }"];
+p0 -> p1;
+p1[label = "{<f0>|<f1> (1,1) 178-34-34|<f2> }"];
+p1 -> p2;
+p2[label = "{<f0>|<f1> (2,6) 220-220-220|<f2> }"];
+
+}

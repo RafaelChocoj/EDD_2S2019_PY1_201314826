@@ -120,7 +120,7 @@ void Leer_archivo::read_path()
 	if (encontrado == true){
 		//cout<<"strlen(path_archivo.c_str()): "<<strlen(path_archivo.c_str())<<endl;	
 		pun = path_archivo.find(".csv");
-		cout<<"encontrado: "<<encontrado<<endl;
+		//cout<<"encontrado: "<<encontrado<<endl;
 		
 		nombre_ima = path_archivo.substr(0, pun);
 		//cout<<"nombre_ima: "<<nombre_ima<<endl;
@@ -131,8 +131,8 @@ void Leer_archivo::read_path()
 		
 		inorder_layer(ar_leyers.root);
 	
-		mt.print_node_cor_orde_zz();
-		///mt.Tipo_a_Graficar();
+		//mt.print_node_cor_orde_zz();
+		/////mt.Tipo_a_Graficar();
 		
 		//////guardando nombre en arbol
 		arbol.insert(nombre_ima.c_str(),mt, pix_w, pix_h,  pix_ima_w, pix_ima_h, no_pixel_w, no_pixel_h);
@@ -242,8 +242,8 @@ void Leer_archivo::Read_config(string file)
  		no_pixel_w = ima_w;
 		no_pixel_h = ima_h;
  		
- 		cout <<"pix_ima_w: "<<pix_ima_w<<endl;
- 		cout <<"pix_ima_h: "<<pix_ima_h<<endl;
+ 		//cout <<"pix_ima_w: "<<pix_ima_w<<endl;
+ 		//cout <<"pix_ima_h: "<<pix_ima_h<<endl;
 	 }
 }
 
@@ -302,6 +302,7 @@ void Leer_archivo::Read_capas(string files, int layer)
 	 			//cout<<"-dat: "<<dat<<'\t'<<"     "; 	
 				
 				/*****inicio bloque agregando a matrix*****/
+				
 				cout<<dat<<'\t'<<"     "; 
 				
 				if (dat == "x" || dat == "X")

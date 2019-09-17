@@ -42,6 +42,7 @@ public:
     Node* root;
     
     Node* imagen_actual_nod;
+    Node* imagen_a_reportar;
     
     int size=0;
     int index_root;
@@ -78,6 +79,10 @@ public:
     /*para buscar por index*/
     void Buscando_x_index(int index)  {  Buscando_x_index(root, index);};
     void Buscando_x_index( Node* actual, int index);
+    
+    /*para enocntrar a reportar*/
+    void Buscando_x_index_report(int index)  {  Buscando_x_index_report(root, index);};
+    void Buscando_x_index_report( Node* actual, int index);
     
     //Node Retorno_nodo_imagen(Node *root_nod);
     

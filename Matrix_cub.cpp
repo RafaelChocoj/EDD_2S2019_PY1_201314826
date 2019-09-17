@@ -407,8 +407,10 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
     		tem = tem->down;
 		}
 		if(tem->right == NULL){
+			
 			tem->right = new_node;
 			new_node->left = tem;
+		
 			//if( 4 == y && 7 == x ){cout<<"if1"<<endl;}
 		}
 		//else if(tem->right->cor_x >= x ){
@@ -444,8 +446,35 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 			//if(temp_der->cor_y != y && temp_der->cor_x != x ){	
     		if(temp_der->cor_y == y && temp_der->cor_x == x ){
     		}else{
+    			
+    			
+    			
+    			node *ul_der = NULL;
+    			if (temp_der->right != NULL ){
+    				ul_der = temp_der->right;
+    				
+    				/*if (y == 6 && x == 7)
+	    			{
+	    				cout<<endl;
+	    				cout<<"ccx: "<< x <<" cc y: "<< y <<endl;
+	    				cout<<"temp_der->right->cor_y: "<< temp_der->right->cor_y <<" temp_der->right->cor_x: "<< temp_der->right->cor_x <<endl;
+	    				cout<<"ul_der->cor_y: "<< ul_der->cor_y <<" ul_der->cor_x: "<< ul_der->cor_x <<endl;
+	    				system("pause");
+					}*/
+				}
+    			
     			temp_der->right = new_node;
 				new_node->left = temp_der;
+				
+				//para que enlace el que estaba antes
+				if (ul_der != NULL ){
+										
+    				new_node->right = ul_der;
+					ul_der->left = new_node;
+				}
+				
+				
+				
 			}
 		}
 	}
@@ -737,13 +766,30 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 		file.close();
 		string dot, ima;
 		//os.system("fdp -Tpng -o graph-g.png ejemplo.dot")
-		dot = "fdp -Tpng "+ nom_ar + " -o "+nombre + ".jpg";
+		//dot = "fdp -Tpng "+ nom_ar + " -o "+nombre + ".jpg";
+		dot = "neato -Tpng "+ nom_ar + " -o "+nombre + ".jpg";
 		ima = nombre + ".jpg";
 		system(dot.c_str());
 	    system(ima.c_str());
 	    
 	    system(nom_ar.c_str());
-
+	}
+	
+	void matrix :: create_archivo_linear(string nombre, string contenido) {
+    	
+    	string nom_ar = "";
+		nom_ar = nombre + ".txt";
+		ofstream file;
+		file.open(nom_ar.c_str());
+		file <<contenido;
+		file.close();
+		string dot, ima;
+		dot = "dot -Tpng "+ nom_ar + " -o "+nombre + ".jpg";
+		ima = nombre + ".jpg";
+		system(dot.c_str());
+	    system(ima.c_str());
+	    
+	    system(nom_ar.c_str());
 	}
     
     int matrix :: alto_mat(){
@@ -768,7 +814,17 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
     	return alt;
 	}
     
-    void matrix :: Tipo_a_Graficar() {
+    int matrix :: ancho_mat_x_cap(node *matrix_head){
+    	int anch = 0;
+    	
+    	node *temp = matrix_head;
+    	while (temp->right != NULL) { 
+    		temp = temp->right;
+    	}
+    	anch = temp->cor_x;
+    	return anch;
+	}
+    void matrix :: Tipo_a_Graficar_back() {
     	
     	//node *temp = head;
     	//print_Grafica_matrix(temp);
@@ -794,6 +850,205 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 		
 	}
     
+    void matrix :: Tipo_a_Graficar(int capa) {
+    	
+    	//node *temp = head;
+    	//print_Grafica_matrix(temp);
+    	
+    	string name_cap;
+    	
+    	node *temp = head;
+    	//while (temp->capa_up != NULL) { 
+    	while (temp != NULL) { 
+	    	//cout<<"c_o_z: "<<temp->data<<endl;
+	    	
+	    	if (capa == 0){
+	    		ostringstream cap;
+		    	cap<<temp->cor_z;
+	    		name_cap = "cap"+cap.str();
+		    	print_Grafica_matrix(temp, name_cap);
+			}
+	    	else if (capa != 0 && capa == temp->cor_z ){
+	    		ostringstream cap;
+		    	cap<<temp->cor_z;
+	    		name_cap = "cap"+cap.str();
+		    	print_Grafica_matrix(temp, name_cap);
+			} 
+	    	
+	    	
+	    	temp = temp->capa_up;
+		}  	
+		//cout<<"c_o_z: "<<temp->data<<endl;
+		
+		//ostringstream cap;
+		//cap<<temp->cor_z;
+    	//name_cap = "cap"+cap.str();
+		//print_Grafica_matrix(temp, name_cap);
+		
+	}
+	
+	void matrix :: Tipo_a_Graficar_linear(int capa, string tipo_lin) {
+    	string name_cap;
+    	
+    	node *temp = head;
+    	//while (temp->capa_up != NULL) { 
+    	while (temp != NULL) { 
+	    	if (capa == 0){
+	    		ostringstream cap;
+		    	cap<<temp->cor_z;
+	    		name_cap = "cap"+cap.str();
+		    	print_Grafica_matrix_linear(temp, name_cap, tipo_lin);
+			}
+	    	else if (capa != 0 && capa == temp->cor_z ){
+	    		ostringstream cap;
+		    	cap<<temp->cor_z;
+	    		name_cap = "cap"+cap.str();
+		    	print_Grafica_matrix_linear(temp, name_cap, tipo_lin);
+			} 
+	    	temp = temp->capa_up;
+		}  	
+	}
+	
+	void matrix :: print_Grafica_matrix_linear(node *matrix_capa, string name_cap, string tipo_lin) {
+    	
+		string graf_matrix_lin_filas;
+    	string xx, yy;
+    	string xx2, yy2;
+    	
+    	string nodo_name, nodo_name_sig;
+		int nod = 0; 
+		    			
+    	int alto;
+    	int ancho;
+    	
+    	graf_matrix_lin_filas = "";
+		graf_matrix_lin_filas = graf_matrix_lin_filas + "digraph G { rankdir=LR\n";
+		graf_matrix_lin_filas = graf_matrix_lin_filas + "node [shape=record dir=both];\n";
+		//graf_matrix_lin_filas = graf_matrix_lin_filas + "node [shape=record dir=both];\n";
+    	
+    	graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+"0"+"[label = \"{<f0>|<f1> " + "Inicio" + "|<f2> }\"];\n";  
+							
+    	graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+"0" +" -> ";    
+		graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+"1" +";\n";	
+							
+    	////node *temp = head;
+    	node *temp = matrix_capa;
+    	
+    	//alto = alto_mat();
+    	alto = alto_mat_x_cap(temp);
+    	ancho = ancho_mat_x_cap(temp);
+    	
+    	//node *temp = nodo_x_nivel;
+    	node *temp_inicio;
+    	node *temp_sup_ini;
+		   	
+    	/*para recorrer para la derecha*/
+    	//while (temp->down != NULL) { 
+    	while (temp != NULL) { 
+	    	temp_inicio = temp;
+	    	/*para recorrer para abajo*/
+	    	while (temp != NULL) { 
+				//if (temp != NULL){
+		    		//cout<<"x: "<<temp->data<<" ";	
+
+						if (temp->tipo == "N"){
+							nod++;
+		    			//cout<<"temp->cor_x ("<<temp->cor_x<<")";
+		    			ostringstream co_x,  co_y, nod_n, nod_n_s;
+		    			
+		    			co_x<<temp->cor_x;
+		    			co_y<<temp->cor_y;
+		    			
+		    			////para normales
+		    			//y_gr<<alto - temp->cor_y;
+
+		    			
+		    			//xx =""; yy ="";
+    					xx = co_x.str(); 
+						yy = co_y.str();
+						//y_grap = y_gr.str();
+						//cout<<"xx ("<<xx<<")";
+		    			//cout<<"yy ("<<yy<<")";
+		    			nod_n<<nod;
+		    			nod_n_s<<nod+1;
+		    			
+		    			nodo_name = nod_n.str();
+            			nodo_name_sig  = nod_n_s.str();
+            
+		    			
+			    			//cout<<"("<<xx<<","<<yy<<") "<<temp->valor<<"->"<<endl;
+			    			////graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+xx+"_"+yy +"[label = \"{<f0>|<f1> " + "("+xx+","+yy+") "+temp->valor + "|<f2> }\"];\n";  
+							graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name+"[label = \"{<f0>|<f1> " + "("+xx+","+yy+") "+temp->valor + "|<f2> }\"];\n";  
+							
+							
+							//flechas
+							/*graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+xx+"_"+yy +" -> ";
+							if (temp->right != NULL //&& temp->down != NULL){
+								ostringstream co_x2,  co_y2;
+								co_x2<<temp->right->cor_x;
+			    				co_y2<<temp->right->cor_y;
+			    				
+			    				xx2 = co_x2.str(); 
+								yy2 = co_y2.str();
+
+								graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+xx2+"_"+yy2 +";\n";
+							}*/  
+							
+							if (tipo_lin == "LIN")
+					    	{
+					    		if (alto == temp->cor_y && temp->right == NULL){
+								//cout<<"alto:"<<alto<<", temp->cor_z"<<temp->cor_y<<endl;
+								}else{
+		
+									graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name +" -> ";    
+									graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name_sig +";\n";
+								}
+							}
+							else if (tipo_lin == "COL")
+					    	{
+					    		if (ancho == temp->cor_x && temp->down == NULL){
+								}else{
+		
+									graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name +" -> ";    
+									graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name_sig +";\n";
+								}
+							}
+							
+							
+							
+											
+						}
+						    	
+		    	//temp = temp->right;
+		    	if (tipo_lin == "LIN"){
+		    		temp = temp->right;
+				}
+				else if (tipo_lin == "COL"){
+		    		temp = temp->down;
+				}
+			}		
+			temp = temp_inicio;
+	    	//temp = temp->down;
+	    	
+	    	if (tipo_lin == "LIN"){
+	    		temp = temp->down;
+			}
+			else if (tipo_lin == "COL"){
+	    		temp = temp->right;
+			}
+	    	//cout<<endl;
+		}  	
+		
+		if (tipo_lin == "LIN")
+    	{name_cap = name_cap + "_lin";}
+		else if (tipo_lin == "COL")
+    	{name_cap = name_cap + "_col";}
+		
+		graf_matrix_lin_filas = graf_matrix_lin_filas + "\n}\n";
+		create_archivo_linear(name_cap, graf_matrix_lin_filas);
+ 	
+    }
+    
     void matrix :: print_Grafica_matrix(node *matrix_capa, string name_cap) {
     	string graf_matrix;
     	string xx, yy;
@@ -807,12 +1062,12 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
     	//cor_x<<x;
     	//xx = cor_x.str();
     	
-    	
-    	
     	graf_matrix = "";
 		graf_matrix = graf_matrix + "digraph{ \n";
 		graf_matrix = graf_matrix + "rankdir=BT;\n";
+		//graf_matrix = graf_matrix + "graph [nodesep=5.5]; \n";
 		graf_matrix = graf_matrix + "node[shape=record]; \n";
+		//graf_matrix = graf_matrix + "node[shape=record ,width=2.0]; \n";
 		graf_matrix = graf_matrix + "graph[pencolor=transparent]; \n";
 		graf_matrix = graf_matrix + "node [style=filled]; \n";
     	
@@ -821,7 +1076,7 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
     	
     	//alto = alto_mat();
     	alto = alto_mat_x_cap(temp);
-    	cout<<"alto_nod: "<<alto<<endl;
+    	//cout<<"alto_nod: "<<alto<<endl;
     	
     	//node *temp = nodo_x_nivel;
     	node *temp_inicio;
@@ -850,10 +1105,10 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 		    			co_y<<temp->cor_y;
 		    			
 		    			////para normales
-		    			//y_gr<<alto - temp->cor_y;
+		    			y_gr<<alto - temp->cor_y;
 		    			
 		    			//para collage
-		    			y_gr<<alto - temp->cor_y*2;
+		    			//y_gr<<2*alto - temp->cor_y;
 		    			
 		    			//xx =""; yy ="";
     					xx = co_x.str(); 
@@ -864,7 +1119,8 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 		    			//cout<<"yy ("<<yy<<")";
 		    			
 		    			//graf_matrix = graf_matrix + "p"+xx+yy +"[label=\"{<data>"+xx+","+yy+"|<next>}\" pos=\""+xx+","+y_grap+"!\"]; \n";
-						graf_matrix = graf_matrix + "p"+xx+yy +"[label=\"{<data>"+xx+","+yy+"|<next>"+ temp->valor+ "}\" pos=\""+xx+","+y_grap+"!\"]; \n";
+						
+						graf_matrix = graf_matrix + "p"+xx+"_"+yy +"[label=\"{<data>"+xx+","+yy+"|<next>"+ temp->valor+ "}\" pos=\""+xx+","+y_grap+"!\"]; \n";
 						
 						
 						//print_node_superiores(temp);
@@ -878,7 +1134,7 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 		    				xx2 = co_x2.str(); 
 							yy2 = co_y2.str();
 						
-							graf_matrix = graf_matrix + "p"+xx+yy + "->p"+ xx2+yy2+"[dir=both]; \n";
+							graf_matrix = graf_matrix + "p"+xx+"_"+yy + "->p"+ xx2+"_"+yy2+"[dir=both]; \n";
 						}
 						
 						/*para imprimir las flechas de abajo*/
@@ -890,7 +1146,7 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 		    				xx2 = co_x2.str(); 
 							yy2 = co_y2.str();
 						
-							graf_matrix = graf_matrix + "p"+xx+yy + "->p"+ xx2+yy2+"[dir=both]; \n";
+							graf_matrix = graf_matrix + "p"+xx+"_"+yy + "->p"+ xx2+"_"+yy2+"[dir=both]; \n";
 						}
 						
 						
@@ -899,12 +1155,10 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 											    	
 		    	temp = temp->right;
 			}
-			
 			//cout<<"x: "<<temp->data<<" ";			
 			temp = temp_inicio;
-	    	temp = temp->down;
-	    	
-	    	cout<<endl;
+	    	temp = temp->down;  	
+	    	//cout<<endl;
 		}  	
 		//cout <<temp->data<<"   ";    		
 		//cout <<"termina"<<endl;   
@@ -1340,7 +1594,7 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
     	return no_col;
 	}
 	
-    void matrix :: Generando_css(int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto) {
+    void matrix :: Generando_css(int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto, string nam_completo, string nombre) {
     	
     	//node *temp = head;
     	//print_Grafica_matrix(temp);
@@ -1367,11 +1621,10 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
     	//name_cap = "cap"+cap.str();
 
 		file_css = file_css + ".canvas {\n";  
-		//file_css = file_css + "  width: "+ can_w.str() +"px; \n";    
-		//file_css = file_css + "  height: "+can_h.str() +"px;\n";  
-		
-		file_css = file_css + "  width: "+  "360" +"px; \n";    
-		file_css = file_css + "  height: "+  "360" +"px;\n";   
+		file_css = file_css + "  width: "+ can_w.str() +"px; \n";    
+		file_css = file_css + "  height: "+can_h.str() +"px;\n";  
+		//file_css = file_css + "  width: "+  "360" +"px; \n";    
+		//file_css = file_css + "  height: "+  "360" +"px;\n";   
 		  
 		file_css = file_css + " }\n";  
 		
@@ -1394,7 +1647,8 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 		file_html = file_html + "<html>\n";
 		file_html = file_html + "<head>\n";
 		//file_html = file_html + "  <link rel=\"stylesheet\" href=\"geoff.css\">\n";
-		file_html = file_html + "  <link rel=\"stylesheet\" href=\"ejemplo.css\">\n";
+		//file_html = file_html + "  <link rel=\"stylesheet\" href=\"ejemplo.css\">\n";
+		file_html = file_html + "  <link rel=\"stylesheet\" href=\""+nombre+".css\">\n";
 		file_html = file_html + "</head>\n";
 		file_html = file_html + "<body>\n";
 		file_html = file_html + "<div class=\"canvas\"> \n";
@@ -1433,10 +1687,14 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 		
 		
 		//create_file_images(name_cap, file_css);
-		create_file_images("ejemplo.css", file_css);
-		create_file_images("ejemplo.html", file_html);
+		create_file_images( nam_completo +".css", file_css);
+		create_file_images( nam_completo +".html", file_html);
 		
-		system("ejemplo.html");
+		string na_html;
+		na_html = nam_completo +".html";
+		//na_html = nombre +".html";
+		cout<<"Imagen exportada a "<<na_html;
+		system(na_html.c_str());
 		
 	}
 	
@@ -1488,15 +1746,32 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 							getline(col, c_g, '-');
 							getline(col, c_b, '-');
 							
-							//cout<<"c_r: "<<c_r<<endl;
-							//cout<<"c_g: "<<c_g<<endl;
-							//cout<<"c_b: "<<c_b<<endl;
+							//if (color_completo == "230-138-0")
+							/*if (k_str.str() == "200" || k_str.str() == "207" || k_str.str() == "226" || k_str.str() == "245" || k_str.str() == "290")
+							*/
+							
+							if (k_str.str() == "234" )
+							{
+								cout<<"k_str.str(): "<<k_str.str()<<endl;
+								cout<<"c_r: "<<c_r<<endl;
+								cout<<"c_g: "<<c_g<<endl;
+								cout<<"c_b: "<<c_b<<endl;
+								cout<<"temp->cor_z: "<<temp->cor_z<<endl;
+								cout<<"color_completo: "<<color_completo<<endl;
+								cout<<"x,y: "<<temp->cor_x<<","<<temp->cor_y<<endl;
+								system("pause");
+							}
+							
+							
 							color_hexa = RGBToHex( atoi(c_r.c_str()), atoi(c_g.c_str()), atoi(c_b.c_str()) );
 							//cout<<"color_hexa: "<<color_hexa<<endl;
 							
 							//para css
 							file_css = file_css + ".pixel:nth-child("+ k_str.str() + ") { \n";
-							file_css = file_css + "  background: #"+color_hexa+"; \n";
+							
+							//file_css = file_css + "  background: #"+color_hexa+"; \n"; //para exadeciaml
+							file_css = file_css + "  background: rgb("+c_r.c_str()+ ","+ c_g.c_str() + "," +c_b.c_str() +"); \n"; // para color rgb
+							
 							file_css = file_css + "} \n";
 							
 							///para html
@@ -1611,9 +1886,9 @@ matrix matrix :: imagen_original(string tipo, int no_col, int no_lin, int all_ca
     			else if (tipo == "G"){
     				read_matrix_gris(temp, mat_mod, all_capa);
     			}
-    			else if (tipo == "C"){
-    				read_matrix_collage(temp, mat_mod, no_col, all_capa );
-    			}
+    			/*else if (tipo == "C"){
+    				read_matrix_collage(temp, mat_mod, no_col, no_lin, all_capa );
+    			}*/
     			else if (tipo == "EX"){
     				read_matrix_espejo_x(temp, mat_mod, no_col, all_capa );
     			}
@@ -1629,6 +1904,26 @@ matrix matrix :: imagen_original(string tipo, int no_col, int no_lin, int all_ca
 		//cout<<temp->cor_z<<endl;
 		//read_matrix_original(temp, mat_neg);
 		
+		return mat_mod;
+	}
+	
+matrix matrix :: imagen_original_col_mos(string tipo, int no_col, int no_lin, int all_capa, int rep_x, int rep_y) {
+    	
+    	matrix mat_mod;
+
+    	node *temp = head;
+    	//while (temp->capa_up != NULL) { 
+    	while (temp != NULL) { 
+    	
+			//cout<<temp->cor_z<<endl;
+    		if (temp->valor != "RAIZ"){
+    			
+				if (tipo == "C"){
+    				read_matrix_collage(temp, mat_mod, no_col, no_lin, all_capa, rep_x, rep_y );
+    			}
+			}
+	    	temp = temp->capa_up;
+		}  			
 		return mat_mod;
 	}
 	
@@ -1771,11 +2066,16 @@ matrix matrix :: imagen_original(string tipo, int no_col, int no_lin, int all_ca
 		}  	
     }
     
-	void matrix :: read_matrix_collage(node *matrix_capa, matrix mat_mod, int no_col,int all_capa) {
+	void matrix :: read_matrix_collage(node *matrix_capa, matrix mat_mod, int no_col, int no_lin, int all_capa, int rep_x, int rep_y) {
+		
+		int co_x, co_y;
 		
 		int no_x, no_y;
-		no_x = 2;
-		no_y = 2;
+		//no_x = 2;
+		//no_y = 2;
+		
+		no_x = rep_x;
+		no_y = rep_y;
 		
 		for(int y = 1; y<=no_y ; y++){
 			for(int x = 1; x<=no_x ; x++){
@@ -1783,7 +2083,6 @@ matrix matrix :: imagen_original(string tipo, int no_col, int no_lin, int all_ca
 		
     	///node *temp = head;
     	node *temp = matrix_capa;
-    	no_col = no_col + 1;
     	
     	node *temp_inicio;	
     	node *temp_sup_ini;
@@ -1795,8 +2094,13 @@ matrix matrix :: imagen_original(string tipo, int no_col, int no_lin, int all_ca
 						
 					if (temp->tipo == "N")
 					{
-						cout<<"("<<x<<","<<y<<") ";
-						mat_mod.add(temp->data, x*temp->cor_x, y*temp->cor_y, temp->cor_z, temp->valor , "tempo");
+						//cout<<"("<<x<<","<<y<<") ";
+						
+						co_x = (x-1)*no_col; //para columnas x
+						co_y = (y-1)*no_lin; //para lienas y
+						
+						
+						mat_mod.add(temp->data, co_x + temp->cor_x, co_y + temp->cor_y, temp->cor_z, temp->valor , "tempo");
 						////all_capa == 0 , entonces es para toda la capa
 						//if (all_capa == 0)
 						//{mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");	}
@@ -1819,7 +2123,7 @@ matrix matrix :: imagen_original(string tipo, int no_col, int no_lin, int all_ca
 		
 		
 			}
-			cout<<endl;
+			//cout<<endl;
 		}
     }
     
@@ -1843,7 +2147,7 @@ matrix matrix :: imagen_original(string tipo, int no_col, int no_lin, int all_ca
 						//cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
 						//all_capa == 0 , entonces es para toda la capa
 						if (all_capa == 0)
-						{mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");	}
+						{mat_mod.add(temp->data, no_col - temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");	}
 						else /// entonces es solo una capa
 						{
 							if (temp->cor_z == all_capa){

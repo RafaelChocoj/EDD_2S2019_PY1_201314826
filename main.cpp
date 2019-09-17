@@ -15,6 +15,8 @@ int main(int argc, char** argv) {
 
 #include "Matrix_cub.h"
 
+#include <direct.h> //para crear carpeta
+
 using namespace std;
 
 Leer_archivo read_ar; //para importacion
@@ -32,6 +34,18 @@ void menu_filters();
 void Select_capas(string name_filtro);
 void menu_mirror();
 
+void Select_images_exports();
+void Select_images_Report();
+
+void tipo_graff(matrix mat_graph);
+void Select_capas_ima_report(matrix mat_rep); //para capas de reporte 
+
+void tipo_linealizacion(matrix mat_graph, int index);
+
+//tipo a graficar, matriz o lienal
+string s_tipo_graf_mat;
+
+
 //para imagen actual
 int a_pix_ima_w, a_pix_ima_h;
 int a_pix_w, a_pix_h;
@@ -46,7 +60,7 @@ int main(int argc, char** argv)
     bool men = true;
     while(men)
     {
-    	//system("cls");
+    	system("cls");
     	cout <<"***********MENU***********";
     	if (arbol_im.imagen_actual_nod != NULL)
     	{ cout<<"  (Imagen Actual: "<< arbol_im.imagen_actual_nod->data<<")" <<endl; }
@@ -60,6 +74,8 @@ int main(int argc, char** argv)
 		cout <<"5. Export Image"<<endl;
 		cout <<"6. Reports"<<endl;
 		cout <<"7. Exit"<<endl<<endl;
+		
+		
 		cout <<"8. prueba matriz"<<endl<<endl;
 		cout <<"9. graficando matriz"<<endl<<endl;
 		cout <<"10. verificando lista layes"<<endl<<endl;
@@ -94,8 +110,15 @@ int main(int argc, char** argv)
 		/*para exportar el cubo*/
 		else if (opcion == "5")
     	{
-			mtx_actual.Generando_css(arbol_im.imagen_actual_nod->pix_ima_w,arbol_im.imagen_actual_nod->pix_ima_h, arbol_im.imagen_actual_nod->pix_w, arbol_im.imagen_actual_nod->pix_h, arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
-			system("pause");
+    		if (arbol_im.imagen_actual_nod != NULL){
+    			Select_images_exports();
+			} else {
+				cout <<"No tiene una imagen seleccioanda. "<<endl;
+				system("pause");
+			}
+			//mtx_actual.Generando_css(arbol_im.imagen_actual_nod->pix_ima_w,arbol_im.imagen_actual_nod->pix_ima_h, arbol_im.imagen_actual_nod->pix_w, arbol_im.imagen_actual_nod->pix_h, arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
+			//system("pause");
+			
 		
 		} 
 		
@@ -146,12 +169,12 @@ int main(int argc, char** argv)
 			
 			///////////////////sm->print_mt_ejemplo();
 			//mt.print_Grafica_matrix();
-			mt.Tipo_a_Graficar();
+			mt.Tipo_a_Graficar(0);
 	
 		}
 		else if (opcion == "9")
     	{
-    		mtx_actual.Tipo_a_Graficar();
+    		mtx_actual.Tipo_a_Graficar(0);
     	}
     	else if (opcion == "10")
     	{
@@ -175,6 +198,7 @@ int main(int argc, char** argv)
     	else if (opcion == "11")
     	{
 			list_filtros.Lista_print_filters();
+			
 
     	}
 		else if (opcion == "7")
@@ -196,8 +220,6 @@ int main(int argc, char** argv)
 void aplicando_filter_mat(int all_capa, string name_filtro)
 {
 	/*if(all_capa == 0){*/
-		
-
 		if(name_filtro == "NEGATIVE"){
 			
 			matrix mtx_negativo;
@@ -205,7 +227,7 @@ void aplicando_filter_mat(int all_capa, string name_filtro)
 			
 			list_filtros.Insert_nod(all_capa, mtx_negativo, "NEGATIVE");
 			
-			mtx_negativo.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
+			mtx_negativo.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo");
 			
 		}
 		else if(name_filtro == "GRAYSCALE"){
@@ -213,28 +235,18 @@ void aplicando_filter_mat(int all_capa, string name_filtro)
 			matrix mtx_gray;
 			mtx_gray = mtx_actual.imagen_original("G", a_no_pixel_x, a_no_pixel_y, all_capa);
 			
-			mtx_gray.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
+			mtx_gray.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo");
 			
 			list_filtros.Insert_nod(all_capa, mtx_gray, "GRAYSCALE");
 			
 		}
-		else if(name_filtro == "COLLAGE"){
-			
-    		matrix mtx_collage;
-    		mtx_collage = mtx_actual.imagen_original("C", a_no_pixel_x*2, a_no_pixel_y*2, all_capa);
-    		
-    		//mtx_collage.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
-    		mtx_collage.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x*2, a_no_pixel_y*2);
-    		
-    		list_filtros.Insert_nod(all_capa, mtx_collage, "COLLAGE");
-    		//mtx_collage.Tipo_a_Graficar();
-		}
+
 		else if(name_filtro == "X-MIRROR"){
 			
     		matrix mtx_espejo_x;
     		mtx_espejo_x = mtx_actual.imagen_original("EX", a_no_pixel_x, a_no_pixel_y, all_capa);
     		
-    		mtx_espejo_x.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
+    		mtx_espejo_x.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo");
     		
     		list_filtros.Insert_nod(all_capa, mtx_espejo_x, "X-MIRROR");
 		}
@@ -243,7 +255,7 @@ void aplicando_filter_mat(int all_capa, string name_filtro)
     		matrix mtx_espejo_y;
     		mtx_espejo_y = mtx_actual.imagen_original("EY", a_no_pixel_x, a_no_pixel_y, all_capa);
     		
-    		mtx_espejo_y.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
+    		mtx_espejo_y.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo");
 			list_filtros.Insert_nod(all_capa, mtx_espejo_y, "Y-MIRROR");
 		}
 		else if(name_filtro == "XY-DOUBLE MIRROR"){
@@ -251,7 +263,7 @@ void aplicando_filter_mat(int all_capa, string name_filtro)
     		matrix mtx_espejo_xy;
     		mtx_espejo_xy = mtx_actual.imagen_original("EXY", a_no_pixel_x, a_no_pixel_y, all_capa);
     		
-    		mtx_espejo_xy.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
+    		mtx_espejo_xy.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo");
 			list_filtros.Insert_nod(all_capa, mtx_espejo_xy, "XY-DOUBLE MIRROR");
 		}
 		
@@ -281,13 +293,49 @@ void aplicando_filter_mat(int all_capa, string name_filtro)
 	}*/
 }
 
+void aplicando_filter_mat(int all_capa, string name_filtro, int rep_x, int rep_y)
+{
+		if(name_filtro == "COLLAGE"){
+			
+    		matrix mtx_collage;
+    		mtx_collage = mtx_actual.imagen_original_col_mos("C", a_no_pixel_x, a_no_pixel_y, all_capa, rep_x, rep_y);
+    		
+    		//mtx_collage.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
+    		mtx_collage.Generando_css(rep_x*a_pix_ima_w, rep_y*a_pix_ima_h, a_pix_w, a_pix_h, rep_x*a_no_pixel_x, rep_y*a_no_pixel_y, "ejemplo", "ejemplo");
+    		
+    		list_filtros.Insert_nod(all_capa, mtx_collage, "COLLAGE");
+    		
+    		//mtx_collage.Tipo_a_Graficar();
+    		//mtx_collage.print_node_cor_orde_zz();
+		}
+		else if(name_filtro == "MOSAIC"){
+			
+    		matrix mtx_mosaic;
+    		mtx_mosaic = mtx_actual.imagen_original_col_mos("M", a_no_pixel_x, a_no_pixel_y, all_capa, rep_x, rep_y);
+    		
+    		mtx_mosaic.Generando_css(rep_x*a_pix_ima_w, rep_y*a_pix_ima_h, a_pix_w, a_pix_h, rep_x*a_no_pixel_x, rep_y*a_no_pixel_y, "ejemplo", "ejemplo");
+    		
+    		list_filtros.Insert_nod(all_capa, mtx_mosaic, "MOSAIC");
+    		
+    		//mtx_collage.Tipo_a_Graficar();
+    		//mtx_collage.print_node_cor_orde_zz();
+		}
+		
+		if(all_capa == 0){
+			cout <<"Filtro: "<<name_filtro<<" Aplicado."<<endl;
+		} else{
+			cout <<"Filtro: "<<name_filtro<<" Aplicado, Capa "<<all_capa<<endl;
+		}
+		system("pause");
+		
+}
+
 void tipo_filtro(string name_filtro)
 {
 	string opcion;
 	bool men = true;
     while(men)
     {
-    	
 		system("cls");
 	    //cout <<"***********FILTERS***********\n\n";
 		cout <<"1. Imagen Completa"<<endl;
@@ -315,20 +363,162 @@ void tipo_filtro(string name_filtro)
     		system("cls");
     		cout <<"(TIPO FILTRO) Tecla invalida, seleccione opcion valida "<<endl;
     		system("pause");
-					
-    
 		} 
-    	
 	}
 }
 
-void menu_filters()
+void tipo_linealizacion(matrix mat_rep, int index)
 {
 	string opcion;
 	bool men = true;
     while(men)
     {
     	
+		system("cls");
+	    cout <<"***********TIPO LINEALIZACION***********\n\n";
+		cout <<"1. por Fila"<<endl;
+		cout <<"2. por Columna"<<endl;
+		cout <<endl<<endl;
+		cout <<"0. Regresar"<<endl<<endl;
+		cout <<"**************************\n\n";
+		
+		cout<<"Selecciona un tipo de linealizacion:\n" ; cin>>opcion;
+    	cout <<"Reporte: "<<opcion<<endl;
+    	
+    	if (opcion == "1")
+    	{
+    		mat_rep.Tipo_a_Graficar_linear(index, "LIN");
+		}
+		else if (opcion == "2")
+    	{
+    		mat_rep.Tipo_a_Graficar_linear(index, "COL");
+		}
+    	else if (opcion == "0")
+    	{
+    		men = false;
+		}
+		else
+    	{
+    		system("cls");
+    		cout <<"(MIRROR) Tecla invalida, seleccione opcion valida "<<endl;
+    		system("pause");
+					
+		}     	
+	}
+}
+
+void tipo_graff(matrix mat_graph)
+{
+	string opcion;
+	bool men = true;
+    while(men)
+    {
+		system("cls");
+	    //cout <<"***********FILTERS***********\n\n";
+		cout <<"1. Imagen Completa"<<endl;
+		cout <<"2. Por Capa"<<endl;
+		cout<<endl<<endl;
+		cout <<"0. Regresar"<<endl<<endl;
+		//cout <<"**************************\n\n";
+		
+		cout<<"Selecciona un Filtro:\n" ; cin>>opcion;
+    	cout <<"Reporte: "<<opcion<<endl;
+    	
+    	if (opcion == "1")
+    	{
+    		//mat_graph.Tipo_a_Graficar();
+    		if (s_tipo_graf_mat == "MAT"){
+    			mat_graph.Tipo_a_Graficar(0);	
+			}
+			else if (s_tipo_graf_mat == "LIN"){
+				//mat_graph.Tipo_a_Graficar_linear(0);
+				tipo_linealizacion(mat_graph, 0);
+			}
+			cout <<"Reporte Generado "<<endl;
+		}
+		else if (opcion == "2")
+    	{Select_capas_ima_report(mat_graph);
+		}
+    	else if (opcion == "0")
+    	{
+    		men = false;
+		}
+		else
+    	{
+    		system("cls");
+    		cout <<"(TIPO FILTRO) Tecla invalida, seleccione opcion valida "<<endl;
+    		system("pause");
+		} 
+	}
+}
+
+void Select_capas_ima_report(matrix mat_rep)
+{
+	string opcion;
+	int index;
+	bool men = true;
+    while(men)
+    {	
+		system("cls");
+	    cout <<"***********LAYERS***********\n\n";
+	    
+    	mat_rep.Capas_para_select();
+		
+		cout <<endl<<endl;
+		cout <<"0. Regresar"<<endl<<endl;
+		cout <<"**************************\n\n";
+		
+		cout<<"Selecciona un capa:\n" ; cin>>opcion;
+    	//cout <<"imagen: "<<opcion<<endl;
+    	
+		if (opcion == "0")
+    	{
+    		men = false;
+		}
+		else if (opcion != "0" )
+    	{
+			bool encontrado;
+			encontrado = false;
+			
+	    	index = atoi(opcion.c_str());
+			encontrado = mat_rep.Buscando_capa(index);
+			
+			if (encontrado == true)
+	    	{
+	    		//cout <<"Capa Seleccionada: "<<index<<endl;
+	    		if (s_tipo_graf_mat == "MAT"){
+    				mat_rep.Tipo_a_Graficar(index);	
+				}
+				else if (s_tipo_graf_mat == "LIN"){
+					//mat_rep.Tipo_a_Graficar_linear(index);
+					tipo_linealizacion(mat_rep, index);
+				}
+	    		
+				//system("pause");
+				cout <<"Reporte Generado "<<endl;
+				men = false;
+			}
+			else
+			{
+				cout <<"Capa no encontrada, selecciona una capa valida"<<endl;
+				system("pause");
+			}
+		}
+		else
+    	{
+    		system("cls");
+    		cout <<"(Images) Tecla invalida, selecciona opcion valida "<<endl;
+    		system("pause");		
+    
+		} 
+	}
+}
+void menu_filters()
+{
+	string opcion;
+	bool men = true;
+    while(men)
+    {
 		system("cls");
 	    cout <<"***********FILTERS***********\n\n";
 		cout <<"a. NEGATIVE (NEGATIVO)"<<endl;
@@ -357,12 +547,18 @@ void menu_filters()
 		else if (opcion == "d" || opcion == "D")
     	{
     		int rep_x, rep_y;
-    		//system("cls");
-    		//cout<<"Cantidad de repeticiones en X:\n" ; cin>>rep_x;
-    		//cout<<"Cantidad de repeticiones en Y:\n" ; cin>>rep_y;
+    		system("cls");
+    		cout<<"Cantidad de repeticiones en X:\n" ; cin>>rep_x;
+    		cout<<"Cantidad de repeticiones en Y:\n" ; cin>>rep_y;
     		
-    		aplicando_filter_mat(0,"COLLAGE");
+    		aplicando_filter_mat(0,"COLLAGE", rep_x, rep_y);
     		//tipo_filtro("GRAYSCALE");
+		}
+		
+		else if (opcion == "e" || opcion == "E")
+    	{
+    		int rep_x, rep_y;
+    		aplicando_filter_mat(0,"MOSAIC", rep_x, rep_y);
 		}
     	else if (opcion == "0")
     	{
@@ -373,8 +569,6 @@ void menu_filters()
     		system("cls");
     		cout <<"(FILTERS) Tecla invalida, seleccione opcion valida "<<endl;
     		system("pause");
-					
-    
 		} 
     	
 	}
@@ -428,7 +622,7 @@ void menu_mirror()
 }
 void MenuReport()
 {
-	arbol_im = read_ar.Retornando_arbol();
+	//////arbol_im = read_ar.Retornando_arbol();
 	string repor;
 	bool men = true;
     while(men)
@@ -449,7 +643,22 @@ void MenuReport()
     	
     	if (repor == "a" || repor == "A")
     	{
+    		arbol_im = read_ar.Retornando_arbol();
     		arbol_im.Graficando_arbol();
+    		cout <<"Reporte Generado "<<endl;
+    		system("pause");
+		}
+		else if (repor == "b" || repor == "B")
+    	{
+    		s_tipo_graf_mat = "MAT";
+    		Select_images_Report();
+    		//cout <<"Reporte Generado "<<endl;
+    		//system("pause");
+		}
+		else if (repor == "c" || repor == "C")
+    	{
+    		s_tipo_graf_mat = "LIN";
+    		Select_images_Report();
 		}
 		else if (repor == "d" || repor == "D")
     	{
@@ -463,6 +672,88 @@ void MenuReport()
     	{
     		system("cls");
     		cout <<"(REPORTS) Tecla invalida, selecciona opcion valida "<<endl;
+    		system("pause");
+					
+    
+		} 
+    	
+	}
+}
+///creaidno los archivos
+void creando_file_imagen(matrix mtx_export)
+{
+	////creando carpeta de export preder
+	string carpeta_ima, ima_ac, nombre_completo;
+	ima_ac = arbol_im.imagen_actual_nod->data;
+	mkdir("Exports");
+	carpeta_ima = "Exports\\" + ima_ac;
+	mkdir(carpeta_ima.c_str());
+	nombre_completo = carpeta_ima + "\\" + list_filtros.name_actual;
+	//cout <<"nombre_completo: "<<nombre_completo <<endl;
+		
+	mtx_export.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, nombre_completo, list_filtros.name_actual);
+	
+}
+//////////////para imagen
+void Select_images_exports()
+{
+	string opcion;
+	int index;
+	bool men = true;
+    while(men)
+    {
+    	
+		system("cls");
+	    cout <<"***********EXPORT IMAGE";
+	    if (arbol_im.imagen_actual_nod != NULL)
+    	{ cout<<" ("<< arbol_im.imagen_actual_nod->data<<") "; }
+    	cout <<"***********\n\n";
+	    
+    	list_filtros.Lista_print_filters();
+		
+		cout <<endl<<endl;
+		cout <<"0. Regresar"<<endl<<endl;
+		cout <<"**************************\n\n";
+		
+		cout<<"Selecciona un imagen:\n" ; cin>>opcion;
+    	//cout <<"imagen: "<<opcion<<endl;
+    	
+		if (opcion == "0")
+    	{
+    		men = false;
+		}
+		else if (opcion != "0" )
+    	{
+			bool encontrado;
+			encontrado = false;
+			
+	    	index = atoi(opcion.c_str());
+	    	
+			encontrado = list_filtros.Buscando_ima(index);
+			if (encontrado == true)
+	    	{
+	    		
+	    		matrix mtx_export;
+				mtx_export = list_filtros.return_mat_ima(index);
+	    		
+	    		creando_file_imagen(mtx_export);
+	    		
+	    		cout <<"imagen exportada: "<<index<<endl;
+				system("pause");
+				//men = false;
+			}
+			else
+			{
+				cout <<"imagen no encontrada, selecciona una imagen valida"<<endl;
+				system("pause");
+			}
+    	
+    		
+		}
+		else
+    	{
+    		system("cls");
+    		cout <<"(Images) Tecla invalida, selecciona opcion valida "<<endl;
     		system("pause");
 					
     
@@ -579,6 +870,12 @@ void Select_images()
 	    		a_no_pixel_x = arbol_im.imagen_actual_nod->no_pixel_w;
 	    		a_no_pixel_y = arbol_im.imagen_actual_nod->no_pixel_h;
 	    		
+	    		///agregando por defecto la imagen por defecto
+	    		//primero limpiando lista
+	    		Filtros_lista_cir fil_clean;
+	    		list_filtros = fil_clean;
+	    		list_filtros.Insert_nod(0, mtx_actual, arbol_im.imagen_actual_nod->data );
+	    		
 				system("pause");
 				men = false;
 			}
@@ -586,22 +883,71 @@ void Select_images()
 			{
 				cout <<"Imagen no encontrada, selecciona una imagen valida"<<endl;
 				system("pause");
-			}
-    	
-    		
+			}	
 		}
 		else
     	{
     		system("cls");
     		cout <<"(Images) Tecla invalida, selecciona opcion valida "<<endl;
     		system("pause");
-					
-    
 		} 
     	
 	}
 }
 
+void Select_images_Report()
+{
+	string opcion;
+	int index;
+	bool men = true;
+    while(men)
+    {
+    	
+		system("cls");
+	    cout <<"***********IMAGES REPORTS***********\n\n";
+	    
+	    arbol_images arbol_rep; 
+	    arbol_rep = read_ar.Retornando_arbol();
+    	arbol_rep.inorder();
+		
+		cout <<endl<<endl;
+		cout <<"0. Regresar"<<endl<<endl;
+		cout <<"**************************\n\n";
+		
+		cout<<"Selecciona un imagen:\n" ; cin>>opcion;
+    	//cout <<"imagen: "<<opcion<<endl;
+    	
+		if (opcion == "0")
+    	{
+    		men = false;
+		}
+		else if (opcion != "0" )
+    	{
+			arbol_rep.index_root = 0;
+	    	index = atoi(opcion.c_str());
+	    	
+			arbol_rep.Buscando_x_index_report(index);
+			
+			if (arbol_rep.imagen_a_reportar != NULL)
+	    	{
+	    		cout <<"Imagen Seleccionada: "<<arbol_rep.imagen_a_reportar->data<<endl;
+	    		tipo_graff(arbol_rep.imagen_a_reportar->mat);
+				men = false;
+			}
+			else
+			{
+				cout <<"Imagen no encontrada, selecciona una imagen valida"<<endl;
+				system("pause");
+			}
+		}
+		else
+    	{
+    		system("cls");
+    		cout <<"(Images) Tecla invalida, selecciona opcion valida "<<endl;
+    		system("pause");
+		} 
+	}
+}
 
 void Report_tran()
 {
@@ -609,8 +955,9 @@ void Report_tran()
 	bool men = true;
     while(men)
     {
-    	
 		system("cls");
+		arbol_im = read_ar.Retornando_arbol();
+		
 	    cout <<"***********TRAVERSAL REPORT***********\n\n";
 		cout <<"1. Inorder Traversal"<<endl;
 		cout <<"2. Preorder Traversal"<<endl;
@@ -643,9 +990,6 @@ void Report_tran()
     		system("cls");
     		cout <<"(TRAVERSAL REPORT) Tecla invalida, selecciona opcion valida "<<endl;
     		system("pause");
-					
-    
-		} 
-    	
+		} 	
 	}
 }
