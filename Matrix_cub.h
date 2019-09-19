@@ -201,8 +201,12 @@ public:
     
     void read_matrix_collage(node *matrix_capa, matrix mat_mod, int no_col, int no_lin, int all_capa, int rep_x, int rep_y);
     
+    //////busqueda en mtrix
+    bool Buscando_cordenadas(int capa, int x, int y);
+    bool Buscando_matrix_xy(node *matrix_capa, int x, int y);
     
-    
+    bool Modificando_cordenadas(int capa, int x, int y, string nuevo_color);
+    bool Modificando_matrix_xy(node *matrix_capa, int x, int y, string nuevo_color);
     
     
     

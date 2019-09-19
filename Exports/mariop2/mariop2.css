@@ -16,47 +16,47 @@ body {
   box-shadow: 0px 0px 1px #fff;
 }
 .pixel:nth-child(8) { 
-  background: #9D76E6; 
+  background: rgb(157,118,230); 
 } 
 .pixel:nth-child(9) { 
-  background: #9D76E6; 
+  background: rgb(0,100,0); 
 } 
 .pixel:nth-child(10) { 
-  background: #9D76E6; 
+  background: rgb(157,118,230); 
 } 
 .pixel:nth-child(14) { 
-  background: #9D76E6; 
+  background: rgb(157,118,230); 
 } 
 .pixel:nth-child(16) { 
-  background: #9D76E6; 
+  background: rgb(157,118,230); 
 } 
 .pixel:nth-child(20) { 
-  background: #9D76E6; 
+  background: rgb(157,118,230); 
 } 
 .pixel:nth-child(21) { 
-  background: #9D76E6; 
+  background: rgb(157,118,230); 
 } 
 .pixel:nth-child(22) { 
-  background: #9D76E6; 
+  background: rgb(157,118,230); 
 } 
 .pixel:nth-child(23) { 
-  background: #ADFF2F; 
+  background: rgb(173,255,47); 
 } 
 .pixel:nth-child(26) { 
-  background: #9D76E6; 
+  background: rgb(157,118,230); 
 } 
 .pixel:nth-child(28) { 
-  background: #9D76E6; 
+  background: rgb(157,118,230); 
 } 
 .pixel:nth-child(32) { 
-  background: #9D76E6; 
+  background: rgb(157,118,230); 
 } 
 .pixel:nth-child(34) { 
-  background: #9D76E6; 
+  background: rgb(157,118,230); 
 } 
 .pixel:nth-child(1) { 
-  background: #B22222; 
+  background: rgb(178,34,34); 
 } 
 .pixel:nth-child(32) { 
-  background: #DCDCDC; 
+  background: rgb(220,220,220); 
 } 

@@ -2,8 +2,6 @@ digraph G {
 rankdir=TB;
 graph [nodesep=0.5 ];
 node [shape = record, fillcolor=seashell2];
-nodobatman:C1 -> nodomariop2
-nodobatman [ label ="<C0>|batman - pixel: 20h, 20w - ima: 540h, 780w|<C1>"]; 
 nodomariop2 [ label ="<C0>|mariop2 - pixel: 30h, 30w - ima: 180h, 180w|<C1>"]; 
 
 }

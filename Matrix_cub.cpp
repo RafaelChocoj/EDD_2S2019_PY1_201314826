@@ -889,6 +889,113 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 		
 	}
 	
+	bool matrix :: Buscando_cordenadas(int capa, int x, int y) {
+    	
+    	//node *temp = head;
+    	//print_Grafica_matrix(temp);
+    	bool encontrado = false;
+
+    	node *temp = head;
+    	//while (temp->capa_up != NULL) { 
+    	while (temp != NULL) { 
+	    	//cout<<"c_o_z: "<<temp->data<<endl;
+			//if (capa != 0 && capa == temp->cor_z ){
+			if (capa == temp->cor_z ){
+		    	encontrado = Buscando_matrix_xy(temp, x, y);
+		    	if (encontrado == true){
+		    		return encontrado;
+				}
+			} 
+	    	temp = temp->capa_up;
+		}  	
+		//cout<<"c_o_z: "<<temp->data<<endl;
+	}
+bool matrix :: Buscando_matrix_xy(node *matrix_capa, int x, int y) {
+
+    	////node *temp = head;
+    	node *temp = matrix_capa;
+
+    	//node *temp = nodo_x_nivel;
+    	node *temp_inicio;
+    	
+    	node *temp_sup_ini;
+		   	
+    	/*para recorrer para la derecha*/
+    	while (temp != NULL) { 
+	    	////////cout<<"y: "<<temp->data<<endl;
+	    	temp_inicio = temp;
+	    	/*para recorrer para abajo*/
+	    	while (temp != NULL) { 
+				if (temp->tipo == "N"){
+						if (temp->cor_x == x && temp->cor_y == y){
+							cout<<"color actual: "<<temp->valor<<" ";	
+							//system("pause");
+							return true;
+						}
+					}
+						
+				    	
+		    	temp = temp->right;
+			}
+			//cout<<"x: "<<temp->data<<" ";			
+			temp = temp_inicio;
+	    	temp = temp->down;  	
+	    	//cout<<endl;
+		}  	
+    }
+	////ya modificando
+	
+	bool matrix :: Modificando_cordenadas(int capa, int x, int y, string nuevo_color) {
+    	
+    	bool encontrado = false;
+
+    	node *temp = head;
+    	//while (temp->capa_up != NULL) { 
+    	while (temp != NULL) { 
+			if (capa == temp->cor_z ){
+		    	encontrado = Modificando_matrix_xy(temp, x, y, nuevo_color);
+		    	if (encontrado == true){
+		    		return encontrado;
+				}
+			} 
+	    	temp = temp->capa_up;
+		}  	
+	}
+	
+	bool matrix :: Modificando_matrix_xy(node *matrix_capa, int x, int y, string nuevo_color) {
+
+    	////node *temp = head;
+    	node *temp = matrix_capa;
+
+    	//node *temp = nodo_x_nivel;
+    	node *temp_inicio;
+    	
+    	node *temp_sup_ini;
+		   	
+    	/*para recorrer para la derecha*/
+    	while (temp != NULL) { 
+	    	////////cout<<"y: "<<temp->data<<endl;
+	    	temp_inicio = temp;
+	    	/*para recorrer para abajo*/
+	    	while (temp != NULL) { 
+				if (temp->tipo == "N"){
+						if (temp->cor_x == x && temp->cor_y == y){
+							//cout<<"color actual: "<<temp->valor<<" ";	
+							temp->valor = nuevo_color;
+							//system("pause");
+							return true;
+						}
+					}
+						
+				    	
+		    	temp = temp->right;
+			}
+			//cout<<"x: "<<temp->data<<" ";			
+			temp = temp_inicio;
+	    	temp = temp->down;  	
+	    	//cout<<endl;
+		}  	
+    }
 	void matrix :: Tipo_a_Graficar_linear(int capa, string tipo_lin) {
     	string name_cap;
     	
@@ -1539,7 +1646,7 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 		}  	
 		//cout <<temp->data<<"   ";    
 		
-		cout <<"termina reco der abaj"<<endl;   
+	//	cout <<"termina reco der abaj"<<endl;   
     	
     }
     
@@ -1929,6 +2036,26 @@ matrix matrix :: imagen_original_col_mos(string tipo, int no_col, int no_lin, in
 		}  			
 		return mat_mod;
 	}
+	
+/*	
+matrix matrix :: imagen_original_una_cap(string tipo, int no_col, int no_lin, int all_capa, int rep_x, int rep_y) {
+    	
+    	matrix mat_mod;
+
+    	node *temp = head;
+    	//while (temp->capa_up != NULL) { 
+    	while (temp != NULL) { 	
+			//cout<<temp->cor_z<<endl;
+    		if (temp->valor != "RAIZ"){
+    			
+				if (tipo == "M"){
+    				read_matrix_collage(temp, mat_mod, no_col, no_lin, all_capa, rep_x, rep_y );
+    			}
+			}
+	    	temp = temp->capa_up;
+		}  			
+		return mat_mod;
+	}*/
 	
 	void matrix :: read_matrix_negativ(node *matrix_capa, matrix mat_mod, int all_capa) {
 		

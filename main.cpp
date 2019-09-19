@@ -29,6 +29,8 @@ void Report_tran();
 
 matrix mtx_actual;
 
+//matrix mtx_filtros_actul;
+
 void Select_images();
 void menu_filters();
 void Select_capas(string name_filtro);
@@ -41,6 +43,10 @@ void tipo_graff(matrix mat_graph);
 void Select_capas_ima_report(matrix mat_rep); //para capas de reporte 
 
 void tipo_linealizacion(matrix mat_graph, int index);
+void tipo_modificacion();
+void datos_modificacion(matrix mat_modif);
+int Select_capas_para_modif(matrix mat_modif); //para encontrar capa a modificar
+void Select_filters_modif(); // para modificar el filtro
 
 //tipo a graficar, matriz o lienal
 string s_tipo_graf_mat;
@@ -109,6 +115,15 @@ int main(int argc, char** argv)
 			}
     		
 		}
+		else if (opcion == "4")
+    	{
+    		if (arbol_im.imagen_actual_nod != NULL){
+    			tipo_modificacion();
+			} else {
+				cout <<"No tiene una imagen seleccioanda. "<<endl;
+				system("pause");
+			}
+		}
 		/*para exportar el cubo*/
 		else if (opcion == "5")
     	{
@@ -120,8 +135,6 @@ int main(int argc, char** argv)
 			}
 			//mtx_actual.Generando_css(arbol_im.imagen_actual_nod->pix_ima_w,arbol_im.imagen_actual_nod->pix_ima_h, arbol_im.imagen_actual_nod->pix_w, arbol_im.imagen_actual_nod->pix_h, arbol_im.imagen_actual_nod->no_pixel_w, arbol_im.imagen_actual_nod->no_pixel_h);
 			//system("pause");
-			
-		
 		} 
 		
 		else if (opcion == "6")
@@ -409,6 +422,120 @@ void tipo_linealizacion(matrix mat_rep, int index)
 	}
 }
 
+/////edicion original o por filtros
+void tipo_modificacion()
+{
+	string opcion;
+	bool men = true;
+    while(men)
+    {
+    	
+		system("cls");
+	    cout <<"***********MANUAL EDITING***********\n\n";
+		cout <<"1. Original Image"<<endl;
+		cout <<"2. Filters"<<endl;
+		cout <<endl<<endl;
+		cout <<"0. Regresar"<<endl<<endl;
+		cout <<"**************************\n\n";
+		
+		cout<<"Selecciona un de modificacion:\n" ; cin>>opcion;
+    	cout <<"Reporte: "<<opcion<<endl;
+    	
+    	if (opcion == "1")
+    	{
+    		datos_modificacion(mtx_actual);
+		}
+		else if (opcion == "2")
+    	{
+    		if (list_filtros.size <= 1){
+    			cout <<"No se han aplicado filtros a la imagen seleccionada. "<<endl;
+    			system("pause");
+			}else{
+				Select_filters_modif();
+			}
+		}
+    	else if (opcion == "0")
+    	{
+    		men = false;
+		}
+		else
+    	{
+    		system("cls");
+    		cout <<"(MANUAL EDITING) Tecla invalida, seleccione opcion valida "<<endl;
+    		system("pause");
+					
+		}     	
+	}
+}
+
+void datos_modificacion(matrix mat_modif)
+{
+	string opcion;
+	string new_color;
+	int x;
+	int y;
+	int r, g,b;
+	int capa;
+	bool men = true;
+	bool encon_corde = false;
+    //while(men)
+    //{
+    	//capa = Select_capas_para_modif(mtx_actual);
+    	capa = Select_capas_para_modif(mat_modif);
+    	
+		system("cls");
+	    cout <<"***********DATA EDITING***********\n\n";
+		
+		while(encon_corde == false)
+    	{
+    		cout<<"Desea Salir? S:\n" ; cin>>opcion;
+    		if (opcion =="S" || opcion =="s"){
+    			break;
+			}
+    		
+    		system("cls");
+	    	cout <<"***********DATA EDITING***********\n\n";
+	    	
+			cout<<"Ingrese Coordenada en X:\n" ; cin>>x;
+	    	//cout <<"Reporte: "<<x<<endl;
+	    	cout<<"Ingrese Coordenada en Y:\n" ; cin>>y;
+	    	//cout <<"Reporte: "<<y<<endl;
+	    	
+    	///buscando cordeanas en la capa de la matriz
+	    	//encon_corde = mtx_actual.Buscando_cordenadas(capa, x, y);
+	    	encon_corde = mat_modif.Buscando_cordenadas(capa, x, y);
+	    	cout <<endl;
+	    	if (encon_corde == false){
+	    		cout <<"la cordenada: ("<<x<<","<<y<<") No se ha encontrado"<<endl;
+	    		system("pause");
+			}
+	    }
+    	
+    	if (encon_corde == true){
+	    	cout<<"*** Color Formato RGB ***\n" ;
+	    	cout<<"valor R:\n" ; cin>>r;
+	    	//cout <<"Reporte: "<<r<<endl;
+	    	cout<<"valor G:\n" ; cin>>g;
+	    	//cout <<"Reporte: "<<g<<endl;
+	    	cout<<"valor B:\n" ; cin>>b;
+	    	//cout <<"Reporte: "<<b<<endl;
+	    	
+	    	//modificando valor
+	    	ostringstream ne_r, ne_g, ne_b;
+	    	ne_r<<r;
+	    	ne_g<<g;
+	    	ne_b<<b;
+	    	new_color = ne_r.str() + "-" + ne_g.str() + "-" +ne_b.str();
+	    	//mtx_actual.Modificando_cordenadas(capa, x, y, new_color);
+	    	mat_modif.Modificando_cordenadas(capa, x, y, new_color);
+			cout <<"Se actualizo a nuevo color ingresado"<<endl;
+	    	system("pause");
+    	}
+		cout <<endl<<endl;
+		//cout <<"0. Regresar"<<endl<<endl;
+		cout <<"**************************\n\n";
+}
+
 void tipo_filter_rep()
 {
 	string opcion;
@@ -506,6 +633,112 @@ void tipo_graff(matrix mat_graph)
 	}
 }
 
+int Select_capas_para_modif(matrix mat_modif)
+{
+	string opcion;
+	int index;
+	bool men = true;
+    while(men)
+    {	
+		system("cls");
+	    cout <<"***********LAYERS EDITING***********\n\n";
+	    
+    	mat_modif.Capas_para_select();
+		
+		cout <<endl<<endl;
+		cout <<"0. Regresar"<<endl<<endl;
+		cout <<"**************************\n\n";
+		
+		cout<<"Selecciona un capa:\n" ; cin>>opcion;
+    	//cout <<"imagen: "<<opcion<<endl;
+    	
+		if (opcion == "0")
+    	{
+    		return -1;
+    		men = false;
+		}
+		else if (opcion != "0" )
+    	{
+			bool encontrado;
+			encontrado = false;
+			
+	    	index = atoi(opcion.c_str());
+			encontrado = mat_modif.Buscando_capa(index);
+			
+			if (encontrado == true)
+	    	{
+	    		return index;
+			}
+			else
+			{
+				cout <<"Capa no encontrada, selecciona una capa valida"<<endl;
+				system("pause");
+			}
+		}
+		else
+    	{
+    		system("cls");
+    		cout <<"(Images) Tecla invalida, selecciona opcion valida "<<endl;
+    		system("pause");		
+    
+		} 
+	}
+}
+
+void Select_filters_modif()
+{
+	string opcion;
+	int index;
+	bool men = true;
+    while(men)
+    {
+		system("cls");
+	    cout <<"*********** FILTER EDITING";
+	    if (arbol_im.imagen_actual_nod != NULL)
+    	{ cout<<" ("<< arbol_im.imagen_actual_nod->data<<") "; }
+    	cout <<"***********\n\n";
+	    
+    	list_filtros.Lista_print_filters();
+		
+		cout <<endl<<endl;
+		cout <<"0. Regresar"<<endl<<endl;
+		cout <<"**************************\n\n";
+		
+		cout<<"Selecciona un imagen:\n" ; cin>>opcion;
+    	//cout <<"imagen: "<<opcion<<endl;
+    	
+		if (opcion == "0")
+    	{
+    		men = false;
+		}
+		else if (opcion != "0" )
+    	{
+			bool encontrado;
+			encontrado = false;
+			
+	    	index = atoi(opcion.c_str());
+	    	
+			encontrado = list_filtros.Buscando_ima(index);
+			if (encontrado == true)
+	    	{
+	    		datos_modificacion(list_filtros.filter_a_reportar->mat);
+	    		//mtx_filtros_actul = list_filtros.filter_a_reportar->mat;
+	    		//datos_modificacion(mtx_filtros_actul);
+			}
+			else
+			{
+				cout <<"imagen no encontrada, selecciona una imagen valida"<<endl;
+				system("pause");
+			}
+		}
+		else
+    	{
+    		system("cls");
+    		cout <<"(Images) Tecla invalida, selecciona opcion valida "<<endl;
+    		system("pause");
+		} 
+	}
+}
 void Select_capas_ima_report(matrix mat_rep)
 {
 	string opcion;
@@ -837,7 +1070,6 @@ void Select_filters_reportes()
 	bool men = true;
     while(men)
     {
-    	
 		system("cls");
 	    cout <<"***********INDIVIDUAL FILTER REPORT";
 	    if (arbol_im.imagen_actual_nod != NULL)
@@ -869,8 +1101,7 @@ void Select_filters_reportes()
 	    	{
 	    		//cout <<"list_filtros.filter_a_reportar->: "<<list_filtros.filter_a_reportar->filtro<<endl;
 	    		s_tipo_graf_mat = "MAT";
-	    		tipo_graff(list_filtros.filter_a_reportar->mat);
-	    		  		
+	    		tipo_graff(list_filtros.filter_a_reportar->mat);	
 				//system("pause");
 				//men = false;
 			}
@@ -886,7 +1117,6 @@ void Select_filters_reportes()
     		cout <<"(Images) Tecla invalida, selecciona opcion valida "<<endl;
     		system("pause");
 		} 
-    	
 	}
 }
 
