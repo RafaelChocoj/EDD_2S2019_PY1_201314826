@@ -14,6 +14,8 @@ using namespace std;
 
 string file_css;
 string file_html;
+
+string name_capa;
     	
 void matrix :: add (int value, int x, int y, int z, string valor, string file_capa) {
     	//1 crear header
@@ -1750,13 +1752,13 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 							/*if (k_str.str() == "200" || k_str.str() == "207" || k_str.str() == "226" || k_str.str() == "245" || k_str.str() == "290")
 							*/
 							
-							if (k_str.str() == "234" )
+							if ( atoi(c_r.c_str()) > 255 || atoi(c_g.c_str()) > 255 || atoi(c_b.c_str()) > 255  )
 							{
-								cout<<"k_str.str(): "<<k_str.str()<<endl;
+								//cout<<"k_str.str(): "<<k_str.str()<<endl;
 								cout<<"c_r: "<<c_r<<endl;
 								cout<<"c_g: "<<c_g<<endl;
 								cout<<"c_b: "<<c_b<<endl;
-								cout<<"temp->cor_z: "<<temp->cor_z<<endl;
+								cout<<"capa: "<<temp->cor_z<<endl;
 								cout<<"color_completo: "<<color_completo<<endl;
 								cout<<"x,y: "<<temp->cor_x<<","<<temp->cor_y<<endl;
 								system("pause");
@@ -1787,7 +1789,7 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 			temp = temp_inicio;
 	    	temp = temp->down;
 	    	
-	    	cout<<endl;
+	    	//cout<<endl;
 		}  	
 
 
@@ -1878,6 +1880,7 @@ matrix matrix :: imagen_original(string tipo, int no_col, int no_lin, int all_ca
     	while (temp != NULL) { 
     	
 			//cout<<temp->cor_z<<endl;
+			name_capa = temp->valor;
     		if (temp->valor != "RAIZ"){
     			
     			if (tipo == "N"){
@@ -1903,7 +1906,7 @@ matrix matrix :: imagen_original(string tipo, int no_col, int no_lin, int all_ca
 		}  	
 		//cout<<temp->cor_z<<endl;
 		//read_matrix_original(temp, mat_neg);
-		
+		name_capa ="";
 		return mat_mod;
 	}
 	
@@ -1941,12 +1944,15 @@ matrix matrix :: imagen_original_col_mos(string tipo, int no_col, int no_lin, in
     	int no_col;
     	int k;
     	
+    	//string name_capa;
+    	
     	//node *temp = nodo_x_nivel;
     	node *temp_inicio;	
     	node *temp_sup_ini;
 		   	
     	while (temp != NULL) { 
 	    	temp_inicio = temp;
+	    	
 	    	while (temp != NULL) { 
 						
 						if (temp->tipo == "N")
@@ -1976,13 +1982,13 @@ matrix matrix :: imagen_original_col_mos(string tipo, int no_col, int no_lin, in
 							
 							//all_capa == 0 , entonces es para toda la capa
 							if (all_capa == 0)
-							{mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_negative , "tempo");	}
+							{mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_negative , name_capa);	}
 							else /// entonces es solo una capa
 							{
 								if (temp->cor_z == all_capa){
-									mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_negative , "tempo");
+									mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_negative , name_capa + " ***");
 								} else {
-									mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+									mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , name_capa);
 								}
 								
 							}
@@ -1992,7 +1998,7 @@ matrix matrix :: imagen_original_col_mos(string tipo, int no_col, int no_lin, in
 			temp = temp_inicio;
 	    	temp = temp->down;
 	    	
-	    	cout<<endl;
+	    	//cout<<endl;
 		}  	
     }
     
@@ -2046,13 +2052,13 @@ matrix matrix :: imagen_original_col_mos(string tipo, int no_col, int no_lin, in
 							
 							//all_capa == 0 , entonces es para toda la capa
 							if (all_capa == 0)
-							{mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_gris , "tempo");	}
+							{mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_gris , name_capa);	}
 							else /// entonces es solo una capa
 							{
 								if (temp->cor_z == all_capa){
-									mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_gris , "tempo");
+									mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, rgb_gris , name_capa+ " ***");
 								} else {
-									mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+									mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , name_capa );
 								}
 								
 							}
@@ -2062,7 +2068,7 @@ matrix matrix :: imagen_original_col_mos(string tipo, int no_col, int no_lin, in
 			temp = temp_inicio;
 	    	temp = temp->down;
 	    	
-	    	cout<<endl;
+	    	//cout<<endl;
 		}  	
     }
     
@@ -2100,7 +2106,7 @@ matrix matrix :: imagen_original_col_mos(string tipo, int no_col, int no_lin, in
 						co_y = (y-1)*no_lin; //para lienas y
 						
 						
-						mat_mod.add(temp->data, co_x + temp->cor_x, co_y + temp->cor_y, temp->cor_z, temp->valor , "tempo");
+						mat_mod.add(temp->data, co_x + temp->cor_x, co_y + temp->cor_y, temp->cor_z, temp->valor , name_capa);
 						////all_capa == 0 , entonces es para toda la capa
 						//if (all_capa == 0)
 						//{mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");	}
@@ -2147,13 +2153,13 @@ matrix matrix :: imagen_original_col_mos(string tipo, int no_col, int no_lin, in
 						//cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
 						//all_capa == 0 , entonces es para toda la capa
 						if (all_capa == 0)
-						{mat_mod.add(temp->data, no_col - temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");	}
+						{mat_mod.add(temp->data, no_col - temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , name_capa);	}
 						else /// entonces es solo una capa
 						{
 							if (temp->cor_z == all_capa){
-								mat_mod.add(temp->data, no_col - temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+								mat_mod.add(temp->data, no_col - temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , name_capa +" ***");
 							} else {
-								mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+								mat_mod.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , name_capa);
 							}
 							
 						}
@@ -2191,13 +2197,13 @@ matrix matrix :: imagen_original_col_mos(string tipo, int no_col, int no_lin, in
 							
 							//all_capa == 0 , entonces es para toda la capa
 							if (all_capa == 0)
-							{mat_neg.add(temp->data, temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , "tempo");	}
+							{mat_neg.add(temp->data, temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , name_capa);	}
 							else /// entonces es solo una capa
 							{
 								if (temp->cor_z == all_capa){
-									mat_neg.add(temp->data, temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , "tempo");
+									mat_neg.add(temp->data, temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , name_capa +" ***");
 								} else {
-									mat_neg.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+									mat_neg.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , name_capa);
 								}
 								
 							}
@@ -2239,13 +2245,13 @@ matrix matrix :: imagen_original_col_mos(string tipo, int no_col, int no_lin, in
 							
 							//all_capa == 0 , entonces es para toda la capa	
 							if (all_capa == 0)
-							{mat_neg.add(temp->data, no_col - temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , "tempo");	}
-							else /// entonces es solo una capa
+							{mat_neg.add(temp->data, no_col - temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , name_capa);	}
+							else //// entonces es solo una capa
 							{
 								if (temp->cor_z == all_capa){
-									mat_neg.add(temp->data, no_col - temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , "tempo");
+									mat_neg.add(temp->data, no_col - temp->cor_x, no_lin - temp->cor_y, temp->cor_z, temp->valor , name_capa+" ***");
 								} else {
-									mat_neg.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , "tempo");
+									mat_neg.add(temp->data, temp->cor_x, temp->cor_y, temp->cor_z, temp->valor , name_capa);
 								}
 								
 							}	

@@ -103,6 +103,7 @@ bool Filtros_lista_cir :: Buscando_ima(int in) {
 		//cout<<"index : "<< index<<"*"<< temp_prin->filtro <<endl; 
 			if (in == index){
 				//cout<<"ee : "<< temp_prin->filtro <<endl; 
+				filter_a_reportar = temp_prin;
 				return true;
 			}
 	    	temp_prin = temp_prin->siguiente;
@@ -110,6 +111,7 @@ bool Filtros_lista_cir :: Buscando_ima(int in) {
 		index++;	
 		if (in == index){
 			//cout<<"22 encontrado: "<< temp_prin->filtro <<endl; 
+			filter_a_reportar = temp_prin;
 			return true;
 		}
 		return false;
@@ -145,6 +147,25 @@ matrix Filtros_lista_cir :: return_mat_ima(int in) {
 			return temp_prin->mat;
 		}
 }
+
+/*string Filtros_lista_cir :: return_name_fil(int in) {
+
+    	int index = 0;
+		NodeCir *temp_prin = primero_head;
+    	while (temp_prin != ultimo){
+		index++;	
+			if (in == index){
+				name_actual = temp_prin->filtro; 
+				return name_actual;
+			}
+	    	temp_prin = temp_prin->siguiente;
+		}
+		index++;	
+		if (in == index){
+			name_actual = temp_prin->filtro; 
+			return name_actual;
+		}
+}*/
 
 //Imprimir lista atras
 void Filtros_lista_cir :: Lista_imprimir_atra() {
@@ -222,6 +243,78 @@ void Filtros_lista_cir :: Graf_filters() {
     
 }	
 
+void Filtros_lista_cir :: Graf_filters_all() {
+	
+	//f = open("user_list.txt", "w")
+    //f.write("digraph G { rankdir=LR\n")
+    //f.write("node [shape=record];\n")
+    string nodo_name = "";
+    string nodo_name_sig = "";
+    int nod = 0;
+    string name_filter;
+    
+    ofstream file;
+	file.open("filters.txt");
+	file <<"digraph G { rankdir=LR\n";
+    file <<"node [shape=record dir=both];\n";
+
+    if (esVacio() == true){
+        //cout<< "La  lista esta vacia, no se puede graficar\n"; 
+		} 
+	else {
+        NodeCir *temp_prin = primero_head;
+        while (temp_prin != ultimo) {    
+			//nodo_name =  str(temp_prin.iduser)
+            //nodo_name_sig = str(temp_prin.siguiente.iduser)  
+            nodo_name = static_cast<ostringstream*>(&(ostringstream()<<nod ))->str();
+            nodo_name_sig = static_cast<ostringstream*>(&(ostringstream()<<nod+1 ))->str(); 
+            
+			name_filter =  temp_prin->filtro; 
+			if (temp_prin->val != 0){
+				ostringstream cap;
+            	cap<<temp_prin->val;
+				name_filter = name_filter + " Capa " + cap.str(); 
+			}
+			
+			
+			file <<"node" << nodo_name << "[label = \"{<f0>|<f1> "<< name_filter <<"|<f2> }\"];\n";           
+            
+            file <<"node"+ nodo_name +" -> ";
+            file <<"node"+ nodo_name_sig +" ;\n"; 
+
+            file <<"node"+ nodo_name_sig +" -> ";
+            file <<"node"+ nodo_name +" ;\n";
+
+            temp_prin = temp_prin->siguiente;
+            nod++;
+        	}
+        //nodo_name =  str(temp_prin.iduser)
+        //nodo_name_sig = str(temp_prin.siguiente.iduser)
+        nodo_name = static_cast<ostringstream*>(&(ostringstream()<< nod ))->str();
+        nodo_name_sig =  static_cast<ostringstream*>(&(ostringstream()<<0 ))->str(); 
+
+		name_filter =  temp_prin->filtro; 
+			if (temp_prin->val != 0){
+				ostringstream cap;
+            	cap<<temp_prin->val;
+				name_filter = name_filter + " Capa " + cap.str(); 
+			}
+        file <<"node" << nodo_name <<"[label = \"{<f0>|<f1> "<< name_filter <<"|<f2> }\"];\n";
+
+        file <<"node"+ nodo_name +" -> ";
+        file <<"node"+ nodo_name_sig +";\n"; 
+
+        file <<"node"+ nodo_name_sig +" -> ";
+        file <<"node"+ nodo_name +";\n";
+
+	}
+    file <<"}";
+	file.close();
+
+    system("dot -Tpng filters.txt -o filters.jpg");
+    system("filters.jpg");
+    
+}
 /*
 int main()
 {

@@ -38,6 +38,8 @@ public:
 	NodeCir *primero_head;
 	NodeCir *ultimo;
 	
+	NodeCir *filter_a_reportar;
+	
 	string name_actual;
 	
 	Filtros_lista_cir () {
@@ -50,6 +52,7 @@ public:
 	void Lista_imprimir_ade();
 	void Lista_imprimir_atra();
 	void Graf_filters();
+	void Graf_filters_all();
 	
 	void Lista_print_filters();
 	

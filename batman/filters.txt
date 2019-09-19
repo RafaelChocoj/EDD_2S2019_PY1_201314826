@@ -1,0 +1,18 @@
+digraph G { rankdir=LR
+node [shape=record dir=both];
+node0[label = "{<f0>|<f1> hora_de_aventura|<f2> }"];
+node0 -> node1 ;
+node1 -> node0 ;
+node1[label = "{<f0>|<f1> Y-MIRROR Capa 2|<f2> }"];
+node1 -> node2 ;
+node2 -> node1 ;
+node2[label = "{<f0>|<f1> Y-MIRROR Capa 3|<f2> }"];
+node2 -> node3 ;
+node3 -> node2 ;
+node3[label = "{<f0>|<f1> NEGATIVE Capa 3|<f2> }"];
+node3 -> node4 ;
+node4 -> node3 ;
+node4[label = "{<f0>|<f1> COLLAGE|<f2> }"];
+node4 -> node0;
+node0 -> node4;
+}

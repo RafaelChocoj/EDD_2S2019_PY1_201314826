@@ -6,57 +6,7332 @@ body {
   align-items: center; 
  }
 .canvas {
-  width: 180px; 
-  height: 180px;
+  width: 1080px; 
+  height: 1560px;
  }
 .pixel {
-  width: 30px;
-  height:30px;
+  width: 20px;
+  height:20px;
   float: left;  
   box-shadow: 0px 0px 1px #fff;
 }
-.pixel:nth-child(2) { 
-  background: #9D76E6; 
+.pixel:nth-child(61) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(4) { 
-  background: #9D76E6; 
+.pixel:nth-child(62) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(8) { 
-  background: #9D76E6; 
+.pixel:nth-child(74) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(10) { 
-  background: #9D76E6; 
+.pixel:nth-child(75) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(14) { 
-  background: #9D76E6; 
+.pixel:nth-child(88) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(15) { 
-  background: #9D76E6; 
+.pixel:nth-child(89) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(16) { 
-  background: #9D76E6; 
+.pixel:nth-child(101) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(17) { 
-  background: #ADFF2F; 
+.pixel:nth-child(102) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(20) { 
-  background: #9D76E6; 
+.pixel:nth-child(115) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(22) { 
-  background: #9D76E6; 
+.pixel:nth-child(116) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(26) { 
-  background: #9D76E6; 
+.pixel:nth-child(128) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(27) { 
-  background: #9D76E6; 
+.pixel:nth-child(129) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(28) { 
-  background: #9D76E6; 
+.pixel:nth-child(142) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(2) { 
-  background: #DCDCDC; 
+.pixel:nth-child(143) { 
+  background: rgb(35,29,33); 
 } 
-.pixel:nth-child(31) { 
-  background: #B22222; 
+.pixel:nth-child(155) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(156) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(169) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(170) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(172) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(173) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(174) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(175) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(176) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(177) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(178) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(179) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(180) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(182) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(183) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(196) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(197) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(199) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(200) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(201) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(202) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(203) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(204) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(205) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(206) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(207) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(209) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(210) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(223) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(224) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(225) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(226) { 
+  background: rgb(48,44,58); 
+} 
+.pixel:nth-child(227) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(228) { 
+  background: rgb(48,44,60); 
+} 
+.pixel:nth-child(229) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(230) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(231) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(232) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(233) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(234) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(235) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(236) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(237) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(250) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(251) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(252) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(253) { 
+  background: rgb(48,44,58); 
+} 
+.pixel:nth-child(254) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(255) { 
+  background: rgb(48,44,60); 
+} 
+.pixel:nth-child(256) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(257) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(258) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(259) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(260) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(261) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(262) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(263) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(264) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(277) { 
+  background: rgb(35,29,34); 
+} 
+.pixel:nth-child(278) { 
+  background: rgb(48,44,58); 
+} 
+.pixel:nth-child(279) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(280) { 
+  background: rgb(48,44,60); 
+} 
+.pixel:nth-child(281) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(282) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(283) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(284) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(285) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(286) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(287) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(288) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(289) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(290) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(291) { 
+  background: rgb(35,29,34); 
+} 
+.pixel:nth-child(304) { 
+  background: rgb(35,29,34); 
+} 
+.pixel:nth-child(305) { 
+  background: rgb(48,44,58); 
+} 
+.pixel:nth-child(306) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(307) { 
+  background: rgb(48,44,60); 
+} 
+.pixel:nth-child(308) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(309) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(310) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(311) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(312) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(313) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(314) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(315) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(316) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(317) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(318) { 
+  background: rgb(35,29,34); 
+} 
+.pixel:nth-child(331) { 
+  background: rgb(35,29,35); 
+} 
+.pixel:nth-child(332) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(333) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(334) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(335) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(336) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(337) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(338) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(339) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(340) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(341) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(342) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(343) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(344) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(345) { 
+  background: rgb(35,29,35); 
+} 
+.pixel:nth-child(358) { 
+  background: rgb(35,29,35); 
+} 
+.pixel:nth-child(359) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(360) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(361) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(362) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(363) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(364) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(365) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(366) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(367) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(368) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(369) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(370) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(371) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(372) { 
+  background: rgb(35,29,35); 
+} 
+.pixel:nth-child(385) { 
+  background: rgb(35,29,36); 
+} 
+.pixel:nth-child(386) { 
+  background: rgb(48,44,60); 
+} 
+.pixel:nth-child(387) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(388) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(389) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(390) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(391) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(392) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(393) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(394) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(395) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(396) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(397) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(398) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(399) { 
+  background: rgb(35,29,36); 
+} 
+.pixel:nth-child(412) { 
+  background: rgb(35,29,36); 
+} 
+.pixel:nth-child(413) { 
+  background: rgb(48,44,60); 
+} 
+.pixel:nth-child(414) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(415) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(416) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(417) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(418) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(419) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(420) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(421) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(422) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(423) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(424) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(425) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(426) { 
+  background: rgb(35,29,36); 
+} 
+.pixel:nth-child(439) { 
+  background: rgb(35,29,37); 
+} 
+.pixel:nth-child(440) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(441) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(442) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(443) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(444) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(445) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(446) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(447) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(448) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(449) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(450) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(451) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(452) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(453) { 
+  background: rgb(35,29,37); 
+} 
+.pixel:nth-child(466) { 
+  background: rgb(35,29,37); 
+} 
+.pixel:nth-child(467) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(468) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(469) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(470) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(471) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(472) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(473) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(474) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(475) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(476) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(477) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(478) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(479) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(480) { 
+  background: rgb(35,29,37); 
+} 
+.pixel:nth-child(493) { 
+  background: rgb(35,29,38); 
+} 
+.pixel:nth-child(494) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(495) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(496) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(498) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(499) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(500) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(501) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(502) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(503) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(504) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(506) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(507) { 
+  background: rgb(35,29,38); 
+} 
+.pixel:nth-child(520) { 
+  background: rgb(35,29,38); 
+} 
+.pixel:nth-child(521) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(522) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(523) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(525) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(526) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(527) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(528) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(529) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(530) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(531) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(533) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(534) { 
+  background: rgb(35,29,38); 
+} 
+.pixel:nth-child(547) { 
+  background: rgb(35,29,39); 
+} 
+.pixel:nth-child(548) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(549) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(550) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(554) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(555) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(556) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(560) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(561) { 
+  background: rgb(35,29,39); 
+} 
+.pixel:nth-child(574) { 
+  background: rgb(35,29,39); 
+} 
+.pixel:nth-child(575) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(576) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(577) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(581) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(582) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(583) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(587) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(588) { 
+  background: rgb(35,29,39); 
+} 
+.pixel:nth-child(601) { 
+  background: rgb(35,29,40); 
+} 
+.pixel:nth-child(602) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(603) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(604) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(608) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(609) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(610) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(614) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(615) { 
+  background: rgb(35,29,40); 
+} 
+.pixel:nth-child(628) { 
+  background: rgb(35,29,40); 
+} 
+.pixel:nth-child(629) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(630) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(631) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(635) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(636) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(637) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(641) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(642) { 
+  background: rgb(35,29,40); 
+} 
+.pixel:nth-child(655) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(656) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(657) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(658) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(659) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(660) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(661) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(662) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(663) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(664) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(665) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(666) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(667) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(668) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(669) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(682) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(683) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(684) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(685) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(686) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(687) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(688) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(689) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(690) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(691) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(692) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(693) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(694) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(695) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(696) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(709) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(710) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(711) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(712) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(713) { 
+  background: rgb(35,29,43); 
+} 
+.pixel:nth-child(714) { 
+  background: rgb(35,29,44); 
+} 
+.pixel:nth-child(715) { 
+  background: rgb(35,29,45); 
+} 
+.pixel:nth-child(716) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(717) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(718) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(719) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(720) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(721) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(722) { 
+  background: rgb(48,44,76); 
+} 
+.pixel:nth-child(723) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(736) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(737) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(738) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(739) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(740) { 
+  background: rgb(35,29,43); 
+} 
+.pixel:nth-child(741) { 
+  background: rgb(35,29,44); 
+} 
+.pixel:nth-child(742) { 
+  background: rgb(35,29,45); 
+} 
+.pixel:nth-child(743) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(744) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(745) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(746) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(747) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(748) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(749) { 
+  background: rgb(48,44,76); 
+} 
+.pixel:nth-child(750) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(764) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(765) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(766) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(774) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(775) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(776) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(791) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(792) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(793) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(801) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(802) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(803) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(818) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(819) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(820) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(828) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(829) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(830) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(845) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(846) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(847) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(855) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(856) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(857) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(870) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(871) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(873) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(874) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(882) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(883) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(885) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(886) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(897) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(898) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(900) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(901) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(909) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(910) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(912) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(913) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(923) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(926) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(928) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(929) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(935) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(936) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(938) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(941) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(950) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(953) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(955) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(956) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(962) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(963) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(965) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(968) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(976) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(979) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(984) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(985) { 
+  background: rgb(35,29,43); 
+} 
+.pixel:nth-child(986) { 
+  background: rgb(35,29,44); 
+} 
+.pixel:nth-child(987) { 
+  background: rgb(35,29,45); 
+} 
+.pixel:nth-child(988) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(993) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(996) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1003) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1006) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1011) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(1012) { 
+  background: rgb(35,29,43); 
+} 
+.pixel:nth-child(1013) { 
+  background: rgb(35,29,44); 
+} 
+.pixel:nth-child(1014) { 
+  background: rgb(35,29,45); 
+} 
+.pixel:nth-child(1015) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(1020) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1023) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1029) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1032) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1037) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1043) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1048) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1051) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1056) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1059) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1064) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1070) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1075) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1078) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1082) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1085) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1090) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1091) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1093) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1095) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1097) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1098) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1103) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1106) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1109) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1112) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1117) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1118) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1120) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1122) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1124) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1125) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1130) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1133) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1136) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(1138) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1142) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(1144) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1145) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1146) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1147) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1148) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(1149) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(1150) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1151) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1152) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1154) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1158) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1160) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(1163) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(1165) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1169) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(1171) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1172) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1173) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1174) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1175) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(1176) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(1177) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1178) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1179) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1181) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1185) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1187) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(1190) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(1192) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1196) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(1198) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1199) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1202) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1205) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1206) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1208) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1212) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1214) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(1217) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(1219) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1223) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(1225) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1226) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1229) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1232) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1233) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1235) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1239) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1241) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(1244) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(1246) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1247) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1248) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1249) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1250) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1253) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1259) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1262) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(1263) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1264) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1265) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1266) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1268) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(1271) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(1273) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1274) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1275) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1276) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1277) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1280) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1286) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1289) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(1290) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1291) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1292) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1293) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1295) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(1298) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1300) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1304) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(1316) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(1320) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1322) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1325) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1327) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1331) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(1343) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(1347) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1349) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1352) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1354) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1358) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(1359) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1360) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1361) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1362) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1363) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1364) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1365) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(1366) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(1367) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(1368) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(1369) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1370) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(1374) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1376) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1379) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1381) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1385) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(1386) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1387) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1388) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1389) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1390) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1391) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1392) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(1393) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(1394) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(1395) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(1396) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1397) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(1401) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1403) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1406) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1408) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1412) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(1416) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1420) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1424) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(1428) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1430) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1433) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1435) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1439) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(1443) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1447) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1451) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(1455) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1457) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1460) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1462) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1466) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1470) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1474) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1478) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1482) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1484) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1487) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1489) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1493) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1497) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1501) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1505) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1509) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1511) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1514) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1517) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1520) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1521) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1522) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1523) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1524) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1525) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1526) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1527) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(1528) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(1529) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(1530) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(1531) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1532) { 
+  background: rgb(35,29,64); 
+} 
+.pixel:nth-child(1535) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1538) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1541) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1544) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1547) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1548) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1549) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1550) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1551) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1552) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1553) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1554) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(1555) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(1556) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(1557) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(1558) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1559) { 
+  background: rgb(35,29,64); 
+} 
+.pixel:nth-child(1562) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1565) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1568) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1572) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1573) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1574) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1576) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1584) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1586) { 
+  background: rgb(35,29,65); 
+} 
+.pixel:nth-child(1587) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1588) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1592) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1595) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1599) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1600) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1601) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1603) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1611) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1613) { 
+  background: rgb(35,29,65); 
+} 
+.pixel:nth-child(1614) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1615) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1619) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1622) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1628) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1631) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1637) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1640) { 
+  background: rgb(35,29,66); 
+} 
+.pixel:nth-child(1646) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1649) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1655) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1658) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1664) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1667) { 
+  background: rgb(35,29,66); 
+} 
+.pixel:nth-child(1673) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1676) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(1682) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1686) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1690) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1694) { 
+  background: rgb(35,29,67); 
+} 
+.pixel:nth-child(1700) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(1703) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(1709) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1713) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1717) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1721) { 
+  background: rgb(35,29,67); 
+} 
+.pixel:nth-child(1727) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(1730) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(1736) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1741) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1742) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1743) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1748) { 
+  background: rgb(35,29,68); 
+} 
+.pixel:nth-child(1754) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(1757) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(1763) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(1768) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1769) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1770) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1775) { 
+  background: rgb(35,29,68); 
+} 
+.pixel:nth-child(1781) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(1784) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(1790) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(1791) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(1792) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1793) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(1794) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(1795) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(1797) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1798) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1799) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1800) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1801) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1802) { 
+  background: rgb(35,29,69); 
+} 
+.pixel:nth-child(1804) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1808) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(1811) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(1817) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(1818) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(1819) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(1820) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(1821) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(1822) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(1824) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1825) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1826) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1827) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1828) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(1829) { 
+  background: rgb(35,29,69); 
+} 
+.pixel:nth-child(1831) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1835) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(1838) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(1843) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1844) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(1845) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(1846) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(1847) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1848) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1849) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1851) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1852) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(1853) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(1854) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1855) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1856) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1857) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1859) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1860) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1862) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(1865) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(1870) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1871) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(1872) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(1873) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(1874) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1875) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1876) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1878) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(1879) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(1880) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(1881) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1882) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1883) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1884) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1886) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1887) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1889) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(1892) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1895) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1896) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1898) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(1899) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(1900) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(1901) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1902) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1903) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1905) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1906) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(1907) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(1908) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1909) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1910) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1915) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1916) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1919) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1922) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1923) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1925) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(1926) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(1927) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(1928) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1929) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1930) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1932) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(1933) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(1934) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(1935) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1936) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1937) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1942) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1943) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1947) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1948) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1951) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(1952) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(1953) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(1954) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(1955) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1956) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1957) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1959) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1960) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(1961) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(1962) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(1963) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1964) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1965) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(1974) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1975) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(1978) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(1979) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(1980) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(1981) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(1982) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1983) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1984) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(1986) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(1987) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(1988) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(1989) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(1990) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1991) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1992) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(2005) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(2006) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(2007) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(2008) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(2009) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(2010) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(2011) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(2013) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(2014) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(2015) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(2016) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(2017) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(2018) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(2019) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(2032) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(2033) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(2034) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(2035) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(2036) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(2037) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(2038) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(2040) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(2041) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(2042) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(2043) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(2044) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(2045) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(2046) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(2167) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2168) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2180) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2181) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2194) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2195) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2207) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2208) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2221) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2222) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2234) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2235) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2248) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2249) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2261) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2262) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2275) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2276) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2278) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2279) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2280) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2281) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2282) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2283) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2284) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2285) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2286) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2288) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2289) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2302) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2303) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2305) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2306) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2307) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2308) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2309) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2310) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2311) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2312) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2313) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2315) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2316) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2329) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2330) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2331) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2332) { 
+  background: rgb(48,44,58); 
+} 
+.pixel:nth-child(2333) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2334) { 
+  background: rgb(48,44,60); 
+} 
+.pixel:nth-child(2335) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2336) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2337) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2338) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(2339) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(2340) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(2341) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2342) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2343) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2356) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2357) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2358) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2359) { 
+  background: rgb(48,44,58); 
+} 
+.pixel:nth-child(2360) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2361) { 
+  background: rgb(48,44,60); 
+} 
+.pixel:nth-child(2362) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2363) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2364) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2365) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(2366) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(2367) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(2368) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2369) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2370) { 
+  background: rgb(35,29,33); 
+} 
+.pixel:nth-child(2383) { 
+  background: rgb(35,29,34); 
+} 
+.pixel:nth-child(2384) { 
+  background: rgb(48,44,58); 
+} 
+.pixel:nth-child(2385) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2386) { 
+  background: rgb(48,44,60); 
+} 
+.pixel:nth-child(2387) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2388) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2389) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2390) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(2391) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(2392) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(2393) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(2394) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(2395) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(2396) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(2397) { 
+  background: rgb(35,29,34); 
+} 
+.pixel:nth-child(2410) { 
+  background: rgb(35,29,34); 
+} 
+.pixel:nth-child(2411) { 
+  background: rgb(48,44,58); 
+} 
+.pixel:nth-child(2412) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2413) { 
+  background: rgb(48,44,60); 
+} 
+.pixel:nth-child(2414) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2415) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2416) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2417) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(2418) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(2419) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(2420) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(2421) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(2422) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(2423) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(2424) { 
+  background: rgb(35,29,34); 
+} 
+.pixel:nth-child(2437) { 
+  background: rgb(35,29,35); 
+} 
+.pixel:nth-child(2438) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2439) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2440) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2441) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2442) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2443) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2444) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2445) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2446) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2447) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2448) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2449) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2450) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2451) { 
+  background: rgb(35,29,35); 
+} 
+.pixel:nth-child(2464) { 
+  background: rgb(35,29,35); 
+} 
+.pixel:nth-child(2465) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2466) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2467) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2468) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2469) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2470) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2471) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2472) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2473) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2474) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2475) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2476) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2477) { 
+  background: rgb(48,44,59); 
+} 
+.pixel:nth-child(2478) { 
+  background: rgb(35,29,35); 
+} 
+.pixel:nth-child(2491) { 
+  background: rgb(35,29,36); 
+} 
+.pixel:nth-child(2492) { 
+  background: rgb(48,44,60); 
+} 
+.pixel:nth-child(2493) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2494) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(2495) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2496) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(2497) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(2498) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(2499) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(2500) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(2501) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(2502) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(2503) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(2504) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(2505) { 
+  background: rgb(35,29,36); 
+} 
+.pixel:nth-child(2518) { 
+  background: rgb(35,29,36); 
+} 
+.pixel:nth-child(2519) { 
+  background: rgb(48,44,60); 
+} 
+.pixel:nth-child(2520) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2521) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(2522) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2523) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(2524) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(2525) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(2526) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(2527) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(2528) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(2529) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(2530) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(2531) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(2532) { 
+  background: rgb(35,29,36); 
+} 
+.pixel:nth-child(2545) { 
+  background: rgb(35,29,37); 
+} 
+.pixel:nth-child(2546) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2547) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2548) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(2549) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2550) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2551) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2552) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2553) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2554) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2555) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2556) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2557) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2558) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2559) { 
+  background: rgb(35,29,37); 
+} 
+.pixel:nth-child(2572) { 
+  background: rgb(35,29,37); 
+} 
+.pixel:nth-child(2573) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2574) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2575) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(2576) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2577) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2578) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2579) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2580) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2581) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2582) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2583) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2584) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2585) { 
+  background: rgb(48,44,61); 
+} 
+.pixel:nth-child(2586) { 
+  background: rgb(35,29,37); 
+} 
+.pixel:nth-child(2599) { 
+  background: rgb(35,29,38); 
+} 
+.pixel:nth-child(2600) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2601) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2602) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(2604) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2605) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2606) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2607) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2608) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2609) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2610) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2612) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2613) { 
+  background: rgb(35,29,38); 
+} 
+.pixel:nth-child(2626) { 
+  background: rgb(35,29,38); 
+} 
+.pixel:nth-child(2627) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2628) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2629) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(2631) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2632) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2633) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2634) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2635) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2636) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2637) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2639) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(2640) { 
+  background: rgb(35,29,38); 
+} 
+.pixel:nth-child(2653) { 
+  background: rgb(35,29,39); 
+} 
+.pixel:nth-child(2654) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2655) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2656) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(2660) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2661) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2662) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2666) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2667) { 
+  background: rgb(35,29,39); 
+} 
+.pixel:nth-child(2680) { 
+  background: rgb(35,29,39); 
+} 
+.pixel:nth-child(2681) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2682) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2683) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(2687) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2688) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2689) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2693) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(2694) { 
+  background: rgb(35,29,39); 
+} 
+.pixel:nth-child(2707) { 
+  background: rgb(35,29,40); 
+} 
+.pixel:nth-child(2708) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(2709) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(2710) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(2714) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(2715) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(2716) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(2720) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(2721) { 
+  background: rgb(35,29,40); 
+} 
+.pixel:nth-child(2734) { 
+  background: rgb(35,29,40); 
+} 
+.pixel:nth-child(2735) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(2736) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(2737) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(2741) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(2742) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(2743) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(2747) { 
+  background: rgb(48,44,72); 
+} 
+.pixel:nth-child(2748) { 
+  background: rgb(35,29,40); 
+} 
+.pixel:nth-child(2761) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(2762) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(2763) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(2764) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2765) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2766) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2767) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2768) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2769) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2770) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2771) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2772) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2773) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2774) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2775) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(2788) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(2789) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(2790) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(2791) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2792) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2793) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2794) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2795) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2796) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2797) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2798) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2799) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2800) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2801) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2802) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(2815) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2816) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(2817) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(2818) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2819) { 
+  background: rgb(35,29,43); 
+} 
+.pixel:nth-child(2820) { 
+  background: rgb(35,29,44); 
+} 
+.pixel:nth-child(2821) { 
+  background: rgb(35,29,45); 
+} 
+.pixel:nth-child(2822) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(2823) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(2824) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(2825) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(2826) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(2827) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2828) { 
+  background: rgb(48,44,76); 
+} 
+.pixel:nth-child(2829) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2842) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2843) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(2844) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(2845) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2846) { 
+  background: rgb(35,29,43); 
+} 
+.pixel:nth-child(2847) { 
+  background: rgb(35,29,44); 
+} 
+.pixel:nth-child(2848) { 
+  background: rgb(35,29,45); 
+} 
+.pixel:nth-child(2849) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(2850) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(2851) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(2852) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(2853) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(2854) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2855) { 
+  background: rgb(48,44,76); 
+} 
+.pixel:nth-child(2856) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2870) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2871) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2872) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2880) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2881) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2882) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2897) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2898) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2899) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2907) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2908) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2909) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2924) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2925) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2926) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2934) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2935) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2936) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2951) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2952) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2953) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2961) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2962) { 
+  background: rgb(48,44,74); 
+} 
+.pixel:nth-child(2963) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2976) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(2977) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(2979) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2980) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2988) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2989) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(2991) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(2992) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3003) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3004) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3006) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3007) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3015) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3016) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3018) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3019) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3029) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3032) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3034) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3035) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3041) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3042) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3044) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3047) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3056) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3059) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3061) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3062) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3068) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3069) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3071) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3074) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3082) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3085) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3090) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3091) { 
+  background: rgb(35,29,43); 
+} 
+.pixel:nth-child(3092) { 
+  background: rgb(35,29,44); 
+} 
+.pixel:nth-child(3093) { 
+  background: rgb(35,29,45); 
+} 
+.pixel:nth-child(3094) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(3099) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3102) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3109) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3112) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3117) { 
+  background: rgb(35,29,42); 
+} 
+.pixel:nth-child(3118) { 
+  background: rgb(35,29,43); 
+} 
+.pixel:nth-child(3119) { 
+  background: rgb(35,29,44); 
+} 
+.pixel:nth-child(3120) { 
+  background: rgb(35,29,45); 
+} 
+.pixel:nth-child(3121) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(3126) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3129) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3135) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3138) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3143) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3149) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3154) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3157) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3162) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3165) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3170) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3176) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3181) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3184) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3188) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3191) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3196) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3197) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3199) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3201) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3203) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3204) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3209) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3212) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3215) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3218) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3223) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3224) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3226) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3228) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3230) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3231) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3236) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3239) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3242) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(3244) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3248) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(3250) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3251) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3252) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3253) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3254) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(3255) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(3256) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3257) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3258) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3260) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3264) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3266) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(3269) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(3271) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3275) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(3277) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3278) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3279) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3280) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3281) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(3282) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(3283) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3284) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3285) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3287) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3291) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3293) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(3296) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(3298) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3302) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(3304) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3305) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3308) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3311) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3312) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3314) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3318) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3320) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(3323) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(3325) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3329) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(3331) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3332) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3335) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3338) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3339) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3341) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3345) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3347) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(3350) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(3352) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3353) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3354) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3355) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3356) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3359) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3365) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3368) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(3369) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3370) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3371) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3372) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3374) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(3377) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(3379) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3380) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3381) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3382) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3383) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3386) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3392) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3395) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(3396) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3397) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3398) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3399) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3401) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(3404) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(3406) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3410) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(3422) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(3426) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3428) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(3431) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(3433) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3437) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(3449) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(3453) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3455) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(3458) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3460) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3464) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(3465) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3466) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3467) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3468) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3469) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3470) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3471) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(3472) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(3473) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(3474) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(3475) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(3476) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(3480) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3482) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3485) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3487) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3491) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(3492) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3493) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3494) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3495) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3496) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3497) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3498) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(3499) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(3500) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(3501) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(3502) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(3503) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(3507) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3509) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3512) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3514) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3518) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(3522) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3526) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3530) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(3534) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3536) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3539) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3541) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3545) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(3549) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3553) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3557) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(3561) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3563) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3566) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3568) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3572) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(3576) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3580) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3584) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(3588) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3590) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3593) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3595) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3599) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(3603) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3607) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3611) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(3615) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3617) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3620) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3623) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3626) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3627) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3628) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3629) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3630) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3631) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3632) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3633) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(3634) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(3635) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(3636) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(3637) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(3638) { 
+  background: rgb(35,29,64); 
+} 
+.pixel:nth-child(3641) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3644) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3647) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3650) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3653) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3654) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3655) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3656) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3657) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3658) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3659) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3660) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(3661) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(3662) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(3663) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(3664) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(3665) { 
+  background: rgb(35,29,64); 
+} 
+.pixel:nth-child(3668) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3671) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3674) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3678) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3679) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3680) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3682) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3690) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3692) { 
+  background: rgb(35,29,65); 
+} 
+.pixel:nth-child(3693) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3694) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3698) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3701) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3705) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3706) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3707) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3709) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3717) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3719) { 
+  background: rgb(35,29,65); 
+} 
+.pixel:nth-child(3720) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3721) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3725) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3728) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3734) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3737) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3743) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3746) { 
+  background: rgb(35,29,66); 
+} 
+.pixel:nth-child(3752) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3755) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3761) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3764) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3770) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3773) { 
+  background: rgb(35,29,66); 
+} 
+.pixel:nth-child(3779) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3782) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(3788) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3792) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3796) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3800) { 
+  background: rgb(35,29,67); 
+} 
+.pixel:nth-child(3806) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(3809) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(3815) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3819) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3823) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3827) { 
+  background: rgb(35,29,67); 
+} 
+.pixel:nth-child(3833) { 
+  background: rgb(35,29,59); 
+} 
+.pixel:nth-child(3836) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(3842) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3847) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3848) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3849) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3854) { 
+  background: rgb(35,29,68); 
+} 
+.pixel:nth-child(3860) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(3863) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(3869) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(3874) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3875) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3876) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3881) { 
+  background: rgb(35,29,68); 
+} 
+.pixel:nth-child(3887) { 
+  background: rgb(35,29,60); 
+} 
+.pixel:nth-child(3890) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(3896) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(3897) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(3898) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3899) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(3900) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(3901) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(3903) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(3904) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3905) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3906) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3907) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3908) { 
+  background: rgb(35,29,69); 
+} 
+.pixel:nth-child(3910) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3914) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(3917) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(3923) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(3924) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(3925) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(3926) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(3927) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(3928) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(3930) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(3931) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3932) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(3933) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(3934) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(3935) { 
+  background: rgb(35,29,69); 
+} 
+.pixel:nth-child(3937) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3941) { 
+  background: rgb(35,29,61); 
+} 
+.pixel:nth-child(3944) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(3949) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(3950) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(3951) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(3952) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(3953) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(3954) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(3955) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(3957) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3958) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(3959) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(3960) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(3961) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(3962) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3963) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3965) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3966) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3968) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(3971) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(3976) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(3977) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(3978) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(3979) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(3980) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(3981) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(3982) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(3984) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(3985) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(3986) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(3987) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(3988) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(3989) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3990) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3992) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3993) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(3995) { 
+  background: rgb(35,29,62); 
+} 
+.pixel:nth-child(3998) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(4001) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(4002) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(4004) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(4005) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(4006) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(4007) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(4008) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(4009) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(4011) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(4012) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(4013) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(4014) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(4015) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(4016) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(4021) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(4022) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(4025) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(4028) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(4029) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(4031) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(4032) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(4033) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(4034) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(4035) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(4036) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(4038) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(4039) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(4040) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(4041) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(4042) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(4043) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(4048) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(4049) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(4053) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(4054) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(4057) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(4058) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(4059) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(4060) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(4061) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(4062) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(4063) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(4065) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(4066) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(4067) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(4068) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(4069) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(4070) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(4071) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(4080) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(4081) { 
+  background: rgb(35,29,63); 
+} 
+.pixel:nth-child(4084) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(4085) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(4086) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(4087) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(4088) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(4089) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(4090) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(4092) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(4093) { 
+  background: rgb(48,44,62); 
+} 
+.pixel:nth-child(4094) { 
+  background: rgb(48,44,63); 
+} 
+.pixel:nth-child(4095) { 
+  background: rgb(48,44,64); 
+} 
+.pixel:nth-child(4096) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(4097) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(4098) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(4111) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(4112) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(4113) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(4114) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(4115) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(4116) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(4117) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(4119) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(4120) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(4121) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(4122) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(4123) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(4124) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(4125) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(4138) { 
+  background: rgb(35,29,46); 
+} 
+.pixel:nth-child(4139) { 
+  background: rgb(35,29,47); 
+} 
+.pixel:nth-child(4140) { 
+  background: rgb(35,29,48); 
+} 
+.pixel:nth-child(4141) { 
+  background: rgb(35,29,49); 
+} 
+.pixel:nth-child(4142) { 
+  background: rgb(35,29,50); 
+} 
+.pixel:nth-child(4143) { 
+  background: rgb(35,29,51); 
+} 
+.pixel:nth-child(4144) { 
+  background: rgb(35,29,52); 
+} 
+.pixel:nth-child(4146) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(4147) { 
+  background: rgb(35,29,53); 
+} 
+.pixel:nth-child(4148) { 
+  background: rgb(35,29,54); 
+} 
+.pixel:nth-child(4149) { 
+  background: rgb(35,29,55); 
+} 
+.pixel:nth-child(4150) { 
+  background: rgb(35,29,56); 
+} 
+.pixel:nth-child(4151) { 
+  background: rgb(35,29,57); 
+} 
+.pixel:nth-child(4152) { 
+  background: rgb(35,29,58); 
+} 
+.pixel:nth-child(927) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(937) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(954) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(964) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(980) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(981) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(982) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(983) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(989) { 
+  background: rgb(110,108,122); 
+} 
+.pixel:nth-child(990) { 
+  background: rgb(110,108,123); 
+} 
+.pixel:nth-child(991) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(992) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1007) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1008) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1009) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1010) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1016) { 
+  background: rgb(110,108,122); 
+} 
+.pixel:nth-child(1017) { 
+  background: rgb(110,108,123); 
+} 
+.pixel:nth-child(1018) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1019) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1033) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1034) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1035) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1036) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1038) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1039) { 
+  background: rgb(110,108,119); 
+} 
+.pixel:nth-child(1040) { 
+  background: rgb(110,108,120); 
+} 
+.pixel:nth-child(1041) { 
+  background: rgb(110,108,121); 
+} 
+.pixel:nth-child(1042) { 
+  background: rgb(110,108,122); 
+} 
+.pixel:nth-child(1044) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1045) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1046) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1047) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1060) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1061) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1062) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1063) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1065) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1066) { 
+  background: rgb(110,108,119); 
+} 
+.pixel:nth-child(1067) { 
+  background: rgb(110,108,120); 
+} 
+.pixel:nth-child(1068) { 
+  background: rgb(110,108,121); 
+} 
+.pixel:nth-child(1069) { 
+  background: rgb(110,108,122); 
+} 
+.pixel:nth-child(1071) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1072) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1073) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1074) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1086) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1087) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1088) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1089) { 
+  background: rgb(110,108,112); 
+} 
+.pixel:nth-child(1092) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1094) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1096) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1099) { 
+  background: rgb(110,108,125); 
+} 
+.pixel:nth-child(1100) { 
+  background: rgb(110,108,126); 
+} 
+.pixel:nth-child(1101) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1102) { 
+  background: rgb(110,108,128); 
+} 
+.pixel:nth-child(1113) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1114) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1115) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1116) { 
+  background: rgb(110,108,112); 
+} 
+.pixel:nth-child(1119) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1121) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1123) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1126) { 
+  background: rgb(110,108,125); 
+} 
+.pixel:nth-child(1127) { 
+  background: rgb(110,108,126); 
+} 
+.pixel:nth-child(1128) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1129) { 
+  background: rgb(110,108,128); 
+} 
+.pixel:nth-child(1139) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1140) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1141) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1143) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1153) { 
+  background: rgb(110,108,126); 
+} 
+.pixel:nth-child(1155) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1156) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1157) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1166) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1167) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1168) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1170) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1180) { 
+  background: rgb(110,108,126); 
+} 
+.pixel:nth-child(1182) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1183) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1184) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1193) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1194) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1195) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1197) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(1200) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1201) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1203) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1204) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1207) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1209) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1210) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1211) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1220) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1221) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1222) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1224) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(1227) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1228) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1230) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1231) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1234) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1236) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1237) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1238) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(1251) { 
+  background: rgb(110,108,115); 
+} 
+.pixel:nth-child(1252) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1254) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1255) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1256) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1257) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1258) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1260) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1261) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1278) { 
+  background: rgb(110,108,115); 
+} 
+.pixel:nth-child(1279) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1281) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1282) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1283) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1284) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1285) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1287) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1288) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1301) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1302) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1303) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1305) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(1306) { 
+  background: rgb(110,108,117); 
+} 
+.pixel:nth-child(1307) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1308) { 
+  background: rgb(110,108,119); 
+} 
+.pixel:nth-child(1309) { 
+  background: rgb(110,108,120); 
+} 
+.pixel:nth-child(1310) { 
+  background: rgb(110,108,121); 
+} 
+.pixel:nth-child(1311) { 
+  background: rgb(110,108,122); 
+} 
+.pixel:nth-child(1312) { 
+  background: rgb(110,108,123); 
+} 
+.pixel:nth-child(1313) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1314) { 
+  background: rgb(110,108,125); 
+} 
+.pixel:nth-child(1315) { 
+  background: rgb(110,108,126); 
+} 
+.pixel:nth-child(1317) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1318) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1319) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1328) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1329) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1330) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1332) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(1333) { 
+  background: rgb(110,108,117); 
+} 
+.pixel:nth-child(1334) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(1335) { 
+  background: rgb(110,108,119); 
+} 
+.pixel:nth-child(1336) { 
+  background: rgb(110,108,120); 
+} 
+.pixel:nth-child(1337) { 
+  background: rgb(110,108,121); 
+} 
+.pixel:nth-child(1338) { 
+  background: rgb(110,108,122); 
+} 
+.pixel:nth-child(1339) { 
+  background: rgb(110,108,123); 
+} 
+.pixel:nth-child(1340) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(1341) { 
+  background: rgb(110,108,125); 
+} 
+.pixel:nth-child(1342) { 
+  background: rgb(110,108,126); 
+} 
+.pixel:nth-child(1344) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1345) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1346) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1355) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1356) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1357) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1371) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1372) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1373) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1382) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1383) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1384) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1398) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1399) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1400) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1409) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1410) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1411) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1413) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(1414) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(1415) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(1417) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(1418) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(1419) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(1421) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(1422) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(1423) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(1425) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1426) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1427) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1436) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1437) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1438) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1440) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(1441) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(1442) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(1444) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(1445) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(1446) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(1448) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(1449) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(1450) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(1452) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1453) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1454) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1463) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1464) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1465) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1467) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(1468) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(1469) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(1471) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(1472) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(1473) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(1475) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(1476) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(1477) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(1479) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1480) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1481) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1490) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1491) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1492) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1494) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(1495) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(1496) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(1498) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(1499) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(1500) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(1502) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(1503) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(1504) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(1506) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1507) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1508) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1518) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(1519) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(1533) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(1534) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(1545) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(1546) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(1560) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(1561) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(1575) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1577) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1578) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1579) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1580) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1581) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1582) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1583) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(1585) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1602) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(1604) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(1605) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(1606) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1607) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1608) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1609) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(1610) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(1612) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1629) { 
+  background: rgb(110,108,112); 
+} 
+.pixel:nth-child(1630) { 
+  background: rgb(110,108,112); 
+} 
+.pixel:nth-child(1632) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1633) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1634) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1635) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1636) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1638) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(1639) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(1656) { 
+  background: rgb(110,108,112); 
+} 
+.pixel:nth-child(1657) { 
+  background: rgb(110,108,112); 
+} 
+.pixel:nth-child(1659) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(1660) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1661) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1662) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1663) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1665) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(1666) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(1683) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1684) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1685) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1687) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1688) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1689) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1691) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(1692) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(1693) { 
+  background: rgb(110,108,115); 
+} 
+.pixel:nth-child(1710) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1711) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1712) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1714) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(1715) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1716) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(1718) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(1719) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(1720) { 
+  background: rgb(110,108,115); 
+} 
+.pixel:nth-child(1737) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(1738) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(1739) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1740) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1744) { 
+  background: rgb(110,108,115); 
+} 
+.pixel:nth-child(1745) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(1746) { 
+  background: rgb(110,108,117); 
+} 
+.pixel:nth-child(1747) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(1764) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(1765) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(1766) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1767) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(1771) { 
+  background: rgb(110,108,115); 
+} 
+.pixel:nth-child(1772) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(1773) { 
+  background: rgb(110,108,117); 
+} 
+.pixel:nth-child(1774) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(3033) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3043) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3060) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3070) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3086) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3087) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3088) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3089) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3095) { 
+  background: rgb(110,108,122); 
+} 
+.pixel:nth-child(3096) { 
+  background: rgb(110,108,123); 
+} 
+.pixel:nth-child(3097) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3098) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3113) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3114) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3115) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3116) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3122) { 
+  background: rgb(110,108,122); 
+} 
+.pixel:nth-child(3123) { 
+  background: rgb(110,108,123); 
+} 
+.pixel:nth-child(3124) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3125) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3139) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3140) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3141) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3142) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3144) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3145) { 
+  background: rgb(110,108,119); 
+} 
+.pixel:nth-child(3146) { 
+  background: rgb(110,108,120); 
+} 
+.pixel:nth-child(3147) { 
+  background: rgb(110,108,121); 
+} 
+.pixel:nth-child(3148) { 
+  background: rgb(110,108,122); 
+} 
+.pixel:nth-child(3150) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3151) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3152) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3153) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3166) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3167) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3168) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3169) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3171) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3172) { 
+  background: rgb(110,108,119); 
+} 
+.pixel:nth-child(3173) { 
+  background: rgb(110,108,120); 
+} 
+.pixel:nth-child(3174) { 
+  background: rgb(110,108,121); 
+} 
+.pixel:nth-child(3175) { 
+  background: rgb(110,108,122); 
+} 
+.pixel:nth-child(3177) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3178) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3179) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3180) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3192) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3193) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3194) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3195) { 
+  background: rgb(110,108,112); 
+} 
+.pixel:nth-child(3198) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3200) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3202) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3205) { 
+  background: rgb(110,108,125); 
+} 
+.pixel:nth-child(3206) { 
+  background: rgb(110,108,126); 
+} 
+.pixel:nth-child(3207) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3208) { 
+  background: rgb(110,108,128); 
+} 
+.pixel:nth-child(3219) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3220) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3221) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3222) { 
+  background: rgb(110,108,112); 
+} 
+.pixel:nth-child(3225) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3227) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3229) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3232) { 
+  background: rgb(110,108,125); 
+} 
+.pixel:nth-child(3233) { 
+  background: rgb(110,108,126); 
+} 
+.pixel:nth-child(3234) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3235) { 
+  background: rgb(110,108,128); 
+} 
+.pixel:nth-child(3245) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3246) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3247) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3249) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3259) { 
+  background: rgb(110,108,126); 
+} 
+.pixel:nth-child(3261) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3262) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3263) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3272) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3273) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3274) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3276) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3286) { 
+  background: rgb(110,108,126); 
+} 
+.pixel:nth-child(3288) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3289) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3290) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3299) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3300) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3301) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3303) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(3306) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3307) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3309) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3310) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3313) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3315) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3316) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3317) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3326) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3327) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3328) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3330) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(3333) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3334) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3336) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3337) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3340) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3342) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3343) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3344) { 
+  background: rgb(110,108,127); 
+} 
+.pixel:nth-child(3357) { 
+  background: rgb(110,108,115); 
+} 
+.pixel:nth-child(3358) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3360) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3361) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3362) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3363) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3364) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3366) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3367) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3384) { 
+  background: rgb(110,108,115); 
+} 
+.pixel:nth-child(3385) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3387) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3388) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3389) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3390) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3391) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3393) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3394) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3407) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3408) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3409) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3411) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(3412) { 
+  background: rgb(110,108,117); 
+} 
+.pixel:nth-child(3413) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3414) { 
+  background: rgb(110,108,119); 
+} 
+.pixel:nth-child(3415) { 
+  background: rgb(110,108,120); 
+} 
+.pixel:nth-child(3416) { 
+  background: rgb(110,108,121); 
+} 
+.pixel:nth-child(3417) { 
+  background: rgb(110,108,122); 
+} 
+.pixel:nth-child(3418) { 
+  background: rgb(110,108,123); 
+} 
+.pixel:nth-child(3419) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3420) { 
+  background: rgb(110,108,125); 
+} 
+.pixel:nth-child(3421) { 
+  background: rgb(110,108,126); 
+} 
+.pixel:nth-child(3423) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3424) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3425) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3434) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3435) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3436) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3438) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(3439) { 
+  background: rgb(110,108,117); 
+} 
+.pixel:nth-child(3440) { 
+  background: rgb(110,108,118); 
+} 
+.pixel:nth-child(3441) { 
+  background: rgb(110,108,119); 
+} 
+.pixel:nth-child(3442) { 
+  background: rgb(110,108,120); 
+} 
+.pixel:nth-child(3443) { 
+  background: rgb(110,108,121); 
+} 
+.pixel:nth-child(3444) { 
+  background: rgb(110,108,122); 
+} 
+.pixel:nth-child(3445) { 
+  background: rgb(110,108,123); 
+} 
+.pixel:nth-child(3446) { 
+  background: rgb(110,108,124); 
+} 
+.pixel:nth-child(3447) { 
+  background: rgb(110,108,125); 
+} 
+.pixel:nth-child(3448) { 
+  background: rgb(110,108,126); 
+} 
+.pixel:nth-child(3450) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3451) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3452) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3461) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3462) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3463) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3477) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3478) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3479) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3488) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3489) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3490) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3504) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3505) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3506) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3515) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3516) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3517) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3519) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(3520) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(3521) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(3523) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(3524) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(3525) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(3527) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(3528) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(3529) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(3531) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3532) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3533) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3542) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3543) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3544) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3546) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(3547) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(3548) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(3550) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(3551) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(3552) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(3554) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(3555) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(3556) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(3558) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3559) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3560) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3569) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3570) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3571) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3573) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(3574) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(3575) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(3577) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(3578) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(3579) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(3581) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(3582) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(3583) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(3585) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3586) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3587) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3596) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3597) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3598) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3600) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(3601) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(3602) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(3604) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(3605) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(3606) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(3608) { 
+  background: rgb(204,193,78); 
+} 
+.pixel:nth-child(3609) { 
+  background: rgb(204,193,79); 
+} 
+.pixel:nth-child(3610) { 
+  background: rgb(204,193,80); 
+} 
+.pixel:nth-child(3612) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3613) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3614) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3624) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(3625) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(3639) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(3640) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(3651) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(3652) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(3666) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(3667) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(3681) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3683) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(3684) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(3685) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3686) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3687) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3688) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3689) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(3691) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3708) { 
+  background: rgb(110,108,111); 
+} 
+.pixel:nth-child(3710) { 
+  background: rgb(48,44,65); 
+} 
+.pixel:nth-child(3711) { 
+  background: rgb(48,44,66); 
+} 
+.pixel:nth-child(3712) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3713) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3714) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3715) { 
+  background: rgb(48,44,70); 
+} 
+.pixel:nth-child(3716) { 
+  background: rgb(48,44,71); 
+} 
+.pixel:nth-child(3718) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3735) { 
+  background: rgb(110,108,112); 
+} 
+.pixel:nth-child(3736) { 
+  background: rgb(110,108,112); 
+} 
+.pixel:nth-child(3738) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3739) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3740) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3741) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3742) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3744) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(3745) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(3762) { 
+  background: rgb(110,108,112); 
+} 
+.pixel:nth-child(3763) { 
+  background: rgb(110,108,112); 
+} 
+.pixel:nth-child(3765) { 
+  background: rgb(48,44,67); 
+} 
+.pixel:nth-child(3766) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3767) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3768) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3769) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3771) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(3772) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(3789) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3790) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3791) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3793) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3794) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3795) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3797) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(3798) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(3799) { 
+  background: rgb(110,108,115); 
+} 
+.pixel:nth-child(3816) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3817) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3818) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3820) { 
+  background: rgb(48,44,69); 
+} 
+.pixel:nth-child(3821) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3822) { 
+  background: rgb(48,44,68); 
+} 
+.pixel:nth-child(3824) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(3825) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(3826) { 
+  background: rgb(110,108,115); 
+} 
+.pixel:nth-child(3843) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(3844) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(3845) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3846) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3850) { 
+  background: rgb(110,108,115); 
+} 
+.pixel:nth-child(3851) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(3852) { 
+  background: rgb(110,108,117); 
+} 
+.pixel:nth-child(3853) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(3870) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(3871) { 
+  background: rgb(110,108,114); 
+} 
+.pixel:nth-child(3872) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3873) { 
+  background: rgb(110,108,113); 
+} 
+.pixel:nth-child(3877) { 
+  background: rgb(110,108,115); 
+} 
+.pixel:nth-child(3878) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(3879) { 
+  background: rgb(110,108,117); 
+} 
+.pixel:nth-child(3880) { 
+  background: rgb(110,108,116); 
+} 
+.pixel:nth-child(496) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(504) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(523) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(531) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(550) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(551) { 
+  background: rgb(247,249,249); 
+} 
+.pixel:nth-child(552) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(556) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(557) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(558) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(577) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(578) { 
+  background: rgb(247,249,249); 
+} 
+.pixel:nth-child(579) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(583) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(584) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(585) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(604) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(605) { 
+  background: rgb(247,249,249); 
+} 
+.pixel:nth-child(606) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(610) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(611) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(612) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(631) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(632) { 
+  background: rgb(247,249,249); 
+} 
+.pixel:nth-child(633) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(637) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(638) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(639) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(767) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(768) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(769) { 
+  background: rgb(213,176,151); 
+} 
+.pixel:nth-child(770) { 
+  background: rgb(213,176,152); 
+} 
+.pixel:nth-child(771) { 
+  background: rgb(213,176,153); 
+} 
+.pixel:nth-child(772) { 
+  background: rgb(213,176,154); 
+} 
+.pixel:nth-child(773) { 
+  background: rgb(213,176,155); 
+} 
+.pixel:nth-child(794) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(795) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(796) { 
+  background: rgb(213,176,151); 
+} 
+.pixel:nth-child(797) { 
+  background: rgb(213,176,152); 
+} 
+.pixel:nth-child(798) { 
+  background: rgb(213,176,153); 
+} 
+.pixel:nth-child(799) { 
+  background: rgb(213,176,154); 
+} 
+.pixel:nth-child(800) { 
+  background: rgb(213,176,155); 
+} 
+.pixel:nth-child(821) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(822) { 
+  background: rgb(213,176,149); 
+} 
+.pixel:nth-child(823) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(824) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(825) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(826) { 
+  background: rgb(213,176,149); 
+} 
+.pixel:nth-child(827) { 
+  background: rgb(213,176,149); 
+} 
+.pixel:nth-child(848) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(849) { 
+  background: rgb(213,176,149); 
+} 
+.pixel:nth-child(850) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(851) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(852) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(853) { 
+  background: rgb(213,176,149); 
+} 
+.pixel:nth-child(854) { 
+  background: rgb(213,176,149); 
+} 
+.pixel:nth-child(875) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(876) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(877) { 
+  background: rgb(213,176,151); 
+} 
+.pixel:nth-child(878) { 
+  background: rgb(213,176,152); 
+} 
+.pixel:nth-child(879) { 
+  background: rgb(213,176,153); 
+} 
+.pixel:nth-child(880) { 
+  background: rgb(213,176,154); 
+} 
+.pixel:nth-child(881) { 
+  background: rgb(213,176,155); 
+} 
+.pixel:nth-child(902) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(903) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(904) { 
+  background: rgb(213,176,151); 
+} 
+.pixel:nth-child(905) { 
+  background: rgb(213,176,152); 
+} 
+.pixel:nth-child(906) { 
+  background: rgb(213,176,153); 
+} 
+.pixel:nth-child(907) { 
+  background: rgb(213,176,154); 
+} 
+.pixel:nth-child(908) { 
+  background: rgb(213,176,155); 
+} 
+.pixel:nth-child(930) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(931) { 
+  background: rgb(213,176,151); 
+} 
+.pixel:nth-child(932) { 
+  background: rgb(213,176,152); 
+} 
+.pixel:nth-child(933) { 
+  background: rgb(213,176,153); 
+} 
+.pixel:nth-child(934) { 
+  background: rgb(213,176,154); 
+} 
+.pixel:nth-child(957) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(958) { 
+  background: rgb(213,176,151); 
+} 
+.pixel:nth-child(959) { 
+  background: rgb(213,176,152); 
+} 
+.pixel:nth-child(960) { 
+  background: rgb(213,176,153); 
+} 
+.pixel:nth-child(961) { 
+  background: rgb(213,176,154); 
+} 
+.pixel:nth-child(2602) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(2610) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(2629) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(2637) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(2656) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(2657) { 
+  background: rgb(247,249,249); 
+} 
+.pixel:nth-child(2658) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(2662) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(2663) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(2664) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(2683) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(2684) { 
+  background: rgb(247,249,249); 
+} 
+.pixel:nth-child(2685) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(2689) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(2690) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(2691) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(2710) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(2711) { 
+  background: rgb(247,249,249); 
+} 
+.pixel:nth-child(2712) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(2716) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(2717) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(2718) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(2737) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(2738) { 
+  background: rgb(247,249,249); 
+} 
+.pixel:nth-child(2739) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(2743) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(2744) { 
+  background: rgb(247,249,250); 
+} 
+.pixel:nth-child(2745) { 
+  background: rgb(247,249,248); 
+} 
+.pixel:nth-child(2873) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(2874) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(2875) { 
+  background: rgb(213,176,151); 
+} 
+.pixel:nth-child(2876) { 
+  background: rgb(213,176,152); 
+} 
+.pixel:nth-child(2877) { 
+  background: rgb(213,176,153); 
+} 
+.pixel:nth-child(2878) { 
+  background: rgb(213,176,154); 
+} 
+.pixel:nth-child(2879) { 
+  background: rgb(213,176,155); 
+} 
+.pixel:nth-child(2900) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(2901) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(2902) { 
+  background: rgb(213,176,151); 
+} 
+.pixel:nth-child(2903) { 
+  background: rgb(213,176,152); 
+} 
+.pixel:nth-child(2904) { 
+  background: rgb(213,176,153); 
+} 
+.pixel:nth-child(2905) { 
+  background: rgb(213,176,154); 
+} 
+.pixel:nth-child(2906) { 
+  background: rgb(213,176,155); 
+} 
+.pixel:nth-child(2927) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(2928) { 
+  background: rgb(213,176,149); 
+} 
+.pixel:nth-child(2929) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(2930) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(2931) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(2932) { 
+  background: rgb(213,176,149); 
+} 
+.pixel:nth-child(2933) { 
+  background: rgb(213,176,149); 
+} 
+.pixel:nth-child(2954) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(2955) { 
+  background: rgb(213,176,149); 
+} 
+.pixel:nth-child(2956) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(2957) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(2958) { 
+  background: rgb(35,29,41); 
+} 
+.pixel:nth-child(2959) { 
+  background: rgb(213,176,149); 
+} 
+.pixel:nth-child(2960) { 
+  background: rgb(213,176,149); 
+} 
+.pixel:nth-child(2981) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(2982) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(2983) { 
+  background: rgb(213,176,151); 
+} 
+.pixel:nth-child(2984) { 
+  background: rgb(213,176,152); 
+} 
+.pixel:nth-child(2985) { 
+  background: rgb(213,176,153); 
+} 
+.pixel:nth-child(2986) { 
+  background: rgb(213,176,154); 
+} 
+.pixel:nth-child(2987) { 
+  background: rgb(213,176,155); 
+} 
+.pixel:nth-child(3008) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(3009) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(3010) { 
+  background: rgb(213,176,151); 
+} 
+.pixel:nth-child(3011) { 
+  background: rgb(213,176,152); 
+} 
+.pixel:nth-child(3012) { 
+  background: rgb(213,176,153); 
+} 
+.pixel:nth-child(3013) { 
+  background: rgb(213,176,154); 
+} 
+.pixel:nth-child(3014) { 
+  background: rgb(213,176,155); 
+} 
+.pixel:nth-child(3036) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(3037) { 
+  background: rgb(213,176,151); 
+} 
+.pixel:nth-child(3038) { 
+  background: rgb(213,176,152); 
+} 
+.pixel:nth-child(3039) { 
+  background: rgb(213,176,153); 
+} 
+.pixel:nth-child(3040) { 
+  background: rgb(213,176,154); 
+} 
+.pixel:nth-child(3063) { 
+  background: rgb(213,176,150); 
+} 
+.pixel:nth-child(3064) { 
+  background: rgb(213,176,151); 
+} 
+.pixel:nth-child(3065) { 
+  background: rgb(213,176,152); 
+} 
+.pixel:nth-child(3066) { 
+  background: rgb(213,176,153); 
+} 
+.pixel:nth-child(3067) { 
+  background: rgb(213,176,154); 
 } 
