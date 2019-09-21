@@ -12,8 +12,8 @@ bool Filtros_lista_cir :: esVacio() {
 	return (primero_head ==NULL);
 }	
 
-void Filtros_lista_cir :: Insert_nod(int tipo, matrix mat_cub,  string filtro) {
-	NodeCir *new_nod = new NodeCir(tipo, mat_cub, filtro);
+void Filtros_lista_cir :: Insert_nod(int tipo, matrix mat_cub,  string filtro, int rep_x, int rep_y) {
+	NodeCir *new_nod = new NodeCir(tipo, mat_cub, filtro, rep_x,rep_y );
  
 	if (esVacio() == true)
 	{
@@ -145,6 +145,23 @@ matrix Filtros_lista_cir :: return_mat_ima(int in) {
 				name_actual = name_actual +" Capa "+cap.str();
 			}
 			return temp_prin->mat;
+		}
+}
+
+NodeCir* Filtros_lista_cir :: return_node_ima(int in) {
+
+    	int index = 0;
+		NodeCir *temp_prin = primero_head;
+    	while (temp_prin != ultimo){
+		index++;	
+			if (in == index){
+				return temp_prin;
+			}
+	    	temp_prin = temp_prin->siguiente;
+		}
+		index++;	
+		if (in == index){
+			return temp_prin;
 		}
 }
 

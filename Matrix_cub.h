@@ -174,7 +174,7 @@ public:
     
     int no_columnas_mat();
     
-    void Generando_css(int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto, string nam_completo, string nombre);
+    void Generando_css(int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto, string nam_completo, string nombre, string es_neg);
     void read_matrix_css_html(node *matrix_capa, int canvas_w, int canvas_h, int pix_w, int pix_, int no_pix_ancho, int no_pix_alto);
     
     void create_file_images(string nombre, string contenido);
@@ -208,9 +208,17 @@ public:
     bool Modificando_cordenadas(int capa, int x, int y, string nuevo_color);
     bool Modificando_matrix_xy(node *matrix_capa, int x, int y, string nuevo_color);
     
+    //una solo capa para colage
+    matrix imagen_original_una_capa(string tipo, int no_col, int no_lin, int all_capa);
+    void read_matrix_una_capa(node *matrix_capa, matrix mat_mod, int no_col, int no_lin, int all_capa);
     
+    void insert_blancos_matrix_una_capa(matrix mat_mod,  int no_x, int no_y);
     
+    string retorno_texto_cab(string des);
     
+    void read_matrix_mosaic(node *matrix_capa, matrix mat_mod, int no_col, int no_lin, int all_capa, int rep_x, int rep_y);
+    
+    string Get_color_mosaic(string Color_Mayor, string color_menor);
     
 };
 

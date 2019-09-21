@@ -195,11 +195,11 @@ int main(int argc, char** argv)
     	{
     		Filtros_lista_cir lis_c;
 	
-			lis_c.Insert_nod(1, mtx_actual,"");
-			lis_c.Insert_nod(2, mtx_actual,"");
-			lis_c.Insert_nod(3, mtx_actual,"");
-			lis_c.Insert_nod(4, mtx_actual,"");
-			lis_c.Insert_nod(55, mtx_actual,"");
+			lis_c.Insert_nod(1, mtx_actual,"", 0,0);
+			lis_c.Insert_nod(2, mtx_actual,"", 0,0);
+			lis_c.Insert_nod(3, mtx_actual,"", 0,0);
+			lis_c.Insert_nod(4, mtx_actual,"", 0,0);
+			lis_c.Insert_nod(55, mtx_actual,"", 0,0);
 			
 			lis_c.Lista_imprimir_ade();
 			
@@ -240,9 +240,9 @@ void aplicando_filter_mat(int all_capa, string name_filtro)
 			matrix mtx_negativo;
 			mtx_negativo = mtx_actual.imagen_original("N", a_no_pixel_x, a_no_pixel_y, all_capa);
 			
-			list_filtros.Insert_nod(all_capa, mtx_negativo, "NEGATIVE");
+			list_filtros.Insert_nod(all_capa, mtx_negativo, "NEGATIVE", 0,0);
 			
-			mtx_negativo.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo");
+			//mtx_negativo.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo", "S");
 			
 		}
 		else if(name_filtro == "GRAYSCALE"){
@@ -250,9 +250,9 @@ void aplicando_filter_mat(int all_capa, string name_filtro)
 			matrix mtx_gray;
 			mtx_gray = mtx_actual.imagen_original("G", a_no_pixel_x, a_no_pixel_y, all_capa);
 			
-			mtx_gray.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo");
+			//mtx_gray.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo", "");
 			
-			list_filtros.Insert_nod(all_capa, mtx_gray, "GRAYSCALE");
+			list_filtros.Insert_nod(all_capa, mtx_gray, "GRAYSCALE", 0,0);
 			
 		}
 
@@ -261,25 +261,25 @@ void aplicando_filter_mat(int all_capa, string name_filtro)
     		matrix mtx_espejo_x;
     		mtx_espejo_x = mtx_actual.imagen_original("EX", a_no_pixel_x, a_no_pixel_y, all_capa);
     		
-    		mtx_espejo_x.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo");
+    		//mtx_espejo_x.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo", "");
     		
-    		list_filtros.Insert_nod(all_capa, mtx_espejo_x, "X-MIRROR");
+    		list_filtros.Insert_nod(all_capa, mtx_espejo_x, "X-MIRROR", 0,0);
 		}
 		else if(name_filtro == "Y-MIRROR"){
 			
     		matrix mtx_espejo_y;
     		mtx_espejo_y = mtx_actual.imagen_original("EY", a_no_pixel_x, a_no_pixel_y, all_capa);
     		
-    		mtx_espejo_y.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo");
-			list_filtros.Insert_nod(all_capa, mtx_espejo_y, "Y-MIRROR");
+    		//mtx_espejo_y.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo", "");
+			list_filtros.Insert_nod(all_capa, mtx_espejo_y, "Y-MIRROR", 0,0);
 		}
 		else if(name_filtro == "XY-DOUBLE MIRROR"){
 
     		matrix mtx_espejo_xy;
     		mtx_espejo_xy = mtx_actual.imagen_original("EXY", a_no_pixel_x, a_no_pixel_y, all_capa);
     		
-    		mtx_espejo_xy.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo");
-			list_filtros.Insert_nod(all_capa, mtx_espejo_xy, "XY-DOUBLE MIRROR");
+    		//mtx_espejo_xy.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, "ejemplo", "ejemplo", "");
+			list_filtros.Insert_nod(all_capa, mtx_espejo_xy, "XY-DOUBLE MIRROR", 0,0);
 		}
 		
 		if(all_capa == 0){
@@ -315,10 +315,10 @@ void aplicando_filter_mat(int all_capa, string name_filtro, int rep_x, int rep_y
     		matrix mtx_collage;
     		mtx_collage = mtx_actual.imagen_original_col_mos("C", a_no_pixel_x, a_no_pixel_y, all_capa, rep_x, rep_y);
     		
-    		//mtx_collage.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y);
-    		mtx_collage.Generando_css(rep_x*a_pix_ima_w, rep_y*a_pix_ima_h, a_pix_w, a_pix_h, rep_x*a_no_pixel_x, rep_y*a_no_pixel_y, "ejemplo", "ejemplo");
+    
+			//mtx_collage.Generando_css(rep_x*a_pix_ima_w, rep_y*a_pix_ima_h, a_pix_w, a_pix_h, rep_x*a_no_pixel_x, rep_y*a_no_pixel_y, "ejemplo", "ejemplo", "");
     		
-    		list_filtros.Insert_nod(all_capa, mtx_collage, "COLLAGE");
+    		list_filtros.Insert_nod(all_capa, mtx_collage, "COLLAGE", rep_x, rep_y);
     		
     		//mtx_collage.Tipo_a_Graficar();
     		//mtx_collage.print_node_cor_orde_zz();
@@ -326,12 +326,23 @@ void aplicando_filter_mat(int all_capa, string name_filtro, int rep_x, int rep_y
 		else if(name_filtro == "MOSAIC"){
 			
     		matrix mtx_mosaic;
-    		mtx_mosaic = mtx_actual.imagen_original_col_mos("C", a_no_pixel_x, a_no_pixel_y, all_capa, rep_x, rep_y);
+    		mtx_mosaic = mtx_actual.imagen_original_una_capa("M", a_no_pixel_x, a_no_pixel_y, all_capa);
     		
     		/////////////mtx_mosaic.Generando_css(rep_x*a_pix_ima_w, rep_y*a_pix_ima_h, a_pix_w, a_pix_h, rep_x*a_no_pixel_x, rep_y*a_no_pixel_y, "ejemplo", "ejemplo");
     		
-    		list_filtros.Insert_nod(all_capa, mtx_mosaic, "MOSAIC");
+    		mtx_mosaic = mtx_mosaic.imagen_original_col_mos("M", a_no_pixel_x, a_no_pixel_y, all_capa, a_no_pixel_x, a_no_pixel_y);
     		
+    		
+    		list_filtros.Insert_nod(all_capa, mtx_mosaic, "MOSAIC",0 ,0);
+    		
+    		//cout<<endl<<endl<<"cordenada abajo, derecha"<<endl; 
+			//mtx_mosaic.print_node_cor_orde_zz();
+			
+			
+			//cout<<endl<<endl<<"cordenada derecha, abajo"<<endl; 
+			////sm->print_node_cor_orde_der_abaj();
+			//mtx_mosaic.print_node_cor_orde_der_abaj_z();
+			
     		//mtx_collage.Tipo_a_Graficar();
     		//mtx_collage.print_node_cor_orde_zz();
 		}
@@ -488,7 +499,7 @@ void datos_modificacion(matrix mat_modif)
 		
 		while(encon_corde == false)
     	{
-    		cout<<"Desea Salir? S:\n" ; cin>>opcion;
+    		cout<<"Desea Salir? S/N:\n" ; cin>>opcion;
     		if (opcion =="S" || opcion =="s"){
     			break;
 			}
@@ -845,9 +856,9 @@ void menu_filters()
 		else if (opcion == "e" || opcion == "E")
     	{
     		int rep_x, rep_y;
-    		system("cls");
-    		cout<<"m Cantidad de repeticiones en X:\n" ; cin>>rep_x;
-    		cout<<"m Cantidad de repeticiones en Y:\n" ; cin>>rep_y;
+    		//system("cls");
+    		//cout<<"m Cantidad de repeticiones en X:\n" ; cin>>rep_x;
+    		//cout<<"m Cantidad de repeticiones en Y:\n" ; cin>>rep_y;
     		
     		aplicando_filter_mat(0,"MOSAIC", rep_x, rep_y);
 		}
@@ -975,7 +986,7 @@ void MenuReport()
 	}
 }
 ///creaidno los archivos
-void creando_file_imagen(matrix mtx_export)
+void creando_file_imagen(matrix mtx_export, NodeCir *nod_fil)
 {
 	////creando carpeta de export preder
 	string carpeta_ima, ima_ac, nombre_completo;
@@ -985,14 +996,65 @@ void creando_file_imagen(matrix mtx_export)
 	mkdir(carpeta_ima.c_str());
 	nombre_completo = carpeta_ima + "\\" + list_filtros.name_actual;
 	//cout <<"nombre_completo: "<<nombre_completo <<endl;
-	cout <<"list_filtros.name_actual: "<<list_filtros.name_actual <<endl;
+	//cout <<"nod_fil->filtro: "<<nod_fil->filtro <<endl;
 	
-	//if(name_filtro == "COLLAGE"){
-    //	mtx_export.Generando_css(rep_x*a_pix_ima_w, rep_y*a_pix_ima_h, a_pix_w, a_pix_h, rep_x*a_no_pixel_x, rep_y*a_no_pixel_y, nombre_completo, list_filtros.name_actual);
-	//} else {
-		mtx_export.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, nombre_completo, list_filtros.name_actual);
+	//cout <<"a_no_pixel_x* a_no_pixel_x: "<<a_no_pixel_x*a_no_pixel_x <<endl;
+	//cout <<"a_no_pixel_x * a_no_pixel_x: "<<a_no_pixel_x * a_no_pixel_x <<endl;
 	
-	//}	
+	//cout <<"a_pix_ima_w: "<<a_pix_ima_w<<endl;
+	//cout <<"a_pix_ima_h: "<<a_pix_ima_h <<endl;
+	
+	int pix_x, pix_y;
+	int canvas_m_x, canvas_m_y;
+	pix_x = a_pix_w*0.25;
+	pix_y = a_pix_h*0.25;
+	
+	//cout <<"a_pix_w: "<<a_pix_w<<endl;
+	//cout <<"a_pix_h: "<<a_pix_h <<endl;
+	
+	//cout <<"2 pix_x: "<<pix_x<<endl;
+	//cout <<"2 pix_y: "<<pix_y <<endl;
+	
+	//cout <<"canvas_x: "<<a_pix_ima_w*a_no_pixel_x<<endl;
+	//cout <<"canvas_y: "<<a_pix_ima_h*a_no_pixel_y <<endl;
+	
+	canvas_m_x = pix_x*a_no_pixel_x*a_no_pixel_x;
+	canvas_m_y = pix_y*a_no_pixel_y*a_no_pixel_y;
+	//cout <<"2 canvas_x: "<<canvas_m_x<<endl;
+	//cout <<"2 canvas_y: "<<canvas_m_y<<endl;
+	
+	if(nod_fil->filtro == "MOSAIC"){ 
+		//matrix mtx_export_tempo;
+		//mtx_export_tempo = mtx_export;
+		
+    	mtx_export.Generando_css(canvas_m_x, canvas_m_y, pix_x, pix_y, a_no_pixel_x * a_no_pixel_x, a_no_pixel_y * a_no_pixel_y, nombre_completo, list_filtros.name_actual, "");
+		//mtx_export.Generando_css(rep_x*a_pix_ima_w, rep_y*a_pix_ima_h, a_pix_w, a_pix_h, rep_x*a_no_pixel_x, rep_y*a_no_pixel_y, "ejemplo", "ejemplo");
+    }		
+	else if(nod_fil->filtro == "COLLAGE"){ 
+	
+		int rep_x, rep_y;
+		rep_x =nod_fil->rep_x;
+		rep_y =nod_fil->rep_y;
+
+    	mtx_export.Generando_css(rep_x*a_pix_ima_w, rep_y*a_pix_ima_h, a_pix_w, a_pix_h, rep_x*a_no_pixel_x, rep_y*a_no_pixel_y, nombre_completo, list_filtros.name_actual, "");
+	
+	}
+	else if(nod_fil->filtro == "NEGATIVE"){ 
+		//verificando si es toda la capa
+		string neg_all ="";
+		if(nod_fil->val == 0){ 
+			neg_all = "S";
+		}
+		
+		mtx_export.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, nombre_completo, list_filtros.name_actual,neg_all);
+	
+	} else {
+		mtx_export.Generando_css(a_pix_ima_w,a_pix_ima_h, a_pix_w, a_pix_h, a_no_pixel_x, a_no_pixel_y, nombre_completo, list_filtros.name_actual, "");
+	
+	}
+	
+	//cout <<"*yrtmina la exportacion*"<<endl;
+	//system("pause");	
 	
 }
 //////////////para imagen
@@ -1037,10 +1099,16 @@ void Select_images_exports()
 	    		matrix mtx_export;
 				mtx_export = list_filtros.return_mat_ima(index);
 				
+				NodeCir *nod_fil;
+				nod_fil = list_filtros.return_node_ima(index);
+				
+				//cout <<"antes de exportar nod_fil->filtro: "<<nod_fil->filtro <<endl;
+				//system("pause");
+				
 				//nombre de filtro
 				string fil_name;
 	    		
-	    		creando_file_imagen(mtx_export);
+	    		creando_file_imagen(mtx_export, nod_fil);
 	    		
 	    		cout <<"imagen exportada: "<<index<<endl;
 				system("pause");
@@ -1232,7 +1300,7 @@ void Select_images()
 	    		//primero limpiando lista
 	    		Filtros_lista_cir fil_clean;
 	    		list_filtros = fil_clean;
-	    		list_filtros.Insert_nod(0, mtx_actual, arbol_im.imagen_actual_nod->data );
+	    		list_filtros.Insert_nod(0, mtx_actual, arbol_im.imagen_actual_nod->data, 0, 0);
 	    		
 				system("pause");
 				men = false;

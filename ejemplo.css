@@ -1,5 +1,5 @@
 body {
-  background: #333333; 
+  background: #CCCCCC; 
   height: 100vh; 
   display: flex; 
   justify-content: center; 
@@ -16,47 +16,50 @@ body {
   box-shadow: 0px 0px 1px #fff;
 }
 .pixel:nth-child(8) { 
-  background: rgb(168,168,168); 
+  background: rgb(98,137,25); 
 } 
 .pixel:nth-child(9) { 
-  background: rgb(168,168,168); 
+  background: rgb(98,137,25); 
 } 
 .pixel:nth-child(10) { 
-  background: rgb(168,168,168); 
+  background: rgb(98,137,25); 
 } 
 .pixel:nth-child(14) { 
-  background: rgb(168,168,168); 
+  background: rgb(98,137,25); 
 } 
 .pixel:nth-child(16) { 
-  background: rgb(168,168,168); 
+  background: rgb(98,137,25); 
 } 
 .pixel:nth-child(20) { 
-  background: rgb(168,168,168); 
+  background: rgb(98,137,25); 
 } 
 .pixel:nth-child(21) { 
-  background: rgb(168,168,168); 
+  background: rgb(98,137,25); 
 } 
 .pixel:nth-child(22) { 
-  background: rgb(168,168,168); 
+  background: rgb(98,137,25); 
 } 
 .pixel:nth-child(23) { 
-  background: rgb(158,158,158); 
+  background: rgb(82,0,208); 
 } 
 .pixel:nth-child(26) { 
-  background: rgb(168,168,168); 
+  background: rgb(98,137,25); 
 } 
 .pixel:nth-child(28) { 
-  background: rgb(168,168,168); 
+  background: rgb(98,137,25); 
 } 
 .pixel:nth-child(32) { 
-  background: rgb(168,168,168); 
+  background: rgb(98,137,25); 
 } 
 .pixel:nth-child(34) { 
-  background: rgb(168,168,168); 
+  background: rgb(98,137,25); 
 } 
 .pixel:nth-child(1) { 
-  background: rgb(82,82,82); 
+  background: rgb(77,221,221); 
 } 
 .pixel:nth-child(32) { 
-  background: rgb(220,220,220); 
+  background: rgb(35,35,35); 
+} 
+.pixel:nth-child(33) { 
+  background: rgb(0,27,59); 
 } 

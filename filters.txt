@@ -6,10 +6,10 @@ node1 -> node0 ;
 node1[label = "{<f0>|<f1> NEGATIVE|<f2> }"];
 node1 -> node2 ;
 node2 -> node1 ;
-node2[label = "{<f0>|<f1> GRAYSCALE Capa 1|<f2> }"];
+node2[label = "{<f0>|<f1> GRAYSCALE|<f2> }"];
 node2 -> node3 ;
 node3 -> node2 ;
-node3[label = "{<f0>|<f1> Y-MIRROR Capa 2|<f2> }"];
+node3[label = "{<f0>|<f1> Y-MIRROR|<f2> }"];
 node3 -> node0;
 node0 -> node3;
 }

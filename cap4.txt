@@ -6,17 +6,22 @@ node [style=filled];
 p0_0[label="{<data>0,0|<next>extra.csv}" pos="0,6!"]; 
 p0_0->p1_0[dir=both]; 
 p0_0->p0_1[dir=both]; 
-p1_0[label="{<data>1,0|<next>X1}" pos="1,6!"]; 
+p1_0[label="{<data>1,0|<next>X1}" pos="2,6!"]; 
 p1_0->p2_0[dir=both]; 
 p1_0->p1_1[dir=both]; 
-p2_0[label="{<data>2,0|<next>X2}" pos="2,6!"]; 
+p2_0[label="{<data>2,0|<next>X2}" pos="4,6!"]; 
+p2_0->p3_0[dir=both]; 
 p2_0->p2_6[dir=both]; 
+p3_0[label="{<data>3,0|<next>X3}" pos="6,6!"]; 
+p3_0->p3_6[dir=both]; 
 p0_1[label="{<data>0,1|<next>Y1}" pos="0,5!"]; 
 p0_1->p1_1[dir=both]; 
 p0_1->p0_6[dir=both]; 
-p1_1[label="{<data>1,1|<next>178-34-34}" pos="1,5!"]; 
+p1_1[label="{<data>1,1|<next>178-34-34}" pos="2,5!"]; 
 p0_6[label="{<data>0,6|<next>Y6}" pos="0,0!"]; 
 p0_6->p2_6[dir=both]; 
-p2_6[label="{<data>2,6|<next>220-220-220}" pos="2,0!"]; 
+p2_6[label="{<data>2,6|<next>220-220-220}" pos="4,0!"]; 
+p2_6->p3_6[dir=both]; 
+p3_6[label="{<data>3,6|<next>255-228-196}" pos="6,0!"]; 
 
 }

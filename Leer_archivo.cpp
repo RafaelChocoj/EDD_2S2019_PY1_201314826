@@ -69,7 +69,13 @@ bool Leer_archivo::leer_arhivo_ima(string archiv){
 	 		linea++;
 	 		layer = "";
 	 		file = "";
-		 		getline(data_ar, layer, ';');
+	 		
+	 			/////para csv con punto y coma
+	 			//getline(data_ar, layer, ';');
+		 		//getline(data_ar, file, '\n');
+		 		
+		 		///para csv con coma
+		 		getline(data_ar, layer, ',');
 		 		getline(data_ar, file, '\n');
 		 		
 		 		////cout<<linea<<' ';
@@ -205,10 +211,17 @@ void Leer_archivo::Read_config(string file)
 	 	{
 	 		config = "";
 	 		value = "";
-		 		getline(data_config, config, ';');
+	 		
+	 			//////para csv con punto y coma
+		 		//getline(data_config, config, ';');
+		 		//getline(data_config, value, '\n');
+		 		
+		 		////para csv con punto y coma
+		 		getline(data_config, config, ',');
 		 		getline(data_config, value, '\n');
 		 		
 		 		//cout<<linea<<' ';
+		 		
 		 		cout<<config<<'=';
 		 		cout<<value<<endl;
 		 		
@@ -291,7 +304,13 @@ void Leer_archivo::Read_capas(string files, int layer)
 	 		/*para recorer por dato*/
 	 		//colum_x = 0;
 	 		colum_x = 1; // para que inicie  en 1, porque 0 esta reservado para raices
-	 		for(string dat; getline(reg_x_linea, dat, ';');)
+	 		
+	 		/////si el archivo csv es con putno y coma
+	 		//for(string dat; getline(reg_x_linea, dat, ';');)	
+			 	
+	 		///si el archivo csv es coma
+	 		for(string dat; getline(reg_x_linea, dat, ',');)
+	 		
 	 		{
 	 			//cout<<"cl_x: "<<colum_x<<"  ";
 	 			
@@ -303,7 +322,7 @@ void Leer_archivo::Read_capas(string files, int layer)
 				
 				/*****inicio bloque agregando a matrix*****/
 				
-				cout<<dat<<'\t'<<"     "; 
+				///////////cout<<dat<<'\t'<<"     "; 
 				
 				if (dat == "x" || dat == "X")
 				{}else {
@@ -316,7 +335,7 @@ void Leer_archivo::Read_capas(string files, int layer)
 	 			//cout<<"dato-"<<dat<<"-"<<'\t';
 	 			colum_x++;
 			}
-			cout<<endl;
+			///////cout<<endl;
 			linea_y++;	 		
 		}
 
