@@ -2,6 +2,5 @@ digraph G {
 rankdir=TB;
 graph [nodesep=0.5 ];
 node [shape = record, fillcolor=seashell2];
-nodobmo [ label ="<C0>|bmo - pixel: 20h, 20w - ima: 220h, 280w|<C1>"]; 
 
 }

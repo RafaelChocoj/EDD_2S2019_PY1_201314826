@@ -976,6 +976,7 @@ void MenuReport()
     	if (repor == "a" || repor == "A")
     	{
     		//arbol_im = read_ar.Retornando_arbol();
+    		arbol_im = read_ar.Retornando_arbol();
     		arbol_im.Graficando_arbol();
     		cout <<"Reporte Generado "<<endl;
     		system("pause");

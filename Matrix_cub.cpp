@@ -864,7 +864,8 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 		file <<contenido;
 		file.close();
 		string dot, ima;
-		dot = "dot -Tpng "+ nom_ar + " -o "+nombre + ".jpg";
+		/////dot = "dot -Tpng "+ nom_ar + " -o "+nombre + ".jpg";  ///todo lineal
+		dot = "neato -Tpng "+ nom_ar + " -o "+nombre + ".jpg";  /// para que grafique abajo y no quede largo y no carge
 		ima = nombre + ".jpg";
 		system(dot.c_str());
 	    system(ima.c_str());
@@ -1113,7 +1114,9 @@ bool matrix :: Buscando_matrix_xy(node *matrix_capa, int x, int y) {
 		graf_matrix_lin_filas = graf_matrix_lin_filas + "node [shape=record dir=both];\n";
 		//graf_matrix_lin_filas = graf_matrix_lin_filas + "node [shape=record dir=both];\n";
     	
-    	graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+"0"+"[label = \"{<f0>|<f1> " + "Inicio" + "|<f2> }\"];\n";  
+    	//*graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+"0"+"[label = \"{<f0>|<f1> " + "Inicio" + "|<f2> }\"];\n";  
+		graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+"0"+"[label = \"{<f0>|<f1> " + "Inicio" + "|<f2> }\" pos=\""+ "0"+","+"100"+"!\"]; \n"; //  lin
+		
 							
     	graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+"0" +" -> ";    
 		graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+"1" +";\n";	
@@ -1128,6 +1131,9 @@ bool matrix :: Buscando_matrix_xy(node *matrix_capa, int x, int y) {
     	//node *temp = nodo_x_nivel;
     	node *temp_inicio;
     	node *temp_sup_ini;
+    	
+    	int x = 0;
+		int y = 100;
 		   	
     	/*para recorrer para la derecha*/
     	//while (temp->down != NULL) { 
@@ -1162,10 +1168,23 @@ bool matrix :: Buscando_matrix_xy(node *matrix_capa, int x, int y) {
 		    			nodo_name = nod_n.str();
             			nodo_name_sig  = nod_n_s.str();
             			
+            			x=x+3;
             			
+            			if (x >= 100)
+            			{
+            				y = y - 3;
+            				x = 1;
+						}
+						ostringstream x_lin,  y_lin;
+						x_lin<<x;
+		    			y_lin<<y;
+						
 			    			//cout<<"("<<xx<<","<<yy<<") "<<temp->valor<<"->"<<endl;
 			    			////graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+xx+"_"+yy +"[label = \"{<f0>|<f1> " + "("+xx+","+yy+") "+temp->valor + "|<f2> }\"];\n";  
-							graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name+"[label = \"{<f0>|<f1> " + "("+xx+","+yy+") "+temp->valor + "|<f2> }\"];\n";  
+							
+							
+							//graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name+"[label = \"{<f0>|<f1> " + "("+xx+","+yy+") "+temp->valor + "|<f2> }\"];\n";  ///original
+							graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name+"[label = \"{<f0>|<f1> " + "("+xx+","+yy+") "+temp->valor + "|<f2> }\" pos=\""+x_lin.str()+","+y_lin.str()+"!\"]; \n";  ////con corde 
 							
 							
 							//flechas
@@ -2100,16 +2119,16 @@ bool matrix :: Buscando_matrix_xy(node *matrix_capa, int x, int y) {
 		
 		
 		//creando los divs
-		cout <<"y<no_pix_alto*no_pix_alto: "<<no_pix_alto*no_pix_alto<<endl;
-		cout <<"x<no_pix_ancho*no_pix_ancho: "<<no_pix_ancho*no_pix_ancho <<endl;
+		//cout <<"y<no_pix_alto*no_pix_alto: "<<no_pix_alto*no_pix_alto<<endl;
+		//cout <<"x<no_pix_ancho*no_pix_ancho: "<<no_pix_ancho*no_pix_ancho <<endl;
 		string solo_x = "";
 		string file_html_tempo = "";
 		
-		for(int x = 0; x<no_pix_ancho*no_pix_ancho ; x++){ ///se tarda mas
+		for(int x = 0; x<no_pix_ancho*no_pix_alto ; x++){ ///se tarda mas
 				solo_x = solo_x + "	<div class=\"pixelfon\"></div>\n";
 		}
 			
-		for(int y = 0; y<no_pix_alto*no_pix_alto ; y++){
+		for(int y = 0; y<no_pix_ancho*no_pix_alto ; y++){
 		file_html_tempo = file_html_tempo + "<div class=\"pixel\">\n";
 			//file_html = file_html + "<div class=\"pixel\">\n";
 			//cout <<"y: "<<y<<" - "<<no_pix_alto*no_pix_alto<<endl;

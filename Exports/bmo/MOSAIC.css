@@ -6,12 +6,12 @@ body {
   align-items: center; 
  }
 .canvas {
-  width: 242px; 
-  height: 392px;
+  width: 363px; 
+  height: 588px;
  }
 .pixel {
-  width: 2px;
-  height:2px;
+  width: 3px;
+  height:3px;
   float: left;  
   box-shadow: 0px 0px 1px #fff;
 }
@@ -745,7 +745,7 @@ body {
   background: #4E7E65; 
 } 
 .pixel:nth-child(244) { 
-  background: #6FC39F; 
+  background: #479C74; 
 } 
 .pixel:nth-child(245) { 
   background: #A8D3B6; 
@@ -778,7 +778,7 @@ body {
   background: #224239; 
 } 
 .pixel:nth-child(255) { 
-  background: #438773; 
+  background: #1B6048; 
 } 
 .pixel:nth-child(256) { 
   background: #7C988A; 
@@ -811,7 +811,7 @@ body {
   background: #25443C; 
 } 
 .pixel:nth-child(266) { 
-  background: #468975; 
+  background: #1E624B; 
 } 
 .pixel:nth-child(267) { 
   background: #7F9A8D; 
@@ -844,7 +844,7 @@ body {
   background: #25453C; 
 } 
 .pixel:nth-child(277) { 
-  background: #468A76; 
+  background: #1F634B; 
 } 
 .pixel:nth-child(278) { 
   background: #7F9A8D; 
@@ -877,7 +877,7 @@ body {
   background: #25453C; 
 } 
 .pixel:nth-child(288) { 
-  background: #468A76; 
+  background: #1E634B; 
 } 
 .pixel:nth-child(289) { 
   background: #7F9B8D; 
@@ -910,7 +910,7 @@ body {
   background: #24443B; 
 } 
 .pixel:nth-child(299) { 
-  background: #458975; 
+  background: #1D624A; 
 } 
 .pixel:nth-child(300) { 
   background: #7E9A8C; 
@@ -943,7 +943,7 @@ body {
   background: #23443B; 
 } 
 .pixel:nth-child(310) { 
-  background: #448974; 
+  background: #1D624A; 
 } 
 .pixel:nth-child(311) { 
   background: #7D998C; 
@@ -976,7 +976,7 @@ body {
   background: #23433A; 
 } 
 .pixel:nth-child(321) { 
-  background: #448874; 
+  background: #1C6149; 
 } 
 .pixel:nth-child(322) { 
   background: #7D998B; 
@@ -1009,7 +1009,7 @@ body {
   background: #25463D; 
 } 
 .pixel:nth-child(332) { 
-  background: #468B76; 
+  background: #1F644C; 
 } 
 .pixel:nth-child(333) { 
   background: #7F9B8E; 
@@ -1042,7 +1042,7 @@ body {
   background: #24453C; 
 } 
 .pixel:nth-child(343) { 
-  background: #458A75; 
+  background: #1E634B; 
 } 
 .pixel:nth-child(344) { 
   background: #7E9A8D; 
@@ -1075,7 +1075,7 @@ body {
   background: #4E7B65; 
 } 
 .pixel:nth-child(354) { 
-  background: #6FC09E; 
+  background: #489974; 
 } 
 .pixel:nth-child(355) { 
   background: #A8D0B6; 
@@ -5827,7 +5827,7 @@ body {
   background: #26433D; 
 } 
 .pixel:nth-child(1938) { 
-  background: #478877; 
+  background: #1F614C; 
 } 
 .pixel:nth-child(1939) { 
   background: #80988E; 
@@ -5860,7 +5860,7 @@ body {
   background: #468375; 
 } 
 .pixel:nth-child(1949) { 
-  background: #67C8AF; 
+  background: #3FA184; 
 } 
 .pixel:nth-child(1950) { 
   background: #A0D8C6; 
@@ -5893,7 +5893,7 @@ body {
   background: #458376; 
 } 
 .pixel:nth-child(1960) { 
-  background: #66C8B0; 
+  background: #3EA185; 
 } 
 .pixel:nth-child(1961) { 
   background: #9FD8C7; 
@@ -5926,7 +5926,7 @@ body {
   background: #448376; 
 } 
 .pixel:nth-child(1971) { 
-  background: #65C8B0; 
+  background: #3EA185; 
 } 
 .pixel:nth-child(1972) { 
   background: #9ED9C7; 
@@ -5959,7 +5959,7 @@ body {
   background: #458377; 
 } 
 .pixel:nth-child(1982) { 
-  background: #66C8B0; 
+  background: #3EA186; 
 } 
 .pixel:nth-child(1983) { 
   background: #9FD8C8; 
@@ -5992,7 +5992,7 @@ body {
   background: #448376; 
 } 
 .pixel:nth-child(1993) { 
-  background: #65C8B0; 
+  background: #3EA185; 
 } 
 .pixel:nth-child(1994) { 
   background: #9ED9C7; 
@@ -6025,7 +6025,7 @@ body {
   background: #458377; 
 } 
 .pixel:nth-child(2004) { 
-  background: #66C8B0; 
+  background: #3EA186; 
 } 
 .pixel:nth-child(2005) { 
   background: #9FD8C8; 
@@ -6058,7 +6058,7 @@ body {
   background: #448376; 
 } 
 .pixel:nth-child(2015) { 
-  background: #65C8B0; 
+  background: #3EA185; 
 } 
 .pixel:nth-child(2016) { 
   background: #9ED9C7; 
@@ -6091,7 +6091,7 @@ body {
   background: #448377; 
 } 
 .pixel:nth-child(2026) { 
-  background: #65C8B0; 
+  background: #3EA186; 
 } 
 .pixel:nth-child(2027) { 
   background: #9ED9C8; 
@@ -6124,7 +6124,7 @@ body {
   background: #468477; 
 } 
 .pixel:nth-child(2037) { 
-  background: #67C9B1; 
+  background: #3FA286; 
 } 
 .pixel:nth-child(2038) { 
   background: #A0D9C8; 
@@ -6157,7 +6157,7 @@ body {
   background: #234540; 
 } 
 .pixel:nth-child(2048) { 
-  background: #448A79; 
+  background: #1D634F; 
 } 
 .pixel:nth-child(2049) { 
   background: #7D9B91; 
@@ -10213,37 +10213,37 @@ body {
   background: #4E7B65; 
 } 
 .pixel:nth-child(3400) { 
-  background: #6FC39F; 
+  background: #479C74; 
 } 
 .pixel:nth-child(3401) { 
-  background: #438773; 
+  background: #1B6048; 
 } 
 .pixel:nth-child(3402) { 
-  background: #468975; 
+  background: #1E624B; 
 } 
 .pixel:nth-child(3403) { 
-  background: #468A76; 
+  background: #1F634B; 
 } 
 .pixel:nth-child(3404) { 
-  background: #468A76; 
+  background: #1E634B; 
 } 
 .pixel:nth-child(3405) { 
-  background: #458975; 
+  background: #1D624A; 
 } 
 .pixel:nth-child(3406) { 
-  background: #448974; 
+  background: #1D624A; 
 } 
 .pixel:nth-child(3407) { 
-  background: #448874; 
+  background: #1C6149; 
 } 
 .pixel:nth-child(3408) { 
-  background: #468B76; 
+  background: #1F644C; 
 } 
 .pixel:nth-child(3409) { 
-  background: #458A75; 
+  background: #1E634B; 
 } 
 .pixel:nth-child(3410) { 
-  background: #6FC09E; 
+  background: #489974; 
 } 
 .pixel:nth-child(3411) { 
   background: #A8D3B6; 
@@ -10576,37 +10576,37 @@ body {
   background: #234540; 
 } 
 .pixel:nth-child(3521) { 
-  background: #478877; 
+  background: #1F614C; 
 } 
 .pixel:nth-child(3522) { 
-  background: #67C8AF; 
+  background: #3FA184; 
 } 
 .pixel:nth-child(3523) { 
-  background: #66C8B0; 
+  background: #3EA185; 
 } 
 .pixel:nth-child(3524) { 
-  background: #65C8B0; 
+  background: #3EA185; 
 } 
 .pixel:nth-child(3525) { 
-  background: #66C8B0; 
+  background: #3EA186; 
 } 
 .pixel:nth-child(3526) { 
-  background: #65C8B0; 
+  background: #3EA185; 
 } 
 .pixel:nth-child(3527) { 
-  background: #66C8B0; 
+  background: #3EA186; 
 } 
 .pixel:nth-child(3528) { 
-  background: #65C8B0; 
+  background: #3EA185; 
 } 
 .pixel:nth-child(3529) { 
-  background: #65C8B0; 
+  background: #3EA186; 
 } 
 .pixel:nth-child(3530) { 
-  background: #67C9B1; 
+  background: #3FA286; 
 } 
 .pixel:nth-child(3531) { 
-  background: #448A79; 
+  background: #1D634F; 
 } 
 .pixel:nth-child(3532) { 
   background: #80988E; 
@@ -10909,7 +10909,7 @@ body {
   background: #26413C; 
 } 
 .pixel:nth-child(3632) { 
-  background: #478675; 
+  background: #1F5F4B; 
 } 
 .pixel:nth-child(3633) { 
   background: #80968D; 
@@ -10939,43 +10939,43 @@ body {
   background: #22433E; 
 } 
 .pixel:nth-child(3642) { 
-  background: #478675; 
+  background: #1F5F4B; 
 } 
 .pixel:nth-child(3643) { 
-  background: #68CBAF; 
+  background: #197D5A; 
 } 
 .pixel:nth-child(3644) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(3645) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(3646) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(3647) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(3648) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(3649) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(3650) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(3651) { 
-  background: #6DC2AA; 
+  background: #459B80; 
 } 
 .pixel:nth-child(3652) { 
-  background: #438878; 
+  background: #1C614D; 
 } 
 .pixel:nth-child(3653) { 
   background: #80968D; 
 } 
 .pixel:nth-child(3654) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(3655) { 
   background: #DAECDE; 
@@ -11008,7 +11008,7 @@ body {
   background: #80968D; 
 } 
 .pixel:nth-child(3665) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(3666) { 
   background: #DAECDE; 
@@ -11041,7 +11041,7 @@ body {
   background: #7F978D; 
 } 
 .pixel:nth-child(3676) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(3677) { 
   background: #D9ECDE; 
@@ -11074,7 +11074,7 @@ body {
   background: #7F978D; 
 } 
 .pixel:nth-child(3687) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(3688) { 
   background: #D9ECDE; 
@@ -11107,7 +11107,7 @@ body {
   background: #7F978D; 
 } 
 .pixel:nth-child(3698) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(3699) { 
   background: #D9ECDE; 
@@ -11140,7 +11140,7 @@ body {
   background: #7F978D; 
 } 
 .pixel:nth-child(3709) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(3710) { 
   background: #D9ECDE; 
@@ -11173,7 +11173,7 @@ body {
   background: #80968D; 
 } 
 .pixel:nth-child(3720) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(3721) { 
   background: #DAECDE; 
@@ -11206,7 +11206,7 @@ body {
   background: #4C7D71; 
 } 
 .pixel:nth-child(3731) { 
-  background: #6DC2AA; 
+  background: #459B80; 
 } 
 .pixel:nth-child(3732) { 
   background: #A6D3C2; 
@@ -11239,7 +11239,7 @@ body {
   background: #22433E; 
 } 
 .pixel:nth-child(3742) { 
-  background: #438878; 
+  background: #1C614D; 
 } 
 .pixel:nth-child(3743) { 
   background: #7C998F; 
@@ -11302,37 +11302,37 @@ body {
   background: #22433E; 
 } 
 .pixel:nth-child(3763) { 
-  background: #478676; 
+  background: #205F4B; 
 } 
 .pixel:nth-child(3764) { 
-  background: #68CBAF; 
+  background: #40A484; 
 } 
 .pixel:nth-child(3765) { 
-  background: #A0DAC4; 
+  background: #78B39A; 
 } 
 .pixel:nth-child(3766) { 
-  background: #A1DDC7; 
+  background: #79B69D; 
 } 
 .pixel:nth-child(3767) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(3768) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(3769) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(3770) { 
-  background: #9FDCC7; 
+  background: #77B59D; 
 } 
 .pixel:nth-child(3771) { 
-  background: #A3E0CC; 
+  background: #7CB9A1; 
 } 
 .pixel:nth-child(3772) { 
-  background: #6CC2AA; 
+  background: #459B80; 
 } 
 .pixel:nth-child(3773) { 
-  background: #438877; 
+  background: #1B614D; 
 } 
 .pixel:nth-child(3774) { 
   background: #80978D; 
@@ -11665,37 +11665,37 @@ body {
   background: #22423E; 
 } 
 .pixel:nth-child(3884) { 
-  background: #478676; 
+  background: #205F4C; 
 } 
 .pixel:nth-child(3885) { 
-  background: #68CBAF; 
+  background: #40A484; 
 } 
 .pixel:nth-child(3886) { 
-  background: #A6E3CD; 
+  background: #7EBCA2; 
 } 
 .pixel:nth-child(3887) { 
-  background: #A1DEC9; 
+  background: #79B79F; 
 } 
 .pixel:nth-child(3888) { 
-  background: #5F9E89; 
+  background: #38775F; 
 } 
 .pixel:nth-child(3889) { 
-  background: #5A9A86; 
+  background: #32735C; 
 } 
 .pixel:nth-child(3890) { 
-  background: #5B9A88; 
+  background: #34735D; 
 } 
 .pixel:nth-child(3891) { 
-  background: #9CD7C2; 
+  background: #75B097; 
 } 
 .pixel:nth-child(3892) { 
-  background: #83C0AB; 
+  background: #5B9981; 
 } 
 .pixel:nth-child(3893) { 
-  background: #6DC2AA; 
+  background: #459B80; 
 } 
 .pixel:nth-child(3894) { 
-  background: #438778; 
+  background: #1C604D; 
 } 
 .pixel:nth-child(3895) { 
   background: #80968E; 
@@ -12028,37 +12028,37 @@ body {
   background: #23433F; 
 } 
 .pixel:nth-child(4005) { 
-  background: #468677; 
+  background: #1E5F4C; 
 } 
 .pixel:nth-child(4006) { 
-  background: #68CBAF; 
+  background: #40A484; 
 } 
 .pixel:nth-child(4007) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(4008) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(4009) { 
-  background: #9DDBC6; 
+  background: #76B49B; 
 } 
 .pixel:nth-child(4010) { 
-  background: #9DDBC7; 
+  background: #75B49C; 
 } 
 .pixel:nth-child(4011) { 
-  background: #9DDCC7; 
+  background: #76B59D; 
 } 
 .pixel:nth-child(4012) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(4013) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(4014) { 
-  background: #6CC2AA; 
+  background: #449B80; 
 } 
 .pixel:nth-child(4015) { 
-  background: #448879; 
+  background: #1D614E; 
 } 
 .pixel:nth-child(4016) { 
   background: #7F968E; 
@@ -12391,37 +12391,37 @@ body {
   background: #22423E; 
 } 
 .pixel:nth-child(4126) { 
-  background: #468677; 
+  background: #1E5F4C; 
 } 
 .pixel:nth-child(4127) { 
-  background: #67CAAE; 
+  background: #40A384; 
 } 
 .pixel:nth-child(4128) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(4129) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(4130) { 
-  background: #A0DBC7; 
+  background: #78B49D; 
 } 
 .pixel:nth-child(4131) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(4132) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(4133) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(4134) { 
-  background: #A1DBC5; 
+  background: #79B49B; 
 } 
 .pixel:nth-child(4135) { 
-  background: #6CC2AA; 
+  background: #449B80; 
 } 
 .pixel:nth-child(4136) { 
-  background: #438778; 
+  background: #1C604D; 
 } 
 .pixel:nth-child(4137) { 
   background: #7F968E; 
@@ -12754,37 +12754,37 @@ body {
   background: #22433E; 
 } 
 .pixel:nth-child(4247) { 
-  background: #478577; 
+  background: #1F5E4C; 
 } 
 .pixel:nth-child(4248) { 
-  background: #62C9AD; 
+  background: #3BA283; 
 } 
 .pixel:nth-child(4249) { 
-  background: #68C9B0; 
+  background: #41A286; 
 } 
 .pixel:nth-child(4250) { 
-  background: #69C9B0; 
+  background: #41A286; 
 } 
 .pixel:nth-child(4251) { 
-  background: #69C8B1; 
+  background: #42A187; 
 } 
 .pixel:nth-child(4252) { 
-  background: #68C8B1; 
+  background: #40A187; 
 } 
 .pixel:nth-child(4253) { 
-  background: #69C6B0; 
+  background: #419F85; 
 } 
 .pixel:nth-child(4254) { 
-  background: #65C8AC; 
+  background: #3EA181; 
 } 
 .pixel:nth-child(4255) { 
-  background: #66C6AF; 
+  background: #3F9F84; 
 } 
 .pixel:nth-child(4256) { 
-  background: #69C6B0; 
+  background: #429F85; 
 } 
 .pixel:nth-child(4257) { 
-  background: #438877; 
+  background: #1B614D; 
 } 
 .pixel:nth-child(4258) { 
   background: #80968E; 
@@ -13117,37 +13117,37 @@ body {
   background: #21423E; 
 } 
 .pixel:nth-child(4368) { 
-  background: #458677; 
+  background: #1E5F4C; 
 } 
 .pixel:nth-child(4369) { 
-  background: #6ACAB0; 
+  background: #42A386; 
 } 
 .pixel:nth-child(4370) { 
-  background: #428A76; 
+  background: #1A634B; 
 } 
 .pixel:nth-child(4371) { 
-  background: #438A76; 
+  background: #1B634B; 
 } 
 .pixel:nth-child(4372) { 
-  background: #438976; 
+  background: #1B624C; 
 } 
 .pixel:nth-child(4373) { 
-  background: #448977; 
+  background: #1C624D; 
 } 
 .pixel:nth-child(4374) { 
-  background: #69CBB3; 
+  background: #41A488; 
 } 
 .pixel:nth-child(4375) { 
-  background: #6BC5B4; 
+  background: #439E89; 
 } 
 .pixel:nth-child(4376) { 
-  background: #458B93; 
+  background: #1D6468; 
 } 
 .pixel:nth-child(4377) { 
-  background: #67C8B0; 
+  background: #3FA185; 
 } 
 .pixel:nth-child(4378) { 
-  background: #428778; 
+  background: #1B604D; 
 } 
 .pixel:nth-child(4379) { 
   background: #7E968E; 
@@ -13480,37 +13480,37 @@ body {
   background: #21423E; 
 } 
 .pixel:nth-child(4489) { 
-  background: #458677; 
+  background: #1E5F4C; 
 } 
 .pixel:nth-child(4490) { 
-  background: #69C7B0; 
+  background: #42A086; 
 } 
 .pixel:nth-child(4491) { 
-  background: #68C4A1; 
+  background: #409D77; 
 } 
 .pixel:nth-child(4492) { 
-  background: #73C89F; 
+  background: #4CA174; 
 } 
 .pixel:nth-child(4493) { 
-  background: #67C8AF; 
+  background: #3FA184; 
 } 
 .pixel:nth-child(4494) { 
-  background: #67C7B0; 
+  background: #40A086; 
 } 
 .pixel:nth-child(4495) { 
-  background: #66C8AE; 
+  background: #3EA183; 
 } 
 .pixel:nth-child(4496) { 
-  background: #67C8AE; 
+  background: #3FA183; 
 } 
 .pixel:nth-child(4497) { 
-  background: #67C7AF; 
+  background: #3FA085; 
 } 
 .pixel:nth-child(4498) { 
-  background: #65C9AC; 
+  background: #3EA282; 
 } 
 .pixel:nth-child(4499) { 
-  background: #428777; 
+  background: #1A604D; 
 } 
 .pixel:nth-child(4500) { 
   background: #7E968E; 
@@ -13843,37 +13843,37 @@ body {
   background: #20413D; 
 } 
 .pixel:nth-child(4610) { 
-  background: #458676; 
+  background: #1E5F4B; 
 } 
 .pixel:nth-child(4611) { 
-  background: #67C8AC; 
+  background: #40A182; 
 } 
 .pixel:nth-child(4612) { 
-  background: #ACDD70; 
+  background: #84B646; 
 } 
 .pixel:nth-child(4613) { 
-  background: #A9DE75; 
+  background: #81B74B; 
 } 
 .pixel:nth-child(4614) { 
-  background: #6EC8A6; 
+  background: #47A17B; 
 } 
 .pixel:nth-child(4615) { 
-  background: #68C9B0; 
+  background: #40A285; 
 } 
 .pixel:nth-child(4616) { 
-  background: #56BDC4; 
+  background: #2F969A; 
 } 
 .pixel:nth-child(4617) { 
-  background: #67C4AF; 
+  background: #409D85; 
 } 
 .pixel:nth-child(4618) { 
-  background: #64C38F; 
+  background: #3D9C64; 
 } 
 .pixel:nth-child(4619) { 
-  background: #67C8AE; 
+  background: #3FA183; 
 } 
 .pixel:nth-child(4620) { 
-  background: #418677; 
+  background: #1A5F4C; 
 } 
 .pixel:nth-child(4621) { 
   background: #7E978D; 
@@ -14206,37 +14206,37 @@ body {
   background: #21413C; 
 } 
 .pixel:nth-child(4731) { 
-  background: #478676; 
+  background: #205F4C; 
 } 
 .pixel:nth-child(4732) { 
-  background: #66C8B4; 
+  background: #3FA18A; 
 } 
 .pixel:nth-child(4733) { 
-  background: #72C498; 
+  background: #4B9D6D; 
 } 
 .pixel:nth-child(4734) { 
-  background: #80C48E; 
+  background: #599D64; 
 } 
 .pixel:nth-child(4735) { 
-  background: #63C5AD; 
+  background: #3C9E83; 
 } 
 .pixel:nth-child(4736) { 
-  background: #67C7B1; 
+  background: #3FA087; 
 } 
 .pixel:nth-child(4737) { 
-  background: #67C9AD; 
+  background: #40A283; 
 } 
 .pixel:nth-child(4738) { 
-  background: #8F7B78; 
+  background: #67544E; 
 } 
 .pixel:nth-child(4739) { 
-  background: #67C8AE; 
+  background: #3FA183; 
 } 
 .pixel:nth-child(4740) { 
-  background: #67C9AB; 
+  background: #3FA281; 
 } 
 .pixel:nth-child(4741) { 
-  background: #428676; 
+  background: #1B5F4B; 
 } 
 .pixel:nth-child(4742) { 
   background: #80968E; 
@@ -14569,37 +14569,37 @@ body {
   background: #254540; 
 } 
 .pixel:nth-child(4852) { 
-  background: #478675; 
+  background: #205F4A; 
 } 
 .pixel:nth-child(4853) { 
-  background: #65CBB2; 
+  background: #3DA487; 
 } 
 .pixel:nth-child(4854) { 
-  background: #65C8B0; 
+  background: #3EA186; 
 } 
 .pixel:nth-child(4855) { 
-  background: #65CBB0; 
+  background: #3EA486; 
 } 
 .pixel:nth-child(4856) { 
-  background: #64C8AD; 
+  background: #3DA182; 
 } 
 .pixel:nth-child(4857) { 
-  background: #66C9AF; 
+  background: #3EA285; 
 } 
 .pixel:nth-child(4858) { 
-  background: #65C9AF; 
+  background: #3EA284; 
 } 
 .pixel:nth-child(4859) { 
-  background: #69CAB3; 
+  background: #42A388; 
 } 
 .pixel:nth-child(4860) { 
-  background: #66C9AE; 
+  background: #3FA284; 
 } 
 .pixel:nth-child(4861) { 
-  background: #66C9B1; 
+  background: #3FA286; 
 } 
 .pixel:nth-child(4862) { 
-  background: #468A7A; 
+  background: #1F634F; 
 } 
 .pixel:nth-child(4863) { 
   background: #80978C; 
@@ -14932,37 +14932,37 @@ body {
   background: #518069; 
 } 
 .pixel:nth-child(4973) { 
-  background: #75C6A0; 
+  background: #4D9F76; 
 } 
 .pixel:nth-child(4974) { 
-  background: #478673; 
+  background: #1F5F49; 
 } 
 .pixel:nth-child(4975) { 
-  background: #488774; 
+  background: #20604A; 
 } 
 .pixel:nth-child(4976) { 
-  background: #488774; 
+  background: #20604A; 
 } 
 .pixel:nth-child(4977) { 
-  background: #498875; 
+  background: #21614B; 
 } 
 .pixel:nth-child(4978) { 
-  background: #468774; 
+  background: #1F6049; 
 } 
 .pixel:nth-child(4979) { 
-  background: #478875; 
+  background: #20614A; 
 } 
 .pixel:nth-child(4980) { 
-  background: #478876; 
+  background: #1F614B; 
 } 
 .pixel:nth-child(4981) { 
-  background: #478875; 
+  background: #20614A; 
 } 
 .pixel:nth-child(4982) { 
-  background: #478875; 
+  background: #20614A; 
 } 
 .pixel:nth-child(4983) { 
-  background: #72C5A2; 
+  background: #4A9E78; 
 } 
 .pixel:nth-child(4984) { 
   background: #AED6B8; 
@@ -15991,7 +15991,7 @@ body {
   background: #26413C; 
 } 
 .pixel:nth-child(5326) { 
-  background: #478676; 
+  background: #205F4B; 
 } 
 .pixel:nth-child(5327) { 
   background: #80978D; 
@@ -16024,7 +16024,7 @@ body {
   background: #478675; 
 } 
 .pixel:nth-child(5337) { 
-  background: #68CBAF; 
+  background: #40A484; 
 } 
 .pixel:nth-child(5338) { 
   background: #A1DBC6; 
@@ -16057,7 +16057,7 @@ body {
   background: #7F958B; 
 } 
 .pixel:nth-child(5348) { 
-  background: #A0DAC4; 
+  background: #78B39A; 
 } 
 .pixel:nth-child(5349) { 
   background: #D9EBDC; 
@@ -16090,7 +16090,7 @@ body {
   background: #80988E; 
 } 
 .pixel:nth-child(5359) { 
-  background: #A1DDC7; 
+  background: #79B69D; 
 } 
 .pixel:nth-child(5360) { 
   background: #DAEDDF; 
@@ -16123,7 +16123,7 @@ body {
   background: #7F978D; 
 } 
 .pixel:nth-child(5370) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(5371) { 
   background: #D9ECDE; 
@@ -16156,7 +16156,7 @@ body {
   background: #7F978D; 
 } 
 .pixel:nth-child(5381) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(5382) { 
   background: #D9ECDE; 
@@ -16189,7 +16189,7 @@ body {
   background: #7F978D; 
 } 
 .pixel:nth-child(5392) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(5393) { 
   background: #D9ECDE; 
@@ -16222,7 +16222,7 @@ body {
   background: #7E978E; 
 } 
 .pixel:nth-child(5403) { 
-  background: #9FDCC7; 
+  background: #77B59D; 
 } 
 .pixel:nth-child(5404) { 
   background: #D8EDDF; 
@@ -16255,7 +16255,7 @@ body {
   background: #829B92; 
 } 
 .pixel:nth-child(5414) { 
-  background: #A3E0CC; 
+  background: #7CB9A1; 
 } 
 .pixel:nth-child(5415) { 
   background: #DCF0E3; 
@@ -16288,7 +16288,7 @@ body {
   background: #4B7D71; 
 } 
 .pixel:nth-child(5425) { 
-  background: #6CC2AA; 
+  background: #459B80; 
 } 
 .pixel:nth-child(5426) { 
   background: #A5D3C2; 
@@ -16321,7 +16321,7 @@ body {
   background: #22433E; 
 } 
 .pixel:nth-child(5436) { 
-  background: #438877; 
+  background: #1B614D; 
 } 
 .pixel:nth-child(5437) { 
   background: #7C988F; 
@@ -21073,7 +21073,7 @@ body {
   background: #26413D; 
 } 
 .pixel:nth-child(7020) { 
-  background: #478676; 
+  background: #205F4C; 
 } 
 .pixel:nth-child(7021) { 
   background: #80968E; 
@@ -21106,7 +21106,7 @@ body {
   background: #478675; 
 } 
 .pixel:nth-child(7031) { 
-  background: #68CBAF; 
+  background: #40A484; 
 } 
 .pixel:nth-child(7032) { 
   background: #A1DBC6; 
@@ -21139,7 +21139,7 @@ body {
   background: #859E93; 
 } 
 .pixel:nth-child(7042) { 
-  background: #A6E3CD; 
+  background: #7EBCA2; 
 } 
 .pixel:nth-child(7043) { 
   background: #DFF3E4; 
@@ -21172,7 +21172,7 @@ body {
   background: #809990; 
 } 
 .pixel:nth-child(7053) { 
-  background: #A1DEC9; 
+  background: #79B79F; 
 } 
 .pixel:nth-child(7054) { 
   background: #DAEFE1; 
@@ -21205,7 +21205,7 @@ body {
   background: #3E5950; 
 } 
 .pixel:nth-child(7064) { 
-  background: #5F9E89; 
+  background: #38775F; 
 } 
 .pixel:nth-child(7065) { 
   background: #98AEA1; 
@@ -21238,7 +21238,7 @@ body {
   background: #39554D; 
 } 
 .pixel:nth-child(7075) { 
-  background: #5A9A86; 
+  background: #32735C; 
 } 
 .pixel:nth-child(7076) { 
   background: #93AB9E; 
@@ -21271,7 +21271,7 @@ body {
   background: #3A554E; 
 } 
 .pixel:nth-child(7086) { 
-  background: #5B9A88; 
+  background: #34735D; 
 } 
 .pixel:nth-child(7087) { 
   background: #94AB9F; 
@@ -21304,7 +21304,7 @@ body {
   background: #7B9288; 
 } 
 .pixel:nth-child(7097) { 
-  background: #9CD7C2; 
+  background: #75B097; 
 } 
 .pixel:nth-child(7098) { 
   background: #D5E7D9; 
@@ -21337,7 +21337,7 @@ body {
   background: #627B72; 
 } 
 .pixel:nth-child(7108) { 
-  background: #83C0AB; 
+  background: #5B9981; 
 } 
 .pixel:nth-child(7109) { 
   background: #BCD1C3; 
@@ -21370,7 +21370,7 @@ body {
   background: #4C7D71; 
 } 
 .pixel:nth-child(7119) { 
-  background: #6DC2AA; 
+  background: #459B80; 
 } 
 .pixel:nth-child(7120) { 
   background: #A6D3C2; 
@@ -21403,7 +21403,7 @@ body {
   background: #22423E; 
 } 
 .pixel:nth-child(7130) { 
-  background: #438778; 
+  background: #1C604D; 
 } 
 .pixel:nth-child(7131) { 
   background: #7C978F; 
@@ -26155,7 +26155,7 @@ body {
   background: #25413D; 
 } 
 .pixel:nth-child(8714) { 
-  background: #468677; 
+  background: #1E5F4C; 
 } 
 .pixel:nth-child(8715) { 
   background: #7F968E; 
@@ -26188,7 +26188,7 @@ body {
   background: #478675; 
 } 
 .pixel:nth-child(8725) { 
-  background: #68CBAF; 
+  background: #40A484; 
 } 
 .pixel:nth-child(8726) { 
   background: #A1DBC6; 
@@ -26221,7 +26221,7 @@ body {
   background: #80968D; 
 } 
 .pixel:nth-child(8736) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(8737) { 
   background: #DAECDE; 
@@ -26254,7 +26254,7 @@ body {
   background: #7F978D; 
 } 
 .pixel:nth-child(8747) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(8748) { 
   background: #D9ECDE; 
@@ -26287,7 +26287,7 @@ body {
   background: #7C968C; 
 } 
 .pixel:nth-child(8758) { 
-  background: #9DDBC6; 
+  background: #76B49B; 
 } 
 .pixel:nth-child(8759) { 
   background: #D6EBDD; 
@@ -26320,7 +26320,7 @@ body {
   background: #7C968D; 
 } 
 .pixel:nth-child(8769) { 
-  background: #9DDBC7; 
+  background: #75B49C; 
 } 
 .pixel:nth-child(8770) { 
   background: #D6ECDE; 
@@ -26353,7 +26353,7 @@ body {
   background: #7C978E; 
 } 
 .pixel:nth-child(8780) { 
-  background: #9DDCC7; 
+  background: #76B59D; 
 } 
 .pixel:nth-child(8781) { 
   background: #D6ECDF; 
@@ -26386,7 +26386,7 @@ body {
   background: #7F978D; 
 } 
 .pixel:nth-child(8791) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(8792) { 
   background: #D9ECDE; 
@@ -26419,7 +26419,7 @@ body {
   background: #80968D; 
 } 
 .pixel:nth-child(8802) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(8803) { 
   background: #DAECDE; 
@@ -26452,7 +26452,7 @@ body {
   background: #4B7D71; 
 } 
 .pixel:nth-child(8813) { 
-  background: #6CC2AA; 
+  background: #449B80; 
 } 
 .pixel:nth-child(8814) { 
   background: #A5D2C2; 
@@ -26485,7 +26485,7 @@ body {
   background: #23433F; 
 } 
 .pixel:nth-child(8824) { 
-  background: #448879; 
+  background: #1D614E; 
 } 
 .pixel:nth-child(8825) { 
   background: #7D9890; 
@@ -31237,7 +31237,7 @@ body {
   background: #25413D; 
 } 
 .pixel:nth-child(10408) { 
-  background: #468677; 
+  background: #1E5F4C; 
 } 
 .pixel:nth-child(10409) { 
   background: #7F968E; 
@@ -31270,7 +31270,7 @@ body {
   background: #468575; 
 } 
 .pixel:nth-child(10419) { 
-  background: #67CAAE; 
+  background: #40A384; 
 } 
 .pixel:nth-child(10420) { 
   background: #A0DBC6; 
@@ -31303,7 +31303,7 @@ body {
   background: #80968D; 
 } 
 .pixel:nth-child(10430) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(10431) { 
   background: #DAECDE; 
@@ -31336,7 +31336,7 @@ body {
   background: #7F978D; 
 } 
 .pixel:nth-child(10441) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(10442) { 
   background: #D9ECDE; 
@@ -31369,7 +31369,7 @@ body {
   background: #7F968E; 
 } 
 .pixel:nth-child(10452) { 
-  background: #A0DBC7; 
+  background: #78B49D; 
 } 
 .pixel:nth-child(10453) { 
   background: #D9ECDF; 
@@ -31402,7 +31402,7 @@ body {
   background: #80968D; 
 } 
 .pixel:nth-child(10463) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(10464) { 
   background: #DAECDE; 
@@ -31435,7 +31435,7 @@ body {
   background: #80968D; 
 } 
 .pixel:nth-child(10474) { 
-  background: #A1DBC6; 
+  background: #79B49C; 
 } 
 .pixel:nth-child(10475) { 
   background: #DAECDE; 
@@ -31468,7 +31468,7 @@ body {
   background: #7F978D; 
 } 
 .pixel:nth-child(10485) { 
-  background: #A0DCC6; 
+  background: #78B59C; 
 } 
 .pixel:nth-child(10486) { 
   background: #D9ECDE; 
@@ -31501,7 +31501,7 @@ body {
   background: #80968C; 
 } 
 .pixel:nth-child(10496) { 
-  background: #A1DBC5; 
+  background: #79B49B; 
 } 
 .pixel:nth-child(10497) { 
   background: #DAECDD; 
@@ -31534,7 +31534,7 @@ body {
   background: #4B7D71; 
 } 
 .pixel:nth-child(10507) { 
-  background: #6CC2AA; 
+  background: #449B80; 
 } 
 .pixel:nth-child(10508) { 
   background: #A5D2C2; 
@@ -31567,7 +31567,7 @@ body {
   background: #22423E; 
 } 
 .pixel:nth-child(10518) { 
-  background: #438778; 
+  background: #1C604D; 
 } 
 .pixel:nth-child(10519) { 
   background: #7C978F; 
@@ -36319,7 +36319,7 @@ body {
   background: #26403D; 
 } 
 .pixel:nth-child(12102) { 
-  background: #478577; 
+  background: #1F5E4C; 
 } 
 .pixel:nth-child(12103) { 
   background: #80968E; 
@@ -36352,7 +36352,7 @@ body {
   background: #418474; 
 } 
 .pixel:nth-child(12113) { 
-  background: #62C9AD; 
+  background: #3BA283; 
 } 
 .pixel:nth-child(12114) { 
   background: #9BDAC5; 
@@ -36385,7 +36385,7 @@ body {
   background: #478477; 
 } 
 .pixel:nth-child(12124) { 
-  background: #68C9B0; 
+  background: #41A286; 
 } 
 .pixel:nth-child(12125) { 
   background: #A1DAC8; 
@@ -36418,7 +36418,7 @@ body {
   background: #488477; 
 } 
 .pixel:nth-child(12135) { 
-  background: #69C9B0; 
+  background: #41A286; 
 } 
 .pixel:nth-child(12136) { 
   background: #A2D9C8; 
@@ -36451,7 +36451,7 @@ body {
   background: #488378; 
 } 
 .pixel:nth-child(12146) { 
-  background: #69C8B1; 
+  background: #42A187; 
 } 
 .pixel:nth-child(12147) { 
   background: #A2D9C9; 
@@ -36484,7 +36484,7 @@ body {
   background: #478378; 
 } 
 .pixel:nth-child(12157) { 
-  background: #68C8B1; 
+  background: #40A187; 
 } 
 .pixel:nth-child(12158) { 
   background: #A1D9C9; 
@@ -36517,7 +36517,7 @@ body {
   background: #488176; 
 } 
 .pixel:nth-child(12168) { 
-  background: #69C6B0; 
+  background: #419F85; 
 } 
 .pixel:nth-child(12169) { 
   background: #A2D6C7; 
@@ -36550,7 +36550,7 @@ body {
   background: #448372; 
 } 
 .pixel:nth-child(12179) { 
-  background: #65C8AC; 
+  background: #3EA181; 
 } 
 .pixel:nth-child(12180) { 
   background: #9ED9C3; 
@@ -36583,7 +36583,7 @@ body {
   background: #458175; 
 } 
 .pixel:nth-child(12190) { 
-  background: #66C6AF; 
+  background: #3F9F84; 
 } 
 .pixel:nth-child(12191) { 
   background: #9FD7C6; 
@@ -36616,7 +36616,7 @@ body {
   background: #488176; 
 } 
 .pixel:nth-child(12201) { 
-  background: #69C6B0; 
+  background: #429F85; 
 } 
 .pixel:nth-child(12202) { 
   background: #A2D7C7; 
@@ -36649,7 +36649,7 @@ body {
   background: #22433E; 
 } 
 .pixel:nth-child(12212) { 
-  background: #438877; 
+  background: #1B614D; 
 } 
 .pixel:nth-child(12213) { 
   background: #7C988F; 
@@ -41401,7 +41401,7 @@ body {
   background: #24413D; 
 } 
 .pixel:nth-child(13796) { 
-  background: #458677; 
+  background: #1E5F4C; 
 } 
 .pixel:nth-child(13797) { 
   background: #7E968E; 
@@ -41434,7 +41434,7 @@ body {
   background: #498577; 
 } 
 .pixel:nth-child(13807) { 
-  background: #6ACAB0; 
+  background: #42A386; 
 } 
 .pixel:nth-child(13808) { 
   background: #A3DBC8; 
@@ -41467,7 +41467,7 @@ body {
   background: #21453C; 
 } 
 .pixel:nth-child(13818) { 
-  background: #428A76; 
+  background: #1A634B; 
 } 
 .pixel:nth-child(13819) { 
   background: #7B9B8D; 
@@ -41500,7 +41500,7 @@ body {
   background: #22453C; 
 } 
 .pixel:nth-child(13829) { 
-  background: #438A76; 
+  background: #1B634B; 
 } 
 .pixel:nth-child(13830) { 
   background: #7C9B8D; 
@@ -41533,7 +41533,7 @@ body {
   background: #22443D; 
 } 
 .pixel:nth-child(13840) { 
-  background: #438976; 
+  background: #1B624C; 
 } 
 .pixel:nth-child(13841) { 
   background: #7C9A8E; 
@@ -41566,7 +41566,7 @@ body {
   background: #23443E; 
 } 
 .pixel:nth-child(13851) { 
-  background: #448977; 
+  background: #1C624D; 
 } 
 .pixel:nth-child(13852) { 
   background: #7D9A8F; 
@@ -41599,7 +41599,7 @@ body {
   background: #488679; 
 } 
 .pixel:nth-child(13862) { 
-  background: #69CBB3; 
+  background: #41A488; 
 } 
 .pixel:nth-child(13863) { 
   background: #A2DBCA; 
@@ -41632,7 +41632,7 @@ body {
   background: #4A807A; 
 } 
 .pixel:nth-child(13873) { 
-  background: #6BC5B4; 
+  background: #439E89; 
 } 
 .pixel:nth-child(13874) { 
   background: #A4D5CB; 
@@ -41665,7 +41665,7 @@ body {
   background: #244659; 
 } 
 .pixel:nth-child(13884) { 
-  background: #458B93; 
+  background: #1D6468; 
 } 
 .pixel:nth-child(13885) { 
   background: #7E9BAA; 
@@ -41698,7 +41698,7 @@ body {
   background: #468376; 
 } 
 .pixel:nth-child(13895) { 
-  background: #67C8B0; 
+  background: #3FA185; 
 } 
 .pixel:nth-child(13896) { 
   background: #A0D8C7; 
@@ -41731,7 +41731,7 @@ body {
   background: #21423E; 
 } 
 .pixel:nth-child(13906) { 
-  background: #428778; 
+  background: #1B604D; 
 } 
 .pixel:nth-child(13907) { 
   background: #7B988F; 
@@ -46483,7 +46483,7 @@ body {
   background: #24413D; 
 } 
 .pixel:nth-child(15490) { 
-  background: #458677; 
+  background: #1E5F4C; 
 } 
 .pixel:nth-child(15491) { 
   background: #7E968E; 
@@ -46516,7 +46516,7 @@ body {
   background: #488277; 
 } 
 .pixel:nth-child(15501) { 
-  background: #69C7B0; 
+  background: #42A086; 
 } 
 .pixel:nth-child(15502) { 
   background: #A2D8C8; 
@@ -46549,7 +46549,7 @@ body {
   background: #477F68; 
 } 
 .pixel:nth-child(15512) { 
-  background: #68C4A1; 
+  background: #409D77; 
 } 
 .pixel:nth-child(15513) { 
   background: #A1D4B9; 
@@ -46582,7 +46582,7 @@ body {
   background: #528365; 
 } 
 .pixel:nth-child(15523) { 
-  background: #73C89F; 
+  background: #4CA174; 
 } 
 .pixel:nth-child(15524) { 
   background: #ACD8B6; 
@@ -46615,7 +46615,7 @@ body {
   background: #468375; 
 } 
 .pixel:nth-child(15534) { 
-  background: #67C8AF; 
+  background: #3FA184; 
 } 
 .pixel:nth-child(15535) { 
   background: #A0D8C6; 
@@ -46648,7 +46648,7 @@ body {
   background: #468277; 
 } 
 .pixel:nth-child(15545) { 
-  background: #67C7B0; 
+  background: #40A086; 
 } 
 .pixel:nth-child(15546) { 
   background: #A0D8C8; 
@@ -46681,7 +46681,7 @@ body {
   background: #458374; 
 } 
 .pixel:nth-child(15556) { 
-  background: #66C8AE; 
+  background: #3EA183; 
 } 
 .pixel:nth-child(15557) { 
   background: #9FD9C5; 
@@ -46714,7 +46714,7 @@ body {
   background: #468374; 
 } 
 .pixel:nth-child(15567) { 
-  background: #67C8AE; 
+  background: #3FA183; 
 } 
 .pixel:nth-child(15568) { 
   background: #A0D8C5; 
@@ -46747,7 +46747,7 @@ body {
   background: #468276; 
 } 
 .pixel:nth-child(15578) { 
-  background: #67C7AF; 
+  background: #3FA085; 
 } 
 .pixel:nth-child(15579) { 
   background: #A0D7C7; 
@@ -46780,7 +46780,7 @@ body {
   background: #448473; 
 } 
 .pixel:nth-child(15589) { 
-  background: #65C9AC; 
+  background: #3EA282; 
 } 
 .pixel:nth-child(15590) { 
   background: #9EDAC4; 
@@ -46813,7 +46813,7 @@ body {
   background: #21423E; 
 } 
 .pixel:nth-child(15600) { 
-  background: #428777; 
+  background: #1A604D; 
 } 
 .pixel:nth-child(15601) { 
   background: #7B978F; 
@@ -51565,7 +51565,7 @@ body {
   background: #24413C; 
 } 
 .pixel:nth-child(17184) { 
-  background: #458676; 
+  background: #1E5F4B; 
 } 
 .pixel:nth-child(17185) { 
   background: #7E978D; 
@@ -51598,7 +51598,7 @@ body {
   background: #468373; 
 } 
 .pixel:nth-child(17195) { 
-  background: #67C8AC; 
+  background: #40A182; 
 } 
 .pixel:nth-child(17196) { 
   background: #A0D8C4; 
@@ -51631,7 +51631,7 @@ body {
   background: #8B9837; 
 } 
 .pixel:nth-child(17206) { 
-  background: #ACDD70; 
+  background: #84B646; 
 } 
 .pixel:nth-child(17207) { 
   background: #E5ED88; 
@@ -51664,7 +51664,7 @@ body {
   background: #88993C; 
 } 
 .pixel:nth-child(17217) { 
-  background: #A9DE75; 
+  background: #81B74B; 
 } 
 .pixel:nth-child(17218) { 
   background: #E2EF8D; 
@@ -51697,7 +51697,7 @@ body {
   background: #4D836C; 
 } 
 .pixel:nth-child(17228) { 
-  background: #6EC8A6; 
+  background: #47A17B; 
 } 
 .pixel:nth-child(17229) { 
   background: #A7D9BD; 
@@ -51730,7 +51730,7 @@ body {
   background: #478476; 
 } 
 .pixel:nth-child(17239) { 
-  background: #68C9B0; 
+  background: #40A285; 
 } 
 .pixel:nth-child(17240) { 
   background: #A1D9C7; 
@@ -51763,7 +51763,7 @@ body {
   background: #35788B; 
 } 
 .pixel:nth-child(17250) { 
-  background: #56BDC4; 
+  background: #2F969A; 
 } 
 .pixel:nth-child(17251) { 
   background: #8FCEDC; 
@@ -51796,7 +51796,7 @@ body {
   background: #467F76; 
 } 
 .pixel:nth-child(17261) { 
-  background: #67C4AF; 
+  background: #409D85; 
 } 
 .pixel:nth-child(17262) { 
   background: #A0D4C7; 
@@ -51829,7 +51829,7 @@ body {
   background: #437E55; 
 } 
 .pixel:nth-child(17272) { 
-  background: #64C38F; 
+  background: #3D9C64; 
 } 
 .pixel:nth-child(17273) { 
   background: #9DD4A6; 
@@ -51862,7 +51862,7 @@ body {
   background: #468374; 
 } 
 .pixel:nth-child(17283) { 
-  background: #67C8AE; 
+  background: #3FA183; 
 } 
 .pixel:nth-child(17284) { 
   background: #A0D8C5; 
@@ -51895,7 +51895,7 @@ body {
   background: #20413D; 
 } 
 .pixel:nth-child(17294) { 
-  background: #418677; 
+  background: #1A5F4C; 
 } 
 .pixel:nth-child(17295) { 
   background: #7A978E; 
@@ -56647,7 +56647,7 @@ body {
   background: #26413D; 
 } 
 .pixel:nth-child(18878) { 
-  background: #478676; 
+  background: #205F4C; 
 } 
 .pixel:nth-child(18879) { 
   background: #80968E; 
@@ -56680,7 +56680,7 @@ body {
   background: #45837B; 
 } 
 .pixel:nth-child(18889) { 
-  background: #66C8B4; 
+  background: #3FA18A; 
 } 
 .pixel:nth-child(18890) { 
   background: #9FD8CC; 
@@ -56713,7 +56713,7 @@ body {
   background: #517F5E; 
 } 
 .pixel:nth-child(18900) { 
-  background: #72C498; 
+  background: #4B9D6D; 
 } 
 .pixel:nth-child(18901) { 
   background: #ABD4AF; 
@@ -56746,7 +56746,7 @@ body {
   background: #5F7F55; 
 } 
 .pixel:nth-child(18911) { 
-  background: #80C48E; 
+  background: #599D64; 
 } 
 .pixel:nth-child(18912) { 
   background: #B9D5A6; 
@@ -56779,7 +56779,7 @@ body {
   background: #428074; 
 } 
 .pixel:nth-child(18922) { 
-  background: #63C5AD; 
+  background: #3C9E83; 
 } 
 .pixel:nth-child(18923) { 
   background: #9CD6C5; 
@@ -56812,7 +56812,7 @@ body {
   background: #468278; 
 } 
 .pixel:nth-child(18933) { 
-  background: #67C7B1; 
+  background: #3FA087; 
 } 
 .pixel:nth-child(18934) { 
   background: #A0D8C9; 
@@ -56845,7 +56845,7 @@ body {
   background: #468474; 
 } 
 .pixel:nth-child(18944) { 
-  background: #67C9AD; 
+  background: #40A283; 
 } 
 .pixel:nth-child(18945) { 
   background: #A0D9C5; 
@@ -56878,7 +56878,7 @@ body {
   background: #6E363F; 
 } 
 .pixel:nth-child(18955) { 
-  background: #8F7B78; 
+  background: #67544E; 
 } 
 .pixel:nth-child(18956) { 
   background: #C88B90; 
@@ -56911,7 +56911,7 @@ body {
   background: #468374; 
 } 
 .pixel:nth-child(18966) { 
-  background: #67C8AE; 
+  background: #3FA183; 
 } 
 .pixel:nth-child(18967) { 
   background: #A0D8C5; 
@@ -56944,7 +56944,7 @@ body {
   background: #468472; 
 } 
 .pixel:nth-child(18977) { 
-  background: #67C9AB; 
+  background: #3FA281; 
 } 
 .pixel:nth-child(18978) { 
   background: #A0D9C3; 
@@ -56977,7 +56977,7 @@ body {
   background: #21413C; 
 } 
 .pixel:nth-child(18988) { 
-  background: #428676; 
+  background: #1B5F4B; 
 } 
 .pixel:nth-child(18989) { 
   background: #7B968D; 
@@ -61729,7 +61729,7 @@ body {
   background: #26413B; 
 } 
 .pixel:nth-child(20572) { 
-  background: #478675; 
+  background: #205F4A; 
 } 
 .pixel:nth-child(20573) { 
   background: #80978C; 
@@ -61762,7 +61762,7 @@ body {
   background: #448678; 
 } 
 .pixel:nth-child(20583) { 
-  background: #65CBB2; 
+  background: #3DA487; 
 } 
 .pixel:nth-child(20584) { 
   background: #9EDCC9; 
@@ -61795,7 +61795,7 @@ body {
   background: #448377; 
 } 
 .pixel:nth-child(20594) { 
-  background: #65C8B0; 
+  background: #3EA186; 
 } 
 .pixel:nth-child(20595) { 
   background: #9ED9C8; 
@@ -61828,7 +61828,7 @@ body {
   background: #448677; 
 } 
 .pixel:nth-child(20605) { 
-  background: #65CBB0; 
+  background: #3EA486; 
 } 
 .pixel:nth-child(20606) { 
   background: #9EDBC8; 
@@ -61861,7 +61861,7 @@ body {
   background: #438373; 
 } 
 .pixel:nth-child(20616) { 
-  background: #64C8AD; 
+  background: #3DA182; 
 } 
 .pixel:nth-child(20617) { 
   background: #9DD8C4; 
@@ -61894,7 +61894,7 @@ body {
   background: #458476; 
 } 
 .pixel:nth-child(20627) { 
-  background: #66C9AF; 
+  background: #3EA285; 
 } 
 .pixel:nth-child(20628) { 
   background: #9FDAC7; 
@@ -61927,7 +61927,7 @@ body {
   background: #448475; 
 } 
 .pixel:nth-child(20638) { 
-  background: #65C9AF; 
+  background: #3EA284; 
 } 
 .pixel:nth-child(20639) { 
   background: #9ED9C6; 
@@ -61960,7 +61960,7 @@ body {
   background: #488579; 
 } 
 .pixel:nth-child(20649) { 
-  background: #69CAB3; 
+  background: #42A388; 
 } 
 .pixel:nth-child(20650) { 
   background: #A2DACA; 
@@ -61993,7 +61993,7 @@ body {
   background: #458475; 
 } 
 .pixel:nth-child(20660) { 
-  background: #66C9AE; 
+  background: #3FA284; 
 } 
 .pixel:nth-child(20661) { 
   background: #9FD9C6; 
@@ -62026,7 +62026,7 @@ body {
   background: #458477; 
 } 
 .pixel:nth-child(20671) { 
-  background: #66C9B1; 
+  background: #3FA286; 
 } 
 .pixel:nth-child(20672) { 
   background: #9FDAC8; 
@@ -62059,7 +62059,7 @@ body {
   background: #254540; 
 } 
 .pixel:nth-child(20682) { 
-  background: #468A7A; 
+  background: #1F634F; 
 } 
 .pixel:nth-child(20683) { 
   background: #7F9A91; 
@@ -66811,7 +66811,7 @@ body {
   background: #548167; 
 } 
 .pixel:nth-child(22266) { 
-  background: #75C6A0; 
+  background: #4D9F76; 
 } 
 .pixel:nth-child(22267) { 
   background: #AED6B8; 
@@ -66844,7 +66844,7 @@ body {
   background: #26413A; 
 } 
 .pixel:nth-child(22277) { 
-  background: #478673; 
+  background: #1F5F49; 
 } 
 .pixel:nth-child(22278) { 
   background: #80968B; 
@@ -66877,7 +66877,7 @@ body {
   background: #27423B; 
 } 
 .pixel:nth-child(22288) { 
-  background: #488774; 
+  background: #20604A; 
 } 
 .pixel:nth-child(22289) { 
   background: #81978C; 
@@ -66910,7 +66910,7 @@ body {
   background: #27423B; 
 } 
 .pixel:nth-child(22299) { 
-  background: #488774; 
+  background: #20604A; 
 } 
 .pixel:nth-child(22300) { 
   background: #81978C; 
@@ -66943,7 +66943,7 @@ body {
   background: #28433C; 
 } 
 .pixel:nth-child(22310) { 
-  background: #498875; 
+  background: #21614B; 
 } 
 .pixel:nth-child(22311) { 
   background: #82988D; 
@@ -66976,7 +66976,7 @@ body {
   background: #25423A; 
 } 
 .pixel:nth-child(22321) { 
-  background: #468774; 
+  background: #1F6049; 
 } 
 .pixel:nth-child(22322) { 
   background: #7F978B; 
@@ -67009,7 +67009,7 @@ body {
   background: #26433B; 
 } 
 .pixel:nth-child(22332) { 
-  background: #478875; 
+  background: #20614A; 
 } 
 .pixel:nth-child(22333) { 
   background: #80988C; 
@@ -67042,7 +67042,7 @@ body {
   background: #26433C; 
 } 
 .pixel:nth-child(22343) { 
-  background: #478876; 
+  background: #1F614B; 
 } 
 .pixel:nth-child(22344) { 
   background: #80988D; 
@@ -67075,7 +67075,7 @@ body {
   background: #26433B; 
 } 
 .pixel:nth-child(22354) { 
-  background: #478875; 
+  background: #20614A; 
 } 
 .pixel:nth-child(22355) { 
   background: #80988C; 
@@ -67108,7 +67108,7 @@ body {
   background: #26433B; 
 } 
 .pixel:nth-child(22365) { 
-  background: #478875; 
+  background: #20614A; 
 } 
 .pixel:nth-child(22366) { 
   background: #80988C; 
@@ -67141,7 +67141,7 @@ body {
   background: #518069; 
 } 
 .pixel:nth-child(22376) { 
-  background: #72C5A2; 
+  background: #4A9E78; 
 } 
 .pixel:nth-child(22377) { 
   background: #ABD5BA; 

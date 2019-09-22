@@ -198,12 +198,12 @@ void arbol_images :: VerArbol( Node *root) {
        	ostringstream pi_h, pi_w;
     	pi_h<<root->pix_h;
     	pi_w<<root->pix_w;
-    	string pix_dim = "pixel: "+ pi_w.str() + "h, "+ pi_h.str()+"w";
+    	string pix_dim = "pixel: "+ pi_w.str() + "w, "+ pi_h.str()+"h";
     	
     	ostringstream ima_h, ima_w;
     	ima_h<<root->pix_ima_h;
     	ima_w<<root->pix_ima_w;
-    	string ima_dim = "ima: "+ ima_w.str() + "h, "+ ima_h.str()+"w";
+    	string ima_dim = "ima: "+ ima_w.str() + "w, "+ ima_h.str()+"h";
        	
 		grafica_orden = grafica_orden +"nodo"+ root->data  +" [ label =\"<C0>|"+ root->data +" - "+ pix_dim +" - "+ ima_dim +"|<C1>\"]; \n";
        	
