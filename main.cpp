@@ -438,11 +438,34 @@ void tipo_linealizacion(matrix mat_rep, int index)
     	
     	if (opcion == "1")
     	{
-    		mat_rep.Tipo_a_Graficar_linear(index, "LIN");
+    		string tip_lin = "1";
+    		cout<<"tipo\n" ;
+    		cout<<"1 = a la derecha y abajo:\n" ;
+    		cout<<"2 = todo a la derecha (puede que no pueda grapiz no soporte todo a la fecha):\n" ; cin>>tip_lin;
+    		if (tip_lin == "1")
+    		{
+				mat_rep.Tipo_a_Graficar_linear(index, "LIN");
+			}
+			else if (tip_lin == "2")
+    		{
+				mat_rep.Tipo_a_Graficar_linear_f2(index, "LIN");
+			}
+    		
 		}
 		else if (opcion == "2")
     	{
+    		string tip_lin = "1";
+    		cout<<"tipo\n" ;
+    		cout<<"1 = a la derecha y abajo:\n" ;
+    		cout<<"2 = todo a la derecha (puede que no pueda grapiz no soporte todo a la fecha):\n" ; cin>>tip_lin;
+    		if (tip_lin == "1")
+    		{
     		mat_rep.Tipo_a_Graficar_linear(index, "COL");
+    		}
+			else if (tip_lin == "2")
+    		{
+				mat_rep.Tipo_a_Graficar_linear_f2(index, "COL");
+			}
 		}
     	else if (opcion == "0")
     	{

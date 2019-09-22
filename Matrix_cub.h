@@ -223,6 +223,12 @@ public:
     ///forma 2
     void read_matrix_css_html_mosaic(node *matrix_capa, int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto);
     void Generando_css_mosaic(int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto, string nam_completo, string nombre , string es_neg, int pix_w_p, int pix_h_p);
+    
+    
+    void print_Grafica_matrix_linear_f2(node *matrix_capa, string name_cap, string tipo_lin);
+    void create_archivo_linear_f2(string nombre, string contenido);
+    
+    void Tipo_a_Graficar_linear_f2(int capa, string tipo_lin);
 };
 
 #endif

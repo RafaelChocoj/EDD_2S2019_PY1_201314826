@@ -873,6 +873,25 @@ void matrix :: add (int value, int x, int y, int z, string valor, string file_ca
 	    system(nom_ar.c_str());
 	}
     
+    
+    void matrix :: create_archivo_linear_f2(string nombre, string contenido) {
+    	
+    	string nom_ar = "";
+		nom_ar = nombre + ".txt";
+		ofstream file;
+		file.open(nom_ar.c_str());
+		file <<contenido;
+		file.close();
+		string dot, ima;
+		dot = "dot -Tpng "+ nom_ar + " -o "+nombre + ".jpg";  ///todo lineal
+		////dot = "neato -Tpng "+ nom_ar + " -o "+nombre + ".jpg";  /// para que grafique abajo y no quede largo y no carge
+		ima = nombre + ".jpg";
+		system(dot.c_str());
+	    system(ima.c_str());
+	    
+	    system(nom_ar.c_str());
+	}
+	
     int matrix :: alto_mat(){
     	int alt = 0;
     	
@@ -1097,6 +1116,29 @@ bool matrix :: Buscando_matrix_xy(node *matrix_capa, int x, int y) {
 		}  	
 	}
 	
+	
+	void matrix :: Tipo_a_Graficar_linear_f2(int capa, string tipo_lin) {
+    	string name_cap;
+    	
+    	node *temp = head;
+    	//while (temp->capa_up != NULL) { 
+    	while (temp != NULL) { 
+	    	if (capa == 0){
+	    		ostringstream cap;
+		    	cap<<temp->cor_z;
+	    		name_cap = "cap"+cap.str();
+		    	print_Grafica_matrix_linear_f2(temp, name_cap, tipo_lin);
+			}
+	    	else if (capa != 0 && capa == temp->cor_z ){
+	    		ostringstream cap;
+		    	cap<<temp->cor_z;
+	    		name_cap = "cap"+cap.str();
+		    	print_Grafica_matrix_linear_f2(temp, name_cap, tipo_lin);
+			} 
+	    	temp = temp->capa_up;
+		}  	
+	}
+	
 	void matrix :: print_Grafica_matrix_linear(node *matrix_capa, string name_cap, string tipo_lin) {
     	
 		string graf_matrix_lin_filas;
@@ -1252,6 +1294,164 @@ bool matrix :: Buscando_matrix_xy(node *matrix_capa, int x, int y) {
 		
 		graf_matrix_lin_filas = graf_matrix_lin_filas + "\n}\n";
 		create_archivo_linear(name_cap, graf_matrix_lin_filas);
+ 	
+    }
+    
+    void matrix :: print_Grafica_matrix_linear_f2(node *matrix_capa, string name_cap, string tipo_lin) {
+    	
+		string graf_matrix_lin_filas;
+    	string xx, yy;
+    	string xx2, yy2;
+    	
+    	string nodo_name, nodo_name_sig;
+		int nod = 0; 
+		    			
+    	int alto;
+    	int ancho;
+    	
+    	graf_matrix_lin_filas = "";
+		graf_matrix_lin_filas = graf_matrix_lin_filas + "digraph G { rankdir=LR\n";
+		graf_matrix_lin_filas = graf_matrix_lin_filas + "node [shape=record dir=both];\n";
+		//graf_matrix_lin_filas = graf_matrix_lin_filas + "node [shape=record dir=both];\n";
+    	
+    	graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+"0"+"[label = \"{<f0>|<f1> " + "Inicio" + "|<f2> }\"];\n";  
+		//graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+"0"+"[label = \"{<f0>|<f1> " + "Inicio" + "|<f2> }\" pos=\""+ "0"+","+"100"+"!\"]; \n"; //  lin
+		
+							
+    	graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+"0" +" -> ";    
+		graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+"1" +";\n";	
+							
+    	////node *temp = head;
+    	node *temp = matrix_capa;
+    	
+    	//alto = alto_mat();
+    	alto = alto_mat_x_cap(temp);
+    	ancho = ancho_mat_x_cap(temp);
+    	
+    	//node *temp = nodo_x_nivel;
+    	node *temp_inicio;
+    	node *temp_sup_ini;
+    	
+    	int x = 0;
+		int y = 100;
+		   	
+    	/*para recorrer para la derecha*/
+    	//while (temp->down != NULL) { 
+    	while (temp != NULL) { 
+	    	temp_inicio = temp;
+	    	/*para recorrer para abajo*/
+	    	while (temp != NULL) { 
+				//if (temp != NULL){
+		    		//cout<<"x: "<<temp->data<<" ";	
+
+						if (temp->tipo == "N"){
+							nod++;
+		    			//cout<<"temp->cor_x ("<<temp->cor_x<<")";
+		    			ostringstream co_x,  co_y, nod_n, nod_n_s;
+		    			
+		    			co_x<<temp->cor_x;
+		    			co_y<<temp->cor_y;
+		    			
+		    			////para normales
+		    			//y_gr<<alto - temp->cor_y;
+
+		    			
+		    			//xx =""; yy ="";
+    					xx = co_x.str(); 
+						yy = co_y.str();
+						//y_grap = y_gr.str();
+						//cout<<"xx ("<<xx<<")";
+		    			//cout<<"yy ("<<yy<<")";
+		    			nod_n<<nod;
+		    			nod_n_s<<nod+1;
+		    			
+		    			nodo_name = nod_n.str();
+            			nodo_name_sig  = nod_n_s.str();
+            			
+            			x=x+3;
+            			
+            			/*if (x >= 100)
+            			{
+            				y = y - 3;
+            				x = 1;
+						}
+						ostringstream x_lin,  y_lin;
+						x_lin<<x;
+		    			y_lin<<y;*/
+						
+			    			//cout<<"("<<xx<<","<<yy<<") "<<temp->valor<<"->"<<endl;
+			    			////graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+xx+"_"+yy +"[label = \"{<f0>|<f1> " + "("+xx+","+yy+") "+temp->valor + "|<f2> }\"];\n";  
+							
+							
+							graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name+"[label = \"{<f0>|<f1> " + "("+xx+","+yy+") "+temp->valor + "|<f2> }\"];\n";  ///original
+							//graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name+"[label = \"{<f0>|<f1> " + "("+xx+","+yy+") "+temp->valor + "|<f2> }\" pos=\""+x_lin.str()+","+y_lin.str()+"!\"]; \n";  ////con corde 
+							
+							
+							//flechas
+							/*graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+xx+"_"+yy +" -> ";
+							if (temp->right != NULL //&& temp->down != NULL){
+								ostringstream co_x2,  co_y2;
+								co_x2<<temp->right->cor_x;
+			    				co_y2<<temp->right->cor_y;
+			    				
+			    				xx2 = co_x2.str(); 
+								yy2 = co_y2.str();
+
+								graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+xx2+"_"+yy2 +";\n";
+							}*/  
+							
+							if (tipo_lin == "LIN")
+					    	{
+					    		if (alto == temp->cor_y && temp->right == NULL){
+								//cout<<"alto:"<<alto<<", temp->cor_z"<<temp->cor_y<<endl;
+								}else{
+		
+									graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name +" -> ";    
+									graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name_sig +";\n";
+								}
+							}
+							else if (tipo_lin == "COL")
+					    	{
+					    		if (ancho == temp->cor_x && temp->down == NULL){
+								}else{
+		
+									graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name +" -> ";    
+									graf_matrix_lin_filas = graf_matrix_lin_filas + "p"+nodo_name_sig +";\n";
+								}
+							}
+							
+							
+							
+											
+						}
+						    	
+		    	//temp = temp->right;
+		    	if (tipo_lin == "LIN"){
+		    		temp = temp->right;
+				}
+				else if (tipo_lin == "COL"){
+		    		temp = temp->down;
+				}
+			}		
+			temp = temp_inicio;
+	    	//temp = temp->down;
+	    	
+	    	if (tipo_lin == "LIN"){
+	    		temp = temp->down;
+			}
+			else if (tipo_lin == "COL"){
+	    		temp = temp->right;
+			}
+	    	//cout<<endl;
+		}  	
+		
+		if (tipo_lin == "LIN")
+    	{name_cap = name_cap + "_lin";}
+		else if (tipo_lin == "COL")
+    	{name_cap = name_cap + "_col";}
+		
+		graf_matrix_lin_filas = graf_matrix_lin_filas + "\n}\n";
+		create_archivo_linear_f2(name_cap, graf_matrix_lin_filas);
  	
     }
     
