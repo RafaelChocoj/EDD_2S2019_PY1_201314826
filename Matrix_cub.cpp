@@ -1951,17 +1951,196 @@ bool matrix :: Buscando_matrix_xy(node *matrix_capa, int x, int y) {
 		///cout <<"x<no_pix_ancho: "<<no_pix_ancho <<endl;
 		
 		
-		for(int y = 0; y<no_pix_alto ; y++){
+		/*for(int y = 0; y<no_pix_alto ; y++){
 			for(int x = 0; x<no_pix_ancho ; x++){
 				///para html
 				file_html = file_html + "  <div class=\"pixel\"></div>\n";
 			}
+		}*/
+		
+		string solo_x = "";
+		string file_html_tempo = "";
+		
+		for(int x = 0; x<no_pix_ancho ; x++){ 
+				solo_x = solo_x + "	<div class=\"pixel\"></div>\n";
 		}
+			
+		for(int y = 0; y<no_pix_alto ; y++){
+			file_html_tempo = file_html_tempo + solo_x;
+		}
+		
+		file_html = file_html + file_html_tempo;
 		
 		
 		if (es_neg =="S"){
 			file_html = file_html + "</div>\n";							
 		}
+		
+		
+		file_html = file_html + "</div>\n";
+		file_html = file_html + "</body>\n";
+		file_html = file_html + "</html> \n";
+		
+		
+		//create_file_images(name_cap, file_css);
+		create_file_images( nam_completo +".css", file_css);
+		create_file_images( nam_completo +".html", file_html);
+		
+		string na_html;
+		na_html = "\""+ nam_completo +".html\"";
+		//na_html = nombre +".html";
+		cout<<endl;
+		cout<<"Imagen exportada a "<<na_html;
+		system(na_html.c_str());
+		
+	}
+	
+	
+	void matrix :: Generando_css_mosaic(int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto, string nam_completo, string nombre , string es_neg, int pix_w_p, int pix_h_p) {
+    	
+    	//node *temp = head;
+    	//print_Grafica_matrix(temp);
+    	string name_cap;
+    	
+    	//string file_css;
+    	//string file_html;
+    	
+ 		///***para css*****///
+    	file_css = "";
+    	
+    	file_css = file_css + "body {\n";
+		
+		file_css = file_css + "  background: #333333; \n";  
+		
+		file_css = file_css + "  height: 100vh; \n";        
+		file_css = file_css + "  display: flex; \n";         
+		file_css = file_css + "  justify-content: center; \n";
+		file_css = file_css + "  align-items: center; \n";   
+		file_css = file_css + " }\n";
+		
+		ostringstream can_w, can_h;
+		can_w<<canvas_w;
+		can_h<<canvas_h;
+		
+    	//name_cap = "cap"+cap.str();
+    	
+    	//cout <<"can_w.str(): "<<can_w.str()<<endl;
+		//cout <<"can_h.str(): "<<can_h.str() <<endl;
+
+		file_css = file_css + ".canvas {\n";  
+		file_css = file_css + "  width: "+ can_w.str() +"px; \n";    
+		file_css = file_css + "  height: "+can_h.str() +"px;\n";  
+		//file_css = file_css + "  width: "+  "360" +"px; \n";    
+		//file_css = file_css + "  height: "+  "360" +"px;\n";   
+		  
+		file_css = file_css + " }\n";  
+		
+		ostringstream px_w, px_h;
+		px_w<<pix_w;
+		px_h<<pix_h;
+		
+		ostringstream px_w_peq, px_h_peq;
+		px_w_peq<<pix_w_p;
+		px_h_peq<<pix_h_p;
+			
+		file_css = file_css + ".pixel {\n"; 
+		file_css = file_css + "  width: "+ px_w.str() + "px;\n"; 
+		file_css = file_css + "  height:"+ px_h.str() + "px;\n"; 
+		file_css = file_css + "  float: left;  \n"; 
+		file_css = file_css + "  box-shadow: 0px 0px 1px #fff;\n"; 
+		file_css = file_css + "}\n"; 
+
+		//if (es_neg =="S"){
+			file_css = file_css + ".pixelfon {\n"; 
+			file_css = file_css + "  width: "+ px_w_peq.str() + "px;\n"; 
+			file_css = file_css + "  height:"+ px_h_peq.str() + "px;\n"; 
+			file_css = file_css + "  float: left;  \n"; 
+			//file_css = file_css + "  box-shadow: 0px 0px 1px #fff;\n"; 
+			file_css = file_css + "}\n"; 
+			
+			//file_css = file_css + ".pixelfon:nth-child(1) { \n";
+			//file_css = file_css + "  background: #CCCCCC; \n"; //para exadeciaml	
+			//file_css = file_css + "} \n";		
+							
+		//}
+
+		///***para html*****///
+		file_html = "";
+		
+		file_html = file_html + "<!DOCTYPE html>\n";
+		file_html = file_html + "<html>\n";
+		file_html = file_html + "<head>\n";
+		//file_html = file_html + "  <link rel=\"stylesheet\" href=\"geoff.css\">\n";
+		//file_html = file_html + "  <link rel=\"stylesheet\" href=\"ejemplo.css\">\n";
+		file_html = file_html + "  <link rel=\"stylesheet\" href=\""+nombre+".css\">\n";
+		file_html = file_html + "</head>\n";
+		file_html = file_html + "<body>\n";
+		
+		file_html = file_html + "<div class=\"canvas\"> \n";
+		
+		//if (es_neg =="S"){
+		//	file_html = file_html + "<div class=\"pixelfon\"> \n";				
+		//}
+		
+		////////////////////
+		//no_pix_ancho = no_columnas_mat();
+    	
+    	node *temp = head;
+    	while (temp->capa_up != NULL) { 
+
+    		
+    		if (temp->valor != "RAIZ"){
+    			read_matrix_css_html_mosaic(temp, canvas_w, canvas_h, pix_w, pix_h, no_pix_ancho, no_pix_alto);
+			}
+	    	
+	    	temp = temp->capa_up;
+		}  	
+		
+		read_matrix_css_html_mosaic(temp, canvas_w, canvas_h, pix_w, pix_h, no_pix_ancho, no_pix_alto);
+		
+		
+		//creando los divs
+		cout <<"y<no_pix_alto*no_pix_alto: "<<no_pix_alto*no_pix_alto<<endl;
+		cout <<"x<no_pix_ancho*no_pix_ancho: "<<no_pix_ancho*no_pix_ancho <<endl;
+		string solo_x = "";
+		string file_html_tempo = "";
+		
+		for(int x = 0; x<no_pix_ancho*no_pix_ancho ; x++){ ///se tarda mas
+				solo_x = solo_x + "	<div class=\"pixelfon\"></div>\n";
+		}
+			
+		for(int y = 0; y<no_pix_alto*no_pix_alto ; y++){
+		file_html_tempo = file_html_tempo + "<div class=\"pixel\">\n";
+			//file_html = file_html + "<div class=\"pixel\">\n";
+			//cout <<"y: "<<y<<" - "<<no_pix_alto*no_pix_alto<<endl;
+			
+			file_html_tempo = file_html_tempo + solo_x;
+			
+			file_html_tempo = file_html_tempo + "</div>\n";
+		}
+		
+		file_html = file_html + file_html_tempo;
+		
+		/*for(int y = 0; y<no_pix_alto*no_pix_alto ; y++){
+			file_html_tempo = file_html_tempo + "<div class=\"pixel\">\n";
+			//file_html = file_html + "<div class=\"pixel\">\n";
+			cout <<"y: "<<y<<" - "<<no_pix_alto*no_pix_alto<<endl;
+			for(int x = 0; x<no_pix_ancho*no_pix_ancho ; x++){ ///se tarda mas
+			//for(int x = 0; x<no_pix_ancho ; x++){
+				///para html
+				//file_html = file_html + "	<div class=\"pixelfon\"></div>\n";
+				file_html_tempo = file_html_tempo + "	<div class=\"pixelfon\"></div>\n";
+
+				//cout <<"x: "<<x<<" - "<<no_pix_ancho*no_pix_ancho<<endl;
+			}
+			file_html_tempo = file_html_tempo + "</div>\n";
+		}*/
+		
+		
+		
+		//if (es_neg =="S"){
+		//	file_html = file_html + "</div>\n";							
+		//}
 		
 		
 		file_html = file_html + "</div>\n";
@@ -2024,7 +2203,6 @@ bool matrix :: Buscando_matrix_xy(node *matrix_capa, int x, int y) {
 							color_completo = temp->valor;
 							//cout<<color_completo<<endl;
 							 
-							
 							stringstream col(color_completo);
 							getline(col, c_r, '-');
 							getline(col, c_g, '-');
@@ -2046,7 +2224,6 @@ bool matrix :: Buscando_matrix_xy(node *matrix_capa, int x, int y) {
 								system("pause");
 							}
 							
-							
 							color_hexa = RGBToHex( atoi(c_r.c_str()), atoi(c_g.c_str()), atoi(c_b.c_str()) );
 							//cout<<"color_hexa: "<<color_hexa<<endl;
 							
@@ -2057,25 +2234,114 @@ bool matrix :: Buscando_matrix_xy(node *matrix_capa, int x, int y) {
 							//file_css = file_css + "  background: rgb("+c_r.c_str()+ ","+ c_g.c_str() + "," +c_b.c_str() +"); \n"; // para color rgb
 							
 							file_css = file_css + "} \n";
-							
+
 							///para html
 							//file_html = file_html + "  <div class=\"pixel\"></div>\n";
 
-						}
-						
-											    	
+						}					    	
 		    	temp = temp->right;
 			}
 			
-		
 			temp = temp_inicio;
 	    	temp = temp->down;
 	    	
 	    	//cout<<endl;
 		}  	
+    }
+    
+    
+    /////////////mosaico forma 2
+    void matrix :: read_matrix_css_html_mosaic(node *matrix_capa, int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto) {
+		
+		string c_r, c_g, c_b;
+		
+		
+    	////node *temp = head;
+    	node *temp = matrix_capa;
+    	
+    	string color_completo;
+    	string color_hexa;
+    	int no_col;
+    	int k;
+    	//no_col = no_columnas_mat();
+    	no_col = no_pix_ancho;
 
+    	
+    	//node *temp = nodo_x_nivel;
+    	node *temp_inicio;	
+    	node *temp_sup_ini;
+		   	
 
- 	
+    	while (temp != NULL) { 
+
+	    	temp_inicio = temp;
+
+	    	while (temp != NULL) { 
+						
+						if (temp->tipo == "N")
+						{
+
+							ostringstream k_str;
+							k = 0;
+							//k = i(y) * Numero Columnas + j(x)
+							//k = temp->cor_y  * no_col + temp->cor_x; 
+							k = ((temp->cor_y - 1 ) * no_col ) + (temp->cor_x - 1); 
+							k = k +1;
+							k_str<<k;
+							
+							//cout<<"("<<temp->cor_x<<","<<temp->cor_y<<")";
+							color_completo = temp->valor;
+							//cout<<color_completo<<endl;
+							 
+							stringstream col(color_completo);
+							getline(col, c_r, '-');
+							getline(col, c_g, '-');
+							getline(col, c_b, '-');
+							
+							//if (color_completo == "230-138-0")
+							/*if (k_str.str() == "200" || k_str.str() == "207" || k_str.str() == "226" || k_str.str() == "245" || k_str.str() == "290")
+							*/
+							
+							if ( atoi(c_r.c_str()) > 255 || atoi(c_g.c_str()) > 255 || atoi(c_b.c_str()) > 255  )
+							{
+								//cout<<"k_str.str(): "<<k_str.str()<<endl;
+								cout<<"c_r: "<<c_r<<endl;
+								cout<<"c_g: "<<c_g<<endl;
+								cout<<"c_b: "<<c_b<<endl;
+								cout<<"capa: "<<temp->cor_z<<endl;
+								cout<<"color_completo: "<<color_completo<<endl;
+								cout<<"x,y: "<<temp->cor_x<<","<<temp->cor_y<<endl;
+								system("pause");
+							}
+							
+							color_hexa = RGBToHex( atoi(c_r.c_str()), atoi(c_g.c_str()), atoi(c_b.c_str()) );
+							//cout<<"color_hexa: "<<color_hexa<<endl;
+							
+							//para css
+							file_css = file_css + ".pixel:nth-child("+ k_str.str() + ") { \n";
+							file_css = file_css + "  background: #"+color_hexa+"; \n"; //para exadeciaml
+							//file_css = file_css + "  background: rgb("+c_r.c_str()+ ","+ c_g.c_str() + "," +c_b.c_str() +"); \n"; // para color rgb
+			
+							file_css = file_css + "} \n";
+							
+							///para matrix pequeño
+							file_css = file_css + ".pixelfon:nth-child("+ k_str.str() + ") { \n";
+							file_css = file_css + "  background: rgb("+c_r.c_str()+ ","+ c_g.c_str() + "," +c_b.c_str() +", 0.4); \n"; // para color rgb
+							//file_css = file_css + "  background: #"+color_hexa+"; \n"; //para exadeciaml
+							file_css = file_css + "} \n";
+							
+							///para html
+							//file_html = file_html + "  <div class=\"pixel\"></div>\n";
+
+						}					    	
+		    	temp = temp->right;
+			}
+			
+			temp = temp_inicio;
+	    	temp = temp->down;
+	    	
+	    	//cout<<endl;
+		}  	
     }
     
     void matrix :: create_file_images(string nombre, string contenido) {
@@ -2251,11 +2517,16 @@ matrix matrix :: imagen_original_una_capa(string tipo, int no_col, int no_lin, i
 				if (tipo == "M"){
     				read_matrix_una_capa(temp, mat_mod, no_col, no_lin, all_capa);
     			}
+    			else if (tipo == "M2"){
+    				read_matrix_una_capa(temp, mat_mod, no_col, no_lin, all_capa);
+    			}
 			}
 	    	temp = temp->capa_down;
 		}
 		
-		insert_blancos_matrix_una_capa(mat_mod, no_col, no_lin);	
+		if (tipo == "M"){
+			insert_blancos_matrix_una_capa(mat_mod, no_col, no_lin);
+		}
 		return mat_mod;
 	}
 		
@@ -2553,7 +2824,7 @@ void matrix :: insert_blancos_matrix_una_capa(matrix mat_mod, int no_x, int no_y
 						new_color = Get_color_mosaic(Color_Mayor, color_menor);
 						
 						//mat_mod.add(temp->data, co_x + temp->cor_x, co_y + temp->cor_y, temp->cor_z, temp->valor , name_capa);
-						mat_mod.add(temp->data, co_x + temp->cor_x, co_y + temp->cor_y, temp->cor_z, new_color , name_capa);
+						mat_mod.add(temp->data, co_x + temp->cor_x, co_y + temp->cor_y, temp->cor_z, new_color , "mosaic");
 						
 					}					    	
 		    	temp = temp->right;

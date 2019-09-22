@@ -220,6 +220,9 @@ public:
     
     string Get_color_mosaic(string Color_Mayor, string color_menor);
     
+    ///forma 2
+    void read_matrix_css_html_mosaic(node *matrix_capa, int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto);
+    void Generando_css_mosaic(int canvas_w, int canvas_h, int pix_w, int pix_h, int no_pix_ancho, int no_pix_alto, string nam_completo, string nombre , string es_neg, int pix_w_p, int pix_h_p);
 };
 
 #endif

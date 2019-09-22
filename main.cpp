@@ -81,25 +81,38 @@ int main(int argc, char** argv)
 		cout <<"4. Manual Editing"<<endl;
 		cout <<"5. Export Image"<<endl;
 		cout <<"6. Reports"<<endl;
-		cout <<"7. Exit"<<endl<<endl;
+		cout <<"7. Exit"<<endl;
+		//cout <<"7. Exit"<<endl<<endl;
+		cout <<"20. Insert Image (Carpetas)"<<endl<<endl;
 		
-		
-		cout <<"8. prueba matriz"<<endl<<endl;
+		/*cout <<"8. prueba matriz"<<endl<<endl;
 		cout <<"9. graficando matriz"<<endl<<endl;
 		cout <<"10. verificando lista layes"<<endl<<endl;
-		cout <<"11. leyendo lista layes"<<endl<<endl;
+		cout <<"11. leyendo lista layes"<<endl<<endl;*/
 		cout <<"**************************\n\n";
 		
     	cout<<"Selecciona opcion:\n" ; cin>>opcion;
     	cout <<"opcion: "<<opcion<<endl;
     	if (opcion == "1")
     	{
-    		//aqui importamos la archivo		
+    		//aqui importamos la archivo
+			read_ar.con_carpeta = "N";	
+			read_ar.name_carpeta = "";	
 			read_ar.read_path();
 			//cout <<"read_ar.arbol.size: "<<read_ar.arbol.size <<endl;
 			//cout <<"termina aqui****--- "<<endl<<endl;
 			system("pause");
 			
+		}
+		else if (opcion == "20")
+    	{
+    		system("cls");
+    		string carpeta;
+    		cout<<"Nombre carpeta:\n" ; cin>>carpeta;
+    		read_ar.con_carpeta = "S";
+    		read_ar.name_carpeta = carpeta;
+    		read_ar.read_path();
+			system("pause");
 		}
 		else if (opcion == "2")
     	{
@@ -141,7 +154,7 @@ int main(int argc, char** argv)
     	{
     		MenuReport();
 		} 
-		else if (opcion == "8")
+		/*else if (opcion == "8")
     	{
     		matrix mt;
     		mt.add(10,2,1,2, "", "");
@@ -215,7 +228,7 @@ int main(int argc, char** argv)
 			list_filtros.Lista_print_filters();
 			
 
-    	}
+    	}*/
 		else if (opcion == "7")
     	{
     		men = false;
@@ -345,6 +358,18 @@ void aplicando_filter_mat(int all_capa, string name_filtro, int rep_x, int rep_y
 			
     		//mtx_collage.Tipo_a_Graficar();
     		//mtx_collage.print_node_cor_orde_zz();
+		}
+		else if(name_filtro == "MOSAICF2"){
+			
+    		matrix mtx_mosaic_f2;
+    		mtx_mosaic_f2 = mtx_actual.imagen_original_una_capa("M2", a_no_pixel_x, a_no_pixel_y, all_capa);
+    		
+    		//mtx_mosaic_f2 = mtx_mosaic_f2.imagen_original_col_mos("M2", a_no_pixel_x, a_no_pixel_y, all_capa, a_no_pixel_x, a_no_pixel_y);
+    		
+    		list_filtros.Insert_nod(all_capa, mtx_mosaic_f2, "MOSAICF2",0 ,0);
+    		
+    		//cout<<endl<<endl<<"cordenada abajo, derecha"<<endl; 
+			//mtx_mosaic.print_node_cor_orde_zz();
 		}
 		
 		if(all_capa == 0){
@@ -824,6 +849,7 @@ void menu_filters()
 		cout <<"c. MIRROR (ESPEJO)"<<endl;
 		cout <<"d. COLLAGE (COLLAGE)"<<endl;
 		cout <<"e. MOSAIC (MOSAICO)"<<endl<<endl;
+		cout <<"f. MOSAIC F2 (MOSAICO FORMA 2)"<<endl<<endl;
 		cout <<"0. Regresar"<<endl<<endl;
 		cout <<"**************************\n\n";
 		
@@ -851,8 +877,7 @@ void menu_filters()
     		
     		aplicando_filter_mat(0,"COLLAGE", rep_x, rep_y);
     		//tipo_filtro("GRAYSCALE");
-		}
-		
+		}	
 		else if (opcion == "e" || opcion == "E")
     	{
     		int rep_x, rep_y;
@@ -861,6 +886,11 @@ void menu_filters()
     		//cout<<"m Cantidad de repeticiones en Y:\n" ; cin>>rep_y;
     		
     		aplicando_filter_mat(0,"MOSAIC", rep_x, rep_y);
+		}
+		else if (opcion == "f" || opcion == "F")
+    	{ 
+    		int rep_x, rep_y;
+    		aplicando_filter_mat(0,"MOSAICF2", rep_x, rep_y);
 		}
     	else if (opcion == "0")
     	{
@@ -1006,30 +1036,60 @@ void creando_file_imagen(matrix mtx_export, NodeCir *nod_fil)
 	
 	int pix_x, pix_y;
 	int canvas_m_x, canvas_m_y;
-	pix_x = a_pix_w*0.25;
-	pix_y = a_pix_h*0.25;
-	
-	//cout <<"a_pix_w: "<<a_pix_w<<endl;
-	//cout <<"a_pix_h: "<<a_pix_h <<endl;
-	
-	//cout <<"2 pix_x: "<<pix_x<<endl;
-	//cout <<"2 pix_y: "<<pix_y <<endl;
-	
-	//cout <<"canvas_x: "<<a_pix_ima_w*a_no_pixel_x<<endl;
-	//cout <<"canvas_y: "<<a_pix_ima_h*a_no_pixel_y <<endl;
-	
-	canvas_m_x = pix_x*a_no_pixel_x*a_no_pixel_x;
-	canvas_m_y = pix_y*a_no_pixel_y*a_no_pixel_y;
-	//cout <<"2 canvas_x: "<<canvas_m_x<<endl;
-	//cout <<"2 canvas_y: "<<canvas_m_y<<endl;
+
 	
 	if(nod_fil->filtro == "MOSAIC"){ 
 		//matrix mtx_export_tempo;
 		//mtx_export_tempo = mtx_export;
 		
+		pix_x = a_pix_w*0.15;
+		pix_y = a_pix_h*0.15;
+		
+		//cout <<"a_pix_w: "<<a_pix_w<<endl;
+		//cout <<"a_pix_h: "<<a_pix_h <<endl;
+		
+		//cout <<"2 pix_x: "<<pix_x<<endl;
+		//cout <<"2 pix_y: "<<pix_y <<endl;
+		
+		//cout <<"canvas_x: "<<a_pix_ima_w*a_no_pixel_x<<endl;
+		//cout <<"canvas_y: "<<a_pix_ima_h*a_no_pixel_y <<endl;
+		
+		canvas_m_x = pix_x*a_no_pixel_x*a_no_pixel_x;
+		canvas_m_y = pix_y*a_no_pixel_y*a_no_pixel_y;
+		//cout <<"2 canvas_x: "<<canvas_m_x<<endl;
+		//cout <<"2 canvas_y: "<<canvas_m_y<<endl;
+		
     	mtx_export.Generando_css(canvas_m_x, canvas_m_y, pix_x, pix_y, a_no_pixel_x * a_no_pixel_x, a_no_pixel_y * a_no_pixel_y, nombre_completo, list_filtros.name_actual, "");
 		//mtx_export.Generando_css(rep_x*a_pix_ima_w, rep_y*a_pix_ima_h, a_pix_w, a_pix_h, rep_x*a_no_pixel_x, rep_y*a_no_pixel_y, "ejemplo", "ejemplo");
-    }		
+    }
+	else if(nod_fil->filtro == "MOSAICF2"){ 
+	
+		int pix_peq_x, pix_peq_y;
+		
+		pix_peq_x = a_pix_w/a_no_pixel_x;
+		pix_peq_y = a_pix_h/a_no_pixel_y;
+		
+		pix_peq_x = pix_peq_x*2;
+		pix_peq_y = pix_peq_y*2;
+		//cout <<"pix_peq_x: "<<pix_peq_x <<endl;
+		//cout <<"pix_peq_y: "<<pix_peq_y<<endl;
+		
+		pix_x = pix_peq_x * a_no_pixel_x;
+		pix_y = pix_peq_y * a_no_pixel_y;
+
+		//cout <<"pix_x: "<<pix_x <<endl;
+	//	cout <<"pix_y: "<<pix_y<<endl;
+
+		canvas_m_x = a_no_pixel_x*pix_x;
+		canvas_m_y = a_no_pixel_y*pix_y;
+		
+		//cout <<"canvas_m_x: "<<canvas_m_x <<endl;
+		//cout <<"canvas_m_y: "<<canvas_m_y<<endl;
+	
+    	//mtx_export.Generando_css_mosaic(canvas_m_x, canvas_m_y, pix_x, pix_y, a_no_pixel_x * a_no_pixel_x, a_no_pixel_y * a_no_pixel_y, nombre_completo, list_filtros.name_actual, "", pix_peq_x, pix_peq_y );
+    	mtx_export.Generando_css_mosaic(canvas_m_x,canvas_m_y, pix_x, pix_y, a_no_pixel_x, a_no_pixel_y, nombre_completo, list_filtros.name_actual, "", pix_peq_x, pix_peq_y);
+    	
+	}		
 	else if(nod_fil->filtro == "COLLAGE"){ 
 	
 		int rep_x, rep_y;

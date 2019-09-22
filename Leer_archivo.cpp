@@ -39,6 +39,7 @@ class Leer_archivo
 };
 */
 
+
 //void Leer_archivo::leer_arhivo_ima(string archiv){
 bool Leer_archivo::leer_arhivo_ima(string archiv){
 	bool encontrado = false;
@@ -46,6 +47,10 @@ bool Leer_archivo::leer_arhivo_ima(string archiv){
 	string file;
 	int layar_val = 0;
 	int linea = 0;
+	
+	if(con_carpeta == "S"){
+		archiv = name_carpeta +"\\"+ archiv;
+	}
 	
 	//para limpiar layers
 	arbol_layers ar_leyers_limpio;
@@ -94,6 +99,7 @@ bool Leer_archivo::leer_arhivo_ima(string archiv){
 			 			Read_config(file);
 			 		}*/			 		
 			 		//insertando en arbol los arhivos a leer
+	
 			 		ar_leyers.insert(layar_val, file);
 		 		}
 	 	}
@@ -120,6 +126,7 @@ void Leer_archivo::read_path()
 	cout <<"Ingrese nombre del arhivo (.CSV)"<<endl;
 	//cin>>path_archivo;
 	getline(cin,path_archivo);
+	
 	cout<<"path_archivo: "<<path_archivo<<endl;
 	
 	encontrado = leer_arhivo_ima(path_archivo);
@@ -182,6 +189,10 @@ void Leer_archivo::Read_config(string file)
 {
 	cout <<"leyendo configuraciones"<<endl;
 	cout<<endl;
+	
+	if(con_carpeta == "S"){
+		file = name_carpeta +"\\"+ file;
+	}
 	
 	string config;
 	string value;
@@ -264,6 +275,10 @@ void Leer_archivo::Read_capas(string files, int layer)
 {
 	cout <<"leyendo archivos de capas"<<endl;
 	cout<<endl;
+	
+	if(con_carpeta == "S"){
+		files = name_carpeta +"\\"+ files;
+	}
 	
 	string val;
 	

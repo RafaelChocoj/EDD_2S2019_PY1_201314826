@@ -1,3 +1,3 @@
 digraph G { rankdir=LR
-"batman" ->"mariop2"
+"bmo" ->"batman" ->"corrin" ->"tux"
 }

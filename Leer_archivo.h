@@ -33,6 +33,9 @@ class Leer_archivo
 		//void inorder_layer()  { inorder_layer(ar_leyers.root);};
     	void inorder_layer( NodeLay* actual);
     	
+    	string con_carpeta = "N";
+		string name_carpeta = "";
+    	
     	
 
 		

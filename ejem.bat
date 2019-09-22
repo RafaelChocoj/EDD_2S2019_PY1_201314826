@@ -1,3 +1,3 @@
-fdp -Tpng cap0.txt -o cap0.jpg
+fdp -Tpng cap3.txt -o cap3.jpg
 
-cap0.jpg
+cap3.jpg
